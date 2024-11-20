@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "681570161969",
+    "project_id": "vfood-72eda",
+    "storage_bucket": "vfood-72eda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681570161969:android:563e6f4fc299f010804c10",
+        "android_client_info": {
+          "package_name": "com.bestrong.vfood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp68BP2CM8JorzcnvLPuEnjRHlnFwgiTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
