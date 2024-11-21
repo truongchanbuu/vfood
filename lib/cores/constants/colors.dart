@@ -18,13 +18,17 @@ class AppColors {
   static const Color textLight = Color(0xFFF5F5F5);
   static const Color textDark = Color(0xFF0A0A0A);
 
+  // BorderSide Colors
+  static const Color defaultBorderSide = Color(0xFFDDDDDD);
+
+  // Elevation Colors
+  static const Color defaultElevation = Color(0x1F000000);
+
   // Food Category Colors
-  static const Color noodleCategory = Color(0xFFF9A825); 
+  static const Color noodleCategory = Color(0xFFF9A825);
   static const Color riceCategory = Color(0xFF43A047);
-  static const Color streetFoodCategory =
-      Color(0xFFE64A19); 
-  static const Color dessertCategory =
-      Color(0xFFAD1457);
+  static const Color streetFoodCategory = Color(0xFFE64A19);
+  static const Color dessertCategory = Color(0xFFAD1457);
 
   // Status Colors
   static const Color success = Color(0xFF4CAF50);

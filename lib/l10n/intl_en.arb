@@ -1,1 +1,8 @@
-{}
+{
+  "@@locale": "en",
+
+  "@__BOTTOM_NAV_BAR": "",
+  "homepage": "Home",
+  "explore_page": "Explore",
+  "setting_page": "Settings"
+}
