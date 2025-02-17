@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../../../../../config/routes/app_routes.dart';
 import '../../../../../cores/constants/colors.dart';
 import '../../../../generated/l10n.dart';
-import '../../../../main.dart';
 import '../../../settings/presentations/pages/settings_page.dart';
 
 class AppView extends StatefulWidget {

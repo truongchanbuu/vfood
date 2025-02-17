@@ -26,6 +26,7 @@ class SettingSelectionBottomSheet<T> extends StatelessWidget {
 
   Widget _buildChoice(BuildContext context, T data) {
     return ListTile(
+      shape: const StadiumBorder(),
       onTap: () {
         if (selected != data) {
           onSelected?.call(data);
