@@ -40,7 +40,8 @@ class AppContainer extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppCommons.appName,
-      theme: AppTheme.lightTheme,
+      theme: context.select((SettingsCubit settings) =>
+          settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),
       localizationsDelegates: AppLocalization.delegates,
       supportedLocales: AppLocalization.supportedLanguages,
       home: const AppView(),

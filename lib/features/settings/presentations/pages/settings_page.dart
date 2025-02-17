@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../cores/constants/colors.dart';
-import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
-import '../../../../cores/constants/text_styles.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../cores/helpers/setting_helper.dart';
 import '../../../../generated/l10n.dart';
@@ -16,6 +14,9 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor =
+        context.isDarkMode ? AppColors.backgroundDark : AppColors.background;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -26,9 +27,7 @@ class SettingsPage extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        backgroundColor: context.isDarkMode
-            ? AppColors.backgroundDark
-            : AppColors.background,
+        backgroundColor: backgroundColor,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -36,145 +35,171 @@ class SettingsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                S.current.general_section_title,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: AppFontSize.labelLarge,
-                ),
-              ),
-              const SizedBox(height: AppSpacing.marginS),
-              Card(
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text(S.current.language_option_title),
-                      trailing: Text(
-                        S.current.english_option,
-                        style: const TextStyle(color: Colors.grey),
-                      ),
-                      onTap: () => _onLangChanged(context),
-                    ),
-                    const Divider(height: 1),
-                    SwitchListTile(
-                      title: Text(S.current.dark_mode_option),
-                      value: false,
-                      onChanged: context.read<SettingsCubit>().themeChanged,
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: AppSpacing.marginL),
-              Text(
+              _buildSectionHeader(context, S.current.general_section_title),
+              _buildSettingsCard(context, [
+                _buildLanguageTile(context),
+                const Divider(height: 1),
+                _buildDarkModeTile(context),
+              ]),
+              _buildSectionHeader(
+                context,
                 S.current.account_setting_section_title,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: AppFontSize.labelLarge,
-                ),
               ),
-              const SizedBox(height: AppSpacing.marginS),
-              Card(
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text(S.current.profile_management_section_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to profile management
-                      },
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      title: Text(S.current.recent_searches_section_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to recent searches
-                      },
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      title: Text(S.current.favorite_food_section_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to favorite food
-                      },
-                    ),
-                  ],
+              _buildSettingsCard(context, [
+                _buildNavigationTile(
+                  context,
+                  S.current.profile_management_section_title,
+                  () {},
                 ),
-              ),
-              const SizedBox(height: AppSpacing.marginL),
-              Text(
+                const Divider(height: 1),
+                _buildNavigationTile(
+                  context,
+                  S.current.recent_searches_section_title,
+                  () {},
+                ),
+                const Divider(height: 1),
+                _buildNavigationTile(
+                  context,
+                  S.current.favorite_food_section_title,
+                  () {},
+                ),
+              ]),
+              _buildSectionHeader(
+                context,
                 S.current.support_and_feedback_section_title,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: AppFontSize.labelLarge,
-                ),
               ),
-              const SizedBox(height: AppSpacing.marginS),
-              Card(
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text(S.current.contact_support_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to contact support
-                      },
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      title: const Text('FAQs'),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to FAQs
-                      },
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      title: Text(S.current.about_us_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to about us
-                      },
-                    ),
-                  ],
+              _buildSettingsCard(context, [
+                _buildNavigationTile(
+                  context,
+                  S.current.contact_support_title,
+                  () {},
                 ),
-              ),
-              const SizedBox(height: AppSpacing.marginL),
-              Text(
-                S.current.app_information_title,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: AppFontSize.labelLarge,
+                const Divider(height: 1),
+                _buildNavigationTile(
+                  context,
+                  'FAQs',
+                  () {},
                 ),
-              ),
-              const SizedBox(height: AppSpacing.marginS),
-              Card(
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text(S.current.app_version_title),
-                      trailing: const Text(
-                        'v1.0.0',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      onTap: () {
-                        // Handle app version tap
-                      },
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      title: Text(S.current.terms_and_conditions_title),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () => _onTermsAndConditionDisplayed(context),
-                    ),
-                  ],
+                const Divider(height: 1),
+                _buildNavigationTile(
+                  context,
+                  S.current.about_us_title,
+                  () {},
                 ),
-              ),
+              ]),
+              _buildSectionHeader(context, S.current.app_information_title),
+              _buildSettingsCard(context, [
+                _buildInfoTile(
+                  context,
+                  S.current.app_version_title,
+                  'v1.0.0',
+                  () {},
+                ),
+                const Divider(height: 1),
+                _buildNavigationTile(
+                  context,
+                  S.current.terms_and_conditions_title,
+                  () => _onTermsAndConditionDisplayed(context),
+                ),
+              ]),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildSectionHeader(BuildContext context, String title) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            color: context.isDarkMode ? Colors.white : Colors.grey,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.marginS),
+      ],
+    );
+  }
+
+  Widget _buildSettingsCard(BuildContext context, List<Widget> children) {
+    return Column(
+      children: [
+        Card(child: Column(children: children)),
+        const SizedBox(height: AppSpacing.marginL),
+      ],
+    );
+  }
+
+  Widget _buildLanguageTile(BuildContext context) {
+    return ListTile(
+      title: Text(
+        S.current.language_option_title,
+        style: TextStyle(
+          color: context.isDarkMode ? Colors.white : Colors.black,
+        ),
+      ),
+      trailing: Text(
+        S.current.english_option,
+        style: TextStyle(
+          color: context.isDarkMode ? Colors.white : Colors.grey,
+        ),
+      ),
+      onTap: () => _onLangChanged(context),
+    );
+  }
+
+  Widget _buildDarkModeTile(BuildContext context) {
+    return SwitchListTile(
+      title: Text(
+        S.current.dark_mode_option,
+        style: TextStyle(
+          color: context.isDarkMode ? Colors.white : Colors.black,
+        ),
+      ),
+      value: context.isDarkMode,
+      onChanged: context.read<SettingsCubit>().themeChanged,
+    );
+  }
+
+  Widget _buildNavigationTile(
+    BuildContext context,
+    String title,
+    VoidCallback onTap,
+  ) {
+    return ListTile(
+      title: Text(
+        title,
+        style:
+            TextStyle(color: context.isDarkMode ? Colors.white : Colors.black),
+      ),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: onTap,
+    );
+  }
+
+  Widget _buildInfoTile(
+    BuildContext context,
+    String title,
+    String info,
+    VoidCallback onTap,
+  ) {
+    return ListTile(
+      title: Text(
+        title,
+        style: TextStyle(
+          color: context.isDarkMode ? Colors.white : Colors.black,
+        ),
+      ),
+      trailing: Text(
+        info,
+        style: TextStyle(
+          color: context.isDarkMode ? Colors.white : Colors.grey,
+        ),
+      ),
+      onTap: onTap,
     );
   }
 
@@ -199,10 +224,7 @@ class SettingsPage extends StatelessWidget {
       useSafeArea: true,
       builder: (context) => Column(
         children: [
-          Text(
-            S.current.terms_and_conditions_title,
-            style: AppTextStyle.h4,
-          ),
+          Text(S.current.terms_and_conditions_title),
           const Divider(height: 1),
           const Text('This is terms and conditions')
         ],
