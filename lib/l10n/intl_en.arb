@@ -1,8 +1,31 @@
 {
   "@@locale": "en",
 
-  "@__BOTTOM_NAV_BAR": "",
+  "@__BOTTOM_NAV_BAR__": {},
   "homepage": "Home",
   "explore_page": "Explore",
-  "setting_page": "Settings"
+  "setting_page": "Settings",
+
+  "@__HOMEPAGE__": {},
+  "search_button": "Search",
+  "upload_button": "Upload",
+
+  "@__SETTINGS_PAGE__": {},
+  "setting_title": "Settings",
+  "general_section_title": "General Settings",
+  "language_option_title": "Language",
+  "english_option": "English",
+  "vietnamese_option": "Vietnamese",
+  "dark_mode_option": "Dark Mode",
+  "light_mode_option": "Light Mode",
+  "account_setting_section_title": "Account Settings",
+  "profile_management_section_title": "Profile Management",
+  "recent_searches_section_title": "Recent Searches",
+  "favorite_food_section_title": "Favorite Food",
+  "support_and_feedback_section_title": "Support & Feedback",
+  "contact_support_title": "Contact Support",
+  "about_us_title": "About us",
+  "app_information_title": "App Information",
+  "app_version_title": "App Version",
+  "terms_and_conditions_title": "Terms & Conditions"
 }

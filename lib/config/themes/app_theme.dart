@@ -22,7 +22,7 @@ class AppTheme {
       // Common font configuration
       fontFamily: GoogleFonts.nunito().fontFamily,
       fontFamilyFallback: const ['roboto', 'sans-serif'],
-      
+
       // Reusable AppBar theme
       appBarTheme: AppBarTheme(
         elevation: 0,
@@ -45,10 +45,6 @@ class AppTheme {
       // Unified Button theme
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.paddingL,
-            vertical: AppSpacing.paddingM,
-          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSpacing.radiusS),
           ),
@@ -60,20 +56,19 @@ class AppTheme {
         filled: true,
         contentPadding: const EdgeInsets.all(AppSpacing.paddingM),
         border: _buildInputBorder(AppColors.textSecondary.withOpacity(0.3)),
-        enabledBorder: _buildInputBorder(AppColors.textSecondary.withOpacity(0.3)),
+        enabledBorder:
+            _buildInputBorder(AppColors.textSecondary.withOpacity(0.3)),
         focusedBorder: _buildInputBorder(AppColors.primary, width: 2),
-        fillColor: brightness == Brightness.light 
-            ? AppColors.surfaceLight 
+        fillColor: brightness == Brightness.light
+            ? AppColors.surfaceLight
             : AppColors.surfaceDark,
       ),
     );
   }
 
   // Helper method to reduce border definition repetition
-  static OutlineInputBorder _buildInputBorder(
-    Color borderColor, 
-    {double width = 1.0}
-  ) {
+  static OutlineInputBorder _buildInputBorder(Color borderColor,
+      {double width = 1.0}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppSpacing.radiusM),
       borderSide: BorderSide(color: borderColor, width: width),

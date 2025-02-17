@@ -22,8 +22,45 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "explore_page": MessageLookupByLibrary.simpleMessage("Explore"),
-        "homepage": MessageLookupByLibrary.simpleMessage("Home"),
-        "setting_page": MessageLookupByLibrary.simpleMessage("Settings")
-      };
+    "about_us_title": MessageLookupByLibrary.simpleMessage("About us"),
+    "account_setting_section_title": MessageLookupByLibrary.simpleMessage(
+      "Account Settings",
+    ),
+    "app_information_title": MessageLookupByLibrary.simpleMessage(
+      "App Information",
+    ),
+    "app_version_title": MessageLookupByLibrary.simpleMessage("App Version"),
+    "contact_support_title": MessageLookupByLibrary.simpleMessage(
+      "Contact Support",
+    ),
+    "dark_mode_option": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+    "english_option": MessageLookupByLibrary.simpleMessage("English"),
+    "explore_page": MessageLookupByLibrary.simpleMessage("Explore"),
+    "favorite_food_section_title": MessageLookupByLibrary.simpleMessage(
+      "Favorite Food",
+    ),
+    "general_section_title": MessageLookupByLibrary.simpleMessage(
+      "General Settings",
+    ),
+    "homepage": MessageLookupByLibrary.simpleMessage("Home"),
+    "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
+    "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "profile_management_section_title": MessageLookupByLibrary.simpleMessage(
+      "Profile Management",
+    ),
+    "recent_searches_section_title": MessageLookupByLibrary.simpleMessage(
+      "Recent Searches",
+    ),
+    "search_button": MessageLookupByLibrary.simpleMessage("Search"),
+    "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
+    "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
+    "support_and_feedback_section_title": MessageLookupByLibrary.simpleMessage(
+      "Support & Feedback",
+    ),
+    "terms_and_conditions_title": MessageLookupByLibrary.simpleMessage(
+      "Terms & Conditions",
+    ),
+    "upload_button": MessageLookupByLibrary.simpleMessage("Upload"),
+    "vietnamese_option": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+  };
 }

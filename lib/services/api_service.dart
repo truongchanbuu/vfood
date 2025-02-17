@@ -2,7 +2,7 @@ import 'package:vfood/cores/resources/data_state.dart';
 
 import '../config/api/api_config.dart';
 
-abstract interface class ApiService<T> {
+abstract interface class ApiService<T> { 
   Future<DataState<T>> get(
     String endpoint, {
     required T Function(Map<String, dynamic> json) fromJson,

@@ -3,7 +3,7 @@ import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../../../../../config/routes/app_routes.dart';
 import '../../../../../cores/constants/colors.dart';
-import '../../../../../generated/l10n.dart';
+import '../../../../config/localization/app_localization.dart';
 import '../../../food/presentations/pages/homepage.dart';
 import '../../../settings/presentations/pages/settings_page.dart';
 
@@ -15,19 +15,9 @@ class AppView extends StatefulWidget {
 }
 
 class _AppViewState extends State<AppView> {
-  late final PersistentTabController _controller;
-
-  int _currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = PersistentTabController(initialIndex: _currentIndex);
-  }
-
   @override
   Widget build(BuildContext context) {
-    final localization = S.current;
+    final localization = AppLocalization.current;
 
     final tabs = <PersistentTabConfig>[
       _buildTabConfig(
@@ -55,10 +45,8 @@ class _AppViewState extends State<AppView> {
 
     return SafeArea(
       child: PersistentTabView(
-        controller: _controller,
-        onTabChanged: (value) => setState(() {
-          _currentIndex = value;
-        }),
+        onTabChanged: (value) {},
+        gestureNavigationEnabled: true,
         tabs: tabs,
         navBarBuilder: (navBarConfig) => Style8BottomNavBar(
           navBarConfig: navBarConfig,

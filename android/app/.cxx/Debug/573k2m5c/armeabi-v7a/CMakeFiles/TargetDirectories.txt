@@ -1,0 +1,2 @@
+C:/Users/truon/StudioProjects/vfood/android/app/.cxx/Debug/573k2m5c/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/truon/StudioProjects/vfood/android/app/.cxx/Debug/573k2m5c/armeabi-v7a/CMakeFiles/rebuild_cache.dir

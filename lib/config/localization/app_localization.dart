@@ -16,5 +16,5 @@ class AppLocalization {
     Locale('vi'),
   ];
 
-  S get appLocalization => S.current;
+  static S get current => S.current;
 }

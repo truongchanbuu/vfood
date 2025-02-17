@@ -3,7 +3,7 @@ import 'colors.dart';
 import 'font_sizes.dart';
 
 class AppTextStyle {
-    static TextStyle _baseTextStyle({
+  static TextStyle _baseTextStyle({
     required double fontSize,
     FontWeight fontWeight = FontWeight.normal,
     Color color = AppColors.textPrimary,
@@ -27,6 +27,16 @@ class AppTextStyle {
 
   static TextStyle h2 = _baseTextStyle(
     fontSize: AppFontSize.h2,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle h3 = _baseTextStyle(
+    fontSize: AppFontSize.h3,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle h4 = _baseTextStyle(
+    fontSize: AppFontSize.h4,
     fontWeight: FontWeight.w600,
   );
 
@@ -54,7 +64,7 @@ class AppTextStyle {
     fontWeight: FontWeight.w600,
     color: AppColors.success,
   );
- 
+
   // Categories
   static TextStyle categoryLabel = _baseTextStyle(
     fontSize: AppFontSize.labelMedium,
