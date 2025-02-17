@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../../../../config/routes/app_routes.dart';
 import '../../../../../cores/constants/colors.dart';
-import '../../../../config/localization/app_localization.dart';
-import '../../../food/presentations/pages/homepage.dart';
+import '../../../../generated/l10n.dart';
+import '../../../../main.dart';
 import '../../../settings/presentations/pages/settings_page.dart';
 
 class AppView extends StatefulWidget {
@@ -15,72 +15,45 @@ class AppView extends StatefulWidget {
 }
 
 class _AppViewState extends State<AppView> {
+  int _currentIndexTab = 0;
+
+  final List<Widget> tabs = [
+    Container(),
+    Container(),
+    const SettingsPage(),
+  ];
+  final List<GButton> navButtons = [
+    GButton(
+      icon: Icons.home_outlined,
+      text: S.current.homepage,
+    ),
+    GButton(
+      icon: Icons.explore_outlined,
+      text: S.current.explore_page,
+    ),
+    GButton(
+      icon: Icons.person_outline,
+      text: S.current.setting_page,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalization.current;
-
-    final tabs = <PersistentTabConfig>[
-      _buildTabConfig(
-        screen: const HomePage(),
-        route: AppRoute.home.path,
-        icon: Icons.home,
-        inactiveIcon: Icons.home_outlined,
-        title: localization.homepage,
-      ),
-      _buildTabConfig(
-        screen: const SettingsPage(),
-        route: AppRoute.explore.path,
-        icon: Icons.explore,
-        inactiveIcon: Icons.explore_outlined,
-        title: localization.explore_page,
-      ),
-      _buildTabConfig(
-        screen: const SettingsPage(),
-        route: AppRoute.settings.path,
-        icon: Icons.person,
-        inactiveIcon: Icons.person_outline,
-        title: localization.setting_page,
-      ),
-    ];
-
     return SafeArea(
-      child: PersistentTabView(
-        onTabChanged: (value) {},
-        gestureNavigationEnabled: true,
-        tabs: tabs,
-        navBarBuilder: (navBarConfig) => Style8BottomNavBar(
-          navBarConfig: navBarConfig,
-          navBarDecoration: const NavBarDecoration(
-            border: Border(top: BorderSide(color: AppColors.defaultBorderSide)),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.defaultElevation,
-                blurRadius: 2,
-                spreadRadius: 2,
-              )
-            ],
-          ),
+      child: Scaffold(
+        body: IndexedStack(
+          index: _currentIndexTab,
+          children: tabs,
         ),
-      ),
-    );
-  }
-
-  PersistentTabConfig _buildTabConfig({
-    required Widget screen,
-    required String route,
-    required IconData icon,
-    required IconData inactiveIcon,
-    required String title,
-  }) {
-    return PersistentTabConfig(
-      screen: screen,
-      navigatorConfig: NavigatorConfig(initialRoute: route),
-      item: ItemConfig(
-        icon: Icon(icon),
-        inactiveIcon: Icon(inactiveIcon, color: AppColors.primary),
-        title: title,
-        activeForegroundColor: AppColors.textLight,
-        activeColorSecondary: AppColors.primary,
+        bottomNavigationBar: GNav(
+          tabs: navButtons,
+          activeColor: AppColors.textLight,
+          gap: 5,
+          tabBackgroundColor: AppColors.primary,
+          hoverColor: AppColors.primary,
+          rippleColor: AppColors.primary,
+          onTabChange: (index) => setState(() => _currentIndexTab = index),
+        ),
       ),
     );
   }

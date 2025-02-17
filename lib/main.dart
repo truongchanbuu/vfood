@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/localization/app_localization.dart';
-import 'config/routes/app_router.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
 import 'features/settings/presentations/bloc/settings_cubit.dart';
+import 'features/shared/presentations/pages/app_view.dart';
 import 'firebase_options.dart';
 import 'injection_container.dart';
 
@@ -37,13 +37,13 @@ class AppContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppCommons.appName,
       theme: AppTheme.lightTheme,
-      routerConfig: AppRouter.appRouter,
       localizationsDelegates: AppLocalization.delegates,
       supportedLocales: AppLocalization.supportedLanguages,
+      home: const AppView(),
     );
   }
 }
