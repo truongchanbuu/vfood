@@ -195,6 +195,21 @@ class S {
     return Intl.message('Content', name: 'content_field', desc: '', args: []);
   }
 
+  /// `Password`
+  String get password_field {
+    return Intl.message('Password', name: 'password_field', desc: '', args: []);
+  }
+
+  /// `Confirm Password`
+  String get confirm_password_field {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password_field',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please enter your full name`
   String get full_name_empty {
     return Intl.message(
@@ -615,6 +630,71 @@ class S {
     return Intl.message(
       'Failed to open facebook',
       name: 'fb_contact_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By signing in or logging in, you agree to our Terms of Service and Privacy Policy`
+  String get terms_of_service_and_privacy_policy {
+    return Intl.message(
+      'By signing in or logging in, you agree to our Terms of Service and Privacy Policy',
+      name: 'terms_of_service_and_privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Account`
+  String get create_account_title {
+    return Intl.message(
+      'Create Account',
+      name: 'create_account_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome_title {
+    return Intl.message('Welcome', name: 'welcome_title', desc: '', args: []);
+  }
+
+  /// `Sign in`
+  String get sign_in_button {
+    return Intl.message('Sign in', name: 'sign_in_button', desc: '', args: []);
+  }
+
+  /// `Sign up`
+  String get sign_up_button {
+    return Intl.message('Sign up', name: 'sign_up_button', desc: '', args: []);
+  }
+
+  /// `Continue with Google`
+  String get continue_with_google_button {
+    return Intl.message(
+      'Continue with Google',
+      name: 'continue_with_google_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get already_have_account_title {
+    return Intl.message(
+      'Already have an account?',
+      name: 'already_have_account_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don\'t have an account?`
+  String get do_not_have_account_title {
+    return Intl.message(
+      'Don\\\'t have an account?',
+      name: 'do_not_have_account_title',
       desc: '',
       args: [],
     );

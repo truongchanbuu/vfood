@@ -18,13 +18,13 @@ class ContactCubit extends Cubit<ContactState> {
       final Uri phoneUri = Uri(scheme: 'tel', path: '+84123456789');
       if (await canLaunchUrl(phoneUri)) {
         await launchUrl(phoneUri);
-        emit(ContactSuccess());
+        emit(ContactSucceed());
       } else {
-        emit(ContactFailure(S.current.phone_contact_error));
+        emit(ContactFailed(S.current.phone_contact_error));
       }
     } catch (e) {
       _appLogger.e(e);
-      emit(ContactFailure(S.current.unknown_exception));
+      emit(ContactFailed(S.current.unknown_exception));
     }
   }
 
@@ -34,12 +34,13 @@ class ContactCubit extends Cubit<ContactState> {
 
       if (await canLaunchUrl(fbUri)) {
         await launchUrl(fbUri, mode: LaunchMode.externalApplication);
+        emit(ContactSucceed());
       } else {
-        emit(ContactFailure(S.current.fb_contact_error));
+        emit(ContactFailed(S.current.fb_contact_error));
       }
     } catch (e) {
       _appLogger.e(e);
-      emit(ContactFailure(S.current.unknown_exception));
+      emit(ContactFailed(S.current.unknown_exception));
     }
   }
 
@@ -59,12 +60,13 @@ class ContactCubit extends Cubit<ContactState> {
 
       if (await canLaunchUrl(emailUri)) {
         await launchUrl(emailUri);
+        emit(ContactSucceed());
       } else {
-        emit(ContactFailure(S.current.email_contact_error));
+        emit(ContactFailed(S.current.email_contact_error));
       }
     } catch (e) {
       _appLogger.e(e);
-      emit(ContactFailure(S.current.unknown_exception));
+      emit(ContactFailed(S.current.unknown_exception));
     }
   }
 }

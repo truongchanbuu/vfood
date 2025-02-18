@@ -79,7 +79,7 @@ class _ContactSupportPageState extends State<ContactSupportPage> {
   Widget build(BuildContext context) {
     return BlocListener<ContactCubit, ContactState>(
       listener: (context, state) {
-        if (state is ContactFailure) {
+        if (state is ContactFailed) {
           CherryToast.error(
             description: Text(state.errorMessage),
             animationDuration: AppCommons.toastAnimationDuration,

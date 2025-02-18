@@ -9,11 +9,11 @@ sealed class ContactState extends Equatable {
 
 final class ContactInitial extends ContactState {}
 
-final class ContactSuccess extends ContactState {}
+final class ContactSucceed extends ContactState {}
 
-final class ContactFailure extends ContactState {
+final class ContactFailed extends ContactState {
   final String errorMessage;
-  const ContactFailure(this.errorMessage);
+  const ContactFailed(this.errorMessage);
 
   @override
   List<Object> get props => [errorMessage];

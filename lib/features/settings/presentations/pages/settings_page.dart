@@ -10,6 +10,7 @@ import '../../../../cores/helpers/setting_helper.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../injection_container.dart';
 import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
+import '../../../auth/presentations/pages/auth_page.dart';
 import '../bloc/contact/contact_cubit.dart';
 import '../bloc/setting/settings_cubit.dart';
 import '../widgets/setting_selection_bottom_sheet.dart';
@@ -81,7 +82,7 @@ class SettingsPage extends StatelessWidget {
                         _buildNavigationTile(
                           context,
                           S.current.authenticate_button,
-                          () {},
+                          () => _onAuth(context),
                         ),
                       ],
               ),
@@ -275,6 +276,16 @@ class SettingsPage extends StatelessWidget {
           create: (_) => getIt.get<ContactCubit>(),
           child: const ContactSupportPage(),
         ),
+      ),
+    );
+  }
+
+  void _onAuth(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.leftToRight,
+        child: const AuthPage(),
       ),
     );
   }

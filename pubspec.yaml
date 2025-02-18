@@ -66,11 +66,13 @@ dependencies:
 
   # Feature
   url_launcher: ^6.3.1
+  formz: ^0.8.0
 
   # Animation
   page_transition: ^2.2.1
 
   # UI
+  iconify_flutter_plus: ^1.0.4
   google_nav_bar: ^5.0.7
   cherry_toast: ^1.12.0
 

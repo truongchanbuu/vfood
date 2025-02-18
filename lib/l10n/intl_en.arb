@@ -19,6 +19,8 @@
   "full_name_field": "Full Name",
   "subject_field": "Subject",
   "content_field": "Content",
+  "password_field": "Password",
+  "confirm_password_field": "Confirm Password",
 
   "@__FORM_EXCEPTION__": {},
   "full_name_empty": "Please enter your full name",
@@ -77,5 +79,15 @@
   "email_receiver": "Dear support team",
   "email_body_contact": "I need your help for ",
   "email_contact_error": "Failed to write an email",
-  "fb_contact_error": "Failed to open facebook"
+  "fb_contact_error": "Failed to open facebook",
+
+  "@__AUTH_PAGE__": {},
+  "terms_of_service_and_privacy_policy": "By signing in or logging in, you agree to our Terms of Service and Privacy Policy",
+  "create_account_title": "Create Account",
+  "welcome_title": "Welcome",
+  "sign_in_button": "Sign in",
+  "sign_up_button": "Sign up",
+  "continue_with_google_button": "Continue with Google",
+  "already_have_account_title": "Already have an account?",
+  "do_not_have_account_title": "Don\\'t have an account?"
 }

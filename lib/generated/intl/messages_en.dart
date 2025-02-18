@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "account_setting_section_title": MessageLookupByLibrary.simpleMessage(
       "Account Settings",
     ),
+    "already_have_account_title": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
     "app_information_title": MessageLookupByLibrary.simpleMessage(
       "App Information",
     ),
@@ -40,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "authenticate_button": MessageLookupByLibrary.simpleMessage(
       "Sign in/Sign up",
     ),
+    "confirm_password_field": MessageLookupByLibrary.simpleMessage(
+      "Confirm Password",
+    ),
     "contact_support_title": MessageLookupByLibrary.simpleMessage(
       "Contact Support",
     ),
@@ -48,7 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter your content",
     ),
     "content_field": MessageLookupByLibrary.simpleMessage("Content"),
+    "continue_with_google_button": MessageLookupByLibrary.simpleMessage(
+      "Continue with Google",
+    ),
+    "create_account_title": MessageLookupByLibrary.simpleMessage(
+      "Create Account",
+    ),
     "dark_mode_option": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+    "do_not_have_account_title": MessageLookupByLibrary.simpleMessage(
+      "Don\\\'t have an account?",
+    ),
     "email_already_in_use": MessageLookupByLibrary.simpleMessage(
       "This email address is already in use",
     ),
@@ -111,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "other_contact": MessageLookupByLibrary.simpleMessage("Other contacts"),
     "others_option": MessageLookupByLibrary.simpleMessage("Others"),
+    "password_field": MessageLookupByLibrary.simpleMessage("Password"),
     "payment_option": MessageLookupByLibrary.simpleMessage("Payment"),
     "phone_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to make a call",
@@ -125,6 +141,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_button": MessageLookupByLibrary.simpleMessage("Search"),
     "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
     "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
+    "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your subject",
     ),
@@ -148,6 +166,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "terms_and_conditions_title": MessageLookupByLibrary.simpleMessage(
       "Terms & Conditions",
     ),
+    "terms_of_service_and_privacy_policy": MessageLookupByLibrary.simpleMessage(
+      "By signing in or logging in, you agree to our Terms of Service and Privacy Policy",
+    ),
     "unknown_exception": MessageLookupByLibrary.simpleMessage(
       "Unknown Exception",
     ),
@@ -162,6 +183,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "weak_password": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak",
     ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage("Welcome"),
     "wrong_password": MessageLookupByLibrary.simpleMessage(
       "The password is incorrect",
     ),

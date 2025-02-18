@@ -55,6 +55,14 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         contentPadding: const EdgeInsets.all(AppSpacing.paddingM),
+        iconColor: brightness == Brightness.light
+            ? AppColors.textDark
+            : AppColors.textLight,
+        floatingLabelStyle: TextStyle(
+          color: brightness == Brightness.light
+              ? AppColors.textDark
+              : AppColors.textLight,
+        ),
         border: _buildInputBorder(AppColors.textGray.withValues(alpha: .3)),
         enabledBorder:
             _buildInputBorder(AppColors.textGray.withValues(alpha: .3)),
