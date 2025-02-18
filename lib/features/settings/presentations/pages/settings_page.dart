@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../../../../cores/constants/colors.dart';
+import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../cores/helpers/setting_helper.dart';
@@ -195,7 +196,10 @@ class SettingsPage extends StatelessWidget {
         style:
             TextStyle(color: context.isDarkMode ? Colors.white : Colors.black),
       ),
-      trailing: const Icon(Icons.chevron_right),
+      trailing: Icon(
+        Icons.chevron_right,
+        color: context.isDarkMode ? AppColors.textLight : AppColors.textGray,
+      ),
       onTap: onTap,
     );
   }
@@ -244,8 +248,18 @@ class SettingsPage extends StatelessWidget {
       useSafeArea: true,
       builder: (context) => Column(
         children: [
-          Text(S.current.terms_and_conditions_title),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: AppSpacing.paddingS),
+            child: Text(
+              S.current.terms_and_conditions_title,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: AppFontSize.h2,
+              ),
+            ),
+          ),
           const Divider(height: 1),
+          const SizedBox(height: AppSpacing.marginS),
           const Text('This is terms and conditions')
         ],
       ),
