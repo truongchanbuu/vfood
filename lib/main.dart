@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'config/localization/app_localization.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
+import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import 'features/settings/presentations/bloc/settings_cubit.dart';
 import 'features/shared/presentations/pages/app_view.dart';
 import 'firebase_options.dart';
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(
+          create: (_) =>
+              getIt.get<AuthBloc>()..add(AuthUserSubscriptionRequest()),
+        ),
         BlocProvider(create: (_) => getIt.get<SettingsCubit>()),
       ],
       child: const AppContainer(),

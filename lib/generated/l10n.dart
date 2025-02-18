@@ -55,6 +55,126 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Unknown Exception`
+  String get unknown_exception {
+    return Intl.message(
+      'Unknown Exception',
+      name: 'unknown_exception',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email address`
+  String get invalid_email {
+    return Intl.message(
+      'Invalid email address',
+      name: 'invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user account has been disabled`
+  String get user_disabled {
+    return Intl.message(
+      'This user account has been disabled',
+      name: 'user_disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This email address is already in use`
+  String get email_already_in_use {
+    return Intl.message(
+      'This email address is already in use',
+      name: 'email_already_in_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This operation is not allowed`
+  String get operation_not_allowed {
+    return Intl.message(
+      'This operation is not allowed',
+      name: 'operation_not_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak`
+  String get weak_password {
+    return Intl.message(
+      'The password provided is too weak',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found with this email address`
+  String get user_not_found {
+    return Intl.message(
+      'No user found with this email address',
+      name: 'user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password is incorrect`
+  String get wrong_password {
+    return Intl.message(
+      'The password is incorrect',
+      name: 'wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An account already exists with a different credential`
+  String get account_exists_with_different_credential {
+    return Intl.message(
+      'An account already exists with a different credential',
+      name: 'account_exists_with_different_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The credential is invalid`
+  String get invalid_credential {
+    return Intl.message(
+      'The credential is invalid',
+      name: 'invalid_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification code is invalid`
+  String get invalid_verification_code {
+    return Intl.message(
+      'The verification code is invalid',
+      name: 'invalid_verification_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification ID is invalid`
+  String get invalid_verification_id {
+    return Intl.message(
+      'The verification ID is invalid',
+      name: 'invalid_verification_id',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get homepage {
     return Intl.message('Home', name: 'homepage', desc: '', args: []);

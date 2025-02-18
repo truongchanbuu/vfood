@@ -1,6 +1,20 @@
 {
   "@@locale": "en",
 
+  "@__AUTH_EXCEPTION__": {},
+  "unknown_exception": "Unknown Exception",
+  "invalid_email": "Invalid email address",
+  "user_disabled": "This user account has been disabled",
+  "email_already_in_use": "This email address is already in use",
+  "operation_not_allowed": "This operation is not allowed",
+  "weak_password": "The password provided is too weak",
+  "user_not_found": "No user found with this email address",
+  "wrong_password": "The password is incorrect",
+  "account_exists_with_different_credential": "An account already exists with a different credential",
+  "invalid_credential": "The credential is invalid",
+  "invalid_verification_code": "The verification code is invalid",
+  "invalid_verification_id": "The verification ID is invalid",
+
   "@__BOTTOM_NAV_BAR__": {},
   "homepage": "Home",
   "explore_page": "Explore",

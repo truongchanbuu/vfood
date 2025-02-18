@@ -23,6 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about_us_title": MessageLookupByLibrary.simpleMessage("About us"),
+    "account_exists_with_different_credential":
+        MessageLookupByLibrary.simpleMessage(
+          "An account already exists with a different credential",
+        ),
     "account_setting_section_title": MessageLookupByLibrary.simpleMessage(
       "Account Settings",
     ),
@@ -34,6 +38,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Contact Support",
     ),
     "dark_mode_option": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+    "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+      "This email address is already in use",
+    ),
     "english_option": MessageLookupByLibrary.simpleMessage("English"),
     "explore_page": MessageLookupByLibrary.simpleMessage("Explore"),
     "favorite_food_section_title": MessageLookupByLibrary.simpleMessage(
@@ -43,8 +50,23 @@ class MessageLookup extends MessageLookupByLibrary {
       "General Settings",
     ),
     "homepage": MessageLookupByLibrary.simpleMessage("Home"),
+    "invalid_credential": MessageLookupByLibrary.simpleMessage(
+      "The credential is invalid",
+    ),
+    "invalid_email": MessageLookupByLibrary.simpleMessage(
+      "Invalid email address",
+    ),
+    "invalid_verification_code": MessageLookupByLibrary.simpleMessage(
+      "The verification code is invalid",
+    ),
+    "invalid_verification_id": MessageLookupByLibrary.simpleMessage(
+      "The verification ID is invalid",
+    ),
     "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
+      "This operation is not allowed",
+    ),
     "profile_management_section_title": MessageLookupByLibrary.simpleMessage(
       "Profile Management",
     ),
@@ -60,7 +82,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "terms_and_conditions_title": MessageLookupByLibrary.simpleMessage(
       "Terms & Conditions",
     ),
+    "unknown_exception": MessageLookupByLibrary.simpleMessage(
+      "Unknown Exception",
+    ),
     "upload_button": MessageLookupByLibrary.simpleMessage("Upload"),
+    "user_disabled": MessageLookupByLibrary.simpleMessage(
+      "This user account has been disabled",
+    ),
+    "user_not_found": MessageLookupByLibrary.simpleMessage(
+      "No user found with this email address",
+    ),
     "vietnamese_option": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+    "weak_password": MessageLookupByLibrary.simpleMessage(
+      "The password provided is too weak",
+    ),
+    "wrong_password": MessageLookupByLibrary.simpleMessage(
+      "The password is incorrect",
+    ),
   };
 }
