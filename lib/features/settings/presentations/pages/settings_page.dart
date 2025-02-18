@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../../cores/constants/colors.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../cores/helpers/setting_helper.dart';
 import '../../../../generated/l10n.dart';
-import '../bloc/settings_cubit.dart';
+import '../../../../injection_container.dart';
+import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
+import '../bloc/contact/contact_cubit.dart';
+import '../bloc/setting/settings_cubit.dart';
 import '../widgets/setting_selection_bottom_sheet.dart';
+import 'contact_support_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final currentAuthStatus = context.select(
+      (AuthBloc auth) => auth.state.status,
+    );
+
     final backgroundColor =
         context.isDarkMode ? AppColors.backgroundDark : AppColors.background;
 
@@ -45,25 +54,36 @@ class SettingsPage extends StatelessWidget {
                 context,
                 S.current.account_setting_section_title,
               ),
-              _buildSettingsCard(context, [
-                _buildNavigationTile(
-                  context,
-                  S.current.profile_management_section_title,
-                  () {},
-                ),
-                const Divider(height: 1),
-                _buildNavigationTile(
-                  context,
-                  S.current.recent_searches_section_title,
-                  () {},
-                ),
-                const Divider(height: 1),
-                _buildNavigationTile(
-                  context,
-                  S.current.favorite_food_section_title,
-                  () {},
-                ),
-              ]),
+              _buildSettingsCard(
+                context,
+                currentAuthStatus == AuthStatus.authenticated
+                    ? [
+                        _buildNavigationTile(
+                          context,
+                          S.current.profile_management_section_title,
+                          () {},
+                        ),
+                        const Divider(height: 1),
+                        _buildNavigationTile(
+                          context,
+                          S.current.recent_searches_section_title,
+                          () {},
+                        ),
+                        const Divider(height: 1),
+                        _buildNavigationTile(
+                          context,
+                          S.current.favorite_food_section_title,
+                          () {},
+                        ),
+                      ]
+                    : [
+                        _buildNavigationTile(
+                          context,
+                          S.current.authenticate_button,
+                          () {},
+                        ),
+                      ],
+              ),
               _buildSectionHeader(
                 context,
                 S.current.support_and_feedback_section_title,
@@ -72,12 +92,12 @@ class SettingsPage extends StatelessWidget {
                 _buildNavigationTile(
                   context,
                   S.current.contact_support_title,
-                  () {},
+                  () => _onContactSupportDisplayed(context),
                 ),
                 const Divider(height: 1),
                 _buildNavigationTile(
                   context,
-                  'FAQs',
+                  S.current.faqs_title,
                   () {},
                 ),
                 const Divider(height: 1),
@@ -228,6 +248,19 @@ class SettingsPage extends StatelessWidget {
           const Divider(height: 1),
           const Text('This is terms and conditions')
         ],
+      ),
+    );
+  }
+
+  void _onContactSupportDisplayed(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.bottomToTop,
+        child: BlocProvider(
+          create: (_) => getIt.get<ContactCubit>(),
+          child: const ContactSupportPage(),
+        ),
       ),
     );
   }

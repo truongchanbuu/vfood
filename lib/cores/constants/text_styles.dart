@@ -6,7 +6,7 @@ class AppTextStyle {
   static TextStyle _baseTextStyle({
     required double fontSize,
     FontWeight fontWeight = FontWeight.normal,
-    Color color = AppColors.textPrimary,
+    Color color = AppColors.textDartGray,
   }) {
     return TextStyle(
       fontSize: fontSize,
@@ -49,7 +49,7 @@ class AppTextStyle {
 
   static TextStyle foodDescription = _baseTextStyle(
     fontSize: AppFontSize.bodyMedium,
-    color: AppColors.textSecondary,
+    color: AppColors.textGray,
   );
 
   static TextStyle ingredientLabel = _baseTextStyle(

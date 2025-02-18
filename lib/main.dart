@@ -6,7 +6,7 @@ import 'config/localization/app_localization.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
-import 'features/settings/presentations/bloc/settings_cubit.dart';
+import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'features/shared/presentations/pages/app_view.dart';
 import 'firebase_options.dart';
 import 'injection_container.dart';
@@ -14,8 +14,7 @@ import 'injection_container.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  initializeDependencies();
-
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

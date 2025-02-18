@@ -55,9 +55,9 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         contentPadding: const EdgeInsets.all(AppSpacing.paddingM),
-        border: _buildInputBorder(AppColors.textSecondary.withOpacity(0.3)),
+        border: _buildInputBorder(AppColors.textGray.withValues(alpha: .3)),
         enabledBorder:
-            _buildInputBorder(AppColors.textSecondary.withOpacity(0.3)),
+            _buildInputBorder(AppColors.textGray.withValues(alpha: .3)),
         focusedBorder: _buildInputBorder(AppColors.primary, width: 2),
         fillColor: brightness == Brightness.light
             ? AppColors.surfaceLight
@@ -87,7 +87,7 @@ class AppTheme {
       error: AppColors.error,
       onPrimary: Colors.white,
       onSecondary: Colors.white,
-      onSurface: AppColors.textPrimary,
+      onSurface: AppColors.textDartGray,
     ),
   );
 

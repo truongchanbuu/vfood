@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../cores/constants/storage_keys.dart';
-import '../../../../cores/helpers/cached_client.dart';
-import '../../../../cores/helpers/setting_helper.dart';
+import '../../../../../cores/constants/storage_keys.dart';
+import '../../../../../cores/helpers/cached_client.dart';
+import '../../../../../cores/helpers/setting_helper.dart';
 
 part 'settings_state.dart';
 

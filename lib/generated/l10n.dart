@@ -175,6 +175,76 @@ class S {
     );
   }
 
+  /// `Full Name`
+  String get full_name_field {
+    return Intl.message(
+      'Full Name',
+      name: 'full_name_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subject`
+  String get subject_field {
+    return Intl.message('Subject', name: 'subject_field', desc: '', args: []);
+  }
+
+  /// `Content`
+  String get content_field {
+    return Intl.message('Content', name: 'content_field', desc: '', args: []);
+  }
+
+  /// `Please enter your full name`
+  String get full_name_empty {
+    return Intl.message(
+      'Please enter your full name',
+      name: 'full_name_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email`
+  String get email_empty {
+    return Intl.message(
+      'Please enter your email',
+      name: 'email_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your subject`
+  String get subject_empty {
+    return Intl.message(
+      'Please enter your subject',
+      name: 'subject_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your content`
+  String get content_empty {
+    return Intl.message(
+      'Please enter your content',
+      name: 'content_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please choose an issue`
+  String get issues_empty {
+    return Intl.message(
+      'Please choose an issue',
+      name: 'issues_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get homepage {
     return Intl.message('Home', name: 'homepage', desc: '', args: []);
@@ -270,6 +340,16 @@ class S {
     );
   }
 
+  /// `Sign in/Sign up`
+  String get authenticate_button {
+    return Intl.message(
+      'Sign in/Sign up',
+      name: 'authenticate_button',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Profile Management`
   String get profile_management_section_title {
     return Intl.message(
@@ -308,6 +388,11 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `FAQs`
+  String get faqs_title {
+    return Intl.message('FAQs', name: 'faqs_title', desc: '', args: []);
   }
 
   /// `Contact Support`
@@ -350,6 +435,186 @@ class S {
     return Intl.message(
       'Terms & Conditions',
       name: 'terms_and_conditions_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support`
+  String get support_title {
+    return Intl.message('Support', name: 'support_title', desc: '', args: []);
+  }
+
+  /// `Contact us`
+  String get contact_with_us_title {
+    return Intl.message(
+      'Contact us',
+      name: 'contact_with_us_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will response within 24 hours`
+  String get support_response_time_desc {
+    return Intl.message(
+      'We will response within 24 hours',
+      name: 'support_response_time_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Issue Types`
+  String get issue_type {
+    return Intl.message('Issue Types', name: 'issue_type', desc: '', args: []);
+  }
+
+  /// `Attach Image (Optional)`
+  String get attached_image_title {
+    return Intl.message(
+      'Attach Image (Optional)',
+      name: 'attached_image_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit support request`
+  String get submit_support_request {
+    return Intl.message(
+      'Submit support request',
+      name: 'submit_support_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other contacts`
+  String get other_contact {
+    return Intl.message(
+      'Other contacts',
+      name: 'other_contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone_contact_option {
+    return Intl.message(
+      'Phone',
+      name: 'phone_contact_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technical Issues`
+  String get technical_issue_option {
+    return Intl.message(
+      'Technical Issues',
+      name: 'technical_issue_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect food recognition`
+  String get incorrect_food_detection_option {
+    return Intl.message(
+      'Incorrect food recognition',
+      name: 'incorrect_food_detection_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incomplete Food Information`
+  String get incomplete_food_information_option {
+    return Intl.message(
+      'Incomplete Food Information',
+      name: 'incomplete_food_information_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get payment_option {
+    return Intl.message('Payment', name: 'payment_option', desc: '', args: []);
+  }
+
+  /// `Suggest new food`
+  String get suggest_new_food_option {
+    return Intl.message(
+      'Suggest new food',
+      name: 'suggest_new_food_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Others`
+  String get others_option {
+    return Intl.message('Others', name: 'others_option', desc: '', args: []);
+  }
+
+  /// `Failed to make a call`
+  String get phone_contact_error {
+    return Intl.message(
+      'Failed to make a call',
+      name: 'phone_contact_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support Request`
+  String get email_subject_contact {
+    return Intl.message(
+      'Support Request',
+      name: 'email_subject_contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dear support team`
+  String get email_receiver {
+    return Intl.message(
+      'Dear support team',
+      name: 'email_receiver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I need your help for `
+  String get email_body_contact {
+    return Intl.message(
+      'I need your help for ',
+      name: 'email_body_contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to write an email`
+  String get email_contact_error {
+    return Intl.message(
+      'Failed to write an email',
+      name: 'email_contact_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to open facebook`
+  String get fb_contact_error {
+    return Intl.message(
+      'Failed to open facebook',
+      name: 'fb_contact_error',
       desc: '',
       args: [],
     );
