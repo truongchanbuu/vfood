@@ -55,6 +55,31 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Failure`
+  String get failure_notification_title {
+    return Intl.message(
+      'Failure',
+      name: 'failure_notification_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success_notification_title {
+    return Intl.message(
+      'Success',
+      name: 'success_notification_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send_button {
+    return Intl.message('Send', name: 'send_button', desc: '', args: []);
+  }
+
   /// `Unknown Exception`
   String get unknown_exception {
     return Intl.message(
@@ -75,101 +100,131 @@ class S {
     );
   }
 
-  /// `This user account has been disabled`
+  /// `This user account has been disabled. Please contact support`
   String get user_disabled {
     return Intl.message(
-      'This user account has been disabled',
+      'This user account has been disabled. Please contact support',
       name: 'user_disabled',
       desc: '',
       args: [],
     );
   }
 
-  /// `This email address is already in use`
+  /// `This email address is already registered`
   String get email_already_in_use {
     return Intl.message(
-      'This email address is already in use',
+      'This email address is already registered',
       name: 'email_already_in_use',
       desc: '',
       args: [],
     );
   }
 
-  /// `This operation is not allowed`
+  /// `This action is not allowed`
   String get operation_not_allowed {
     return Intl.message(
-      'This operation is not allowed',
+      'This action is not allowed',
       name: 'operation_not_allowed',
       desc: '',
       args: [],
     );
   }
 
-  /// `The password provided is too weak`
+  /// `The password is too weak`
   String get weak_password {
     return Intl.message(
-      'The password provided is too weak',
+      'The password is too weak',
       name: 'weak_password',
       desc: '',
       args: [],
     );
   }
 
-  /// `No user found with this email address`
+  /// `Invalid email or password`
   String get user_not_found {
     return Intl.message(
-      'No user found with this email address',
+      'Invalid email or password',
       name: 'user_not_found',
       desc: '',
       args: [],
     );
   }
 
-  /// `The password is incorrect`
+  /// `Invalid email or password`
   String get wrong_password {
     return Intl.message(
-      'The password is incorrect',
+      'Invalid email or password',
       name: 'wrong_password',
       desc: '',
       args: [],
     );
   }
 
-  /// `An account already exists with a different credential`
+  /// `This account is linked with a different sign-in method`
   String get account_exists_with_different_credential {
     return Intl.message(
-      'An account already exists with a different credential',
+      'This account is linked with a different sign-in method',
       name: 'account_exists_with_different_credential',
       desc: '',
       args: [],
     );
   }
 
-  /// `The credential is invalid`
+  /// `Invalid email or password`
   String get invalid_credential {
     return Intl.message(
-      'The credential is invalid',
+      'Invalid email or password',
       name: 'invalid_credential',
       desc: '',
       args: [],
     );
   }
 
-  /// `The verification code is invalid`
+  /// `The verification is failed`
   String get invalid_verification_code {
     return Intl.message(
-      'The verification code is invalid',
+      'The verification is failed',
       name: 'invalid_verification_code',
       desc: '',
       args: [],
     );
   }
 
-  /// `The verification ID is invalid`
+  /// `The verification is failed`
   String get invalid_verification_id {
     return Intl.message(
-      'The verification ID is invalid',
+      'The verification is failed',
       name: 'invalid_verification_id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Failed`
+  String get login_failed {
+    return Intl.message(
+      'Login Failed',
+      name: 'login_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up Failed`
+  String get sign_up_failed {
+    return Intl.message(
+      'Sign Up Failed',
+      name: 'sign_up_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Failed`
+  String get reset_failed {
+    return Intl.message(
+      'Reset Failed',
+      name: 'reset_failed',
       desc: '',
       args: [],
     );
@@ -255,6 +310,16 @@ class S {
     return Intl.message(
       'Please choose an issue',
       name: 'issues_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The confirm password does not match`
+  String get different_confirm_password {
+    return Intl.message(
+      'The confirm password does not match',
+      name: 'different_confirm_password',
       desc: '',
       args: [],
     );
@@ -695,6 +760,26 @@ class S {
     return Intl.message(
       'Don\\\'t have an account?',
       name: 'do_not_have_account_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password`
+  String get forgot_password_title {
+    return Intl.message(
+      'Forgot password',
+      name: 'forgot_password_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A reset email is sent. Please check your mailbox`
+  String get reset_email_sent {
+    return Intl.message(
+      'A reset email is sent. Please check your mailbox',
+      name: 'reset_email_sent',
       desc: '',
       args: [],
     );

@@ -11,8 +11,8 @@ class AppLogger {
     _logger = Logger(
       printer: PrettyPrinter(
         methodCount: 3,
-        errorMethodCount: 8,
-        lineLength: 120,
+        errorMethodCount: 10,
+        lineLength: 300,
         colors: true,
         printEmojis: true,
         dateTimeFormat: DateTimeFormat.dateAndTime,

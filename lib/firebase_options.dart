@@ -46,7 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '681570161969',
     projectId: 'vfood-72eda',
     authDomain: 'vfood-72eda.firebaseapp.com',
-    storageBucket: 'vfood-72eda.appspot.com',
+    storageBucket: 'vfood-72eda.firebasestorage.app',
     measurementId: 'G-FCY449EP0H',
   );
 
@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
     appId: '1:681570161969:android:563e6f4fc299f010804c10',
     messagingSenderId: '681570161969',
     projectId: 'vfood-72eda',
-    storageBucket: 'vfood-72eda.appspot.com',
+    storageBucket: 'vfood-72eda.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -63,7 +63,9 @@ class DefaultFirebaseOptions {
     appId: '1:681570161969:ios:43f83ce1a58f5fed804c10',
     messagingSenderId: '681570161969',
     projectId: 'vfood-72eda',
-    storageBucket: 'vfood-72eda.appspot.com',
+    storageBucket: 'vfood-72eda.firebasestorage.app',
+    androidClientId: '681570161969-fr30maqbqqmfdqhqte648h2eu5p01f26.apps.googleusercontent.com',
+    iosClientId: '681570161969-jh0ikueg928995l67snid2383b2pml9b.apps.googleusercontent.com',
     iosBundleId: 'com.bestrong.vfood',
   );
 
@@ -72,7 +74,9 @@ class DefaultFirebaseOptions {
     appId: '1:681570161969:ios:43f83ce1a58f5fed804c10',
     messagingSenderId: '681570161969',
     projectId: 'vfood-72eda',
-    storageBucket: 'vfood-72eda.appspot.com',
+    storageBucket: 'vfood-72eda.firebasestorage.app',
+    androidClientId: '681570161969-fr30maqbqqmfdqhqte648h2eu5p01f26.apps.googleusercontent.com',
+    iosClientId: '681570161969-jh0ikueg928995l67snid2383b2pml9b.apps.googleusercontent.com',
     iosBundleId: 'com.bestrong.vfood',
   );
 
@@ -82,7 +86,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '681570161969',
     projectId: 'vfood-72eda',
     authDomain: 'vfood-72eda.firebaseapp.com',
-    storageBucket: 'vfood-72eda.appspot.com',
+    storageBucket: 'vfood-72eda.firebasestorage.app',
     measurementId: 'G-44CDS7WBF8',
   );
+
 }

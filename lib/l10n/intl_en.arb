@@ -1,19 +1,27 @@
 {
   "@@locale": "en",
 
+  "@__COMMON__": {},
+  "failure_notification_title": "Failure",
+  "success_notification_title": "Success",
+  "send_button": "Send",
+
   "@__AUTH_EXCEPTION__": {},
   "unknown_exception": "Unknown Exception",
   "invalid_email": "Invalid email address",
-  "user_disabled": "This user account has been disabled",
-  "email_already_in_use": "This email address is already in use",
-  "operation_not_allowed": "This operation is not allowed",
-  "weak_password": "The password provided is too weak",
-  "user_not_found": "No user found with this email address",
-  "wrong_password": "The password is incorrect",
-  "account_exists_with_different_credential": "An account already exists with a different credential",
-  "invalid_credential": "The credential is invalid",
-  "invalid_verification_code": "The verification code is invalid",
-  "invalid_verification_id": "The verification ID is invalid",
+  "user_disabled": "This user account has been disabled. Please contact support",
+  "email_already_in_use": "This email address is already registered",
+  "operation_not_allowed": "This action is not allowed",
+  "weak_password": "The password is too weak",
+  "user_not_found": "Invalid email or password",
+  "wrong_password": "Invalid email or password",
+  "account_exists_with_different_credential": "This account is linked with a different sign-in method",
+  "invalid_credential": "Invalid email or password",
+  "invalid_verification_code": "The verification is failed",
+  "invalid_verification_id": "The verification is failed",
+  "login_failed": "Login Failed",
+  "sign_up_failed": "Sign Up Failed",
+  "reset_failed": "Reset Failed",
 
   "@__FORM_FIELD__": {},
   "full_name_field": "Full Name",
@@ -28,6 +36,7 @@
   "subject_empty": "Please enter your subject",
   "content_empty": "Please enter your content",
   "issues_empty": "Please choose an issue",
+  "different_confirm_password": "The confirm password does not match",
 
   "@__BOTTOM_NAV_BAR__": {},
   "homepage": "Home",
@@ -89,5 +98,7 @@
   "sign_up_button": "Sign up",
   "continue_with_google_button": "Continue with Google",
   "already_have_account_title": "Already have an account?",
-  "do_not_have_account_title": "Don\\'t have an account?"
+  "do_not_have_account_title": "Don\\'t have an account?",
+  "forgot_password_title": "Forgot password",
+  "reset_email_sent": "A reset email is sent. Please check your mailbox"
 }

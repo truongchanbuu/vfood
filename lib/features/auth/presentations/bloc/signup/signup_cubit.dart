@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 
 import '../../../../../cores/exceptions/firebase_auth_exception.dart';
+import '../../../data/models/confirm_password.dart';
 import '../../../data/models/email.dart';
 import '../../../data/models/password.dart';
 import '../../../domain/repositories/auth_repository.dart';
@@ -20,7 +21,19 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   void passwordChanged(String value) {
     final password = Password.dirty(value);
-    emit(PasswordChanged(state, password));
+    final confirmPassword = ConfirmPassword.dirty(
+      password: value,
+      value: state.confirmPassword.value,
+    );
+    emit(PasswordChanged(state, password, confirmPassword: confirmPassword));
+  }
+
+  void confirmPasswordChanged(String value) {
+    final confirmPassword = ConfirmPassword.dirty(
+      password: state.password.value,
+      value: value,
+    );
+    emit(ConfirmPasswordChanged(state, confirmPassword));
   }
 
   Future<void> signUpFormSubmitted() async {

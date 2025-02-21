@@ -70,7 +70,7 @@ final class LoginSucceed extends LoginState {
           password: current.password,
           formStatus: FormzSubmissionStatus.success,
           isValid: current.isValid,
-          errorMessage: current.errorMessage,
+          errorMessage: null,
         );
 }
 

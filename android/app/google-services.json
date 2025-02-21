@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "681570161969",
     "project_id": "vfood-72eda",
-    "storage_bucket": "vfood-72eda.appspot.com"
+    "storage_bucket": "vfood-72eda.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +12,20 @@
           "package_name": "com.bestrong.vfood"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "681570161969-fr30maqbqqmfdqhqte648h2eu5p01f26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bestrong.vfood",
+            "certificate_hash": "a2ac1fc28a2c4fcb9d4ee6cd9f87b66c2d144998"
+          }
+        },
+        {
+          "client_id": "681570161969-q3nh21rm39edqcak23ju49cg16g62huf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCp68BP2CM8JorzcnvLPuEnjRHlnFwgiTY"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681570161969-q3nh21rm39edqcak23ju49cg16g62huf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "681570161969-jh0ikueg928995l67snid2383b2pml9b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bestrong.vfood"
+              }
+            }
+          ]
         }
       }
     }

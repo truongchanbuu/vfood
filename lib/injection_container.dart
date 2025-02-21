@@ -8,7 +8,9 @@ import 'features/auth/data/models/user.model.dart';
 import 'features/auth/data/repositories/auth_repository_impl.dart';
 import 'features/auth/domain/repositories/auth_repository.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
-import 'features/settings/presentations/bloc/contact/contact_cubit.dart';
+import 'features/auth/presentations/bloc/login/login_cubit.dart';
+import 'features/auth/presentations/bloc/reset_password/reset_password_cubit.dart';
+import 'features/auth/presentations/bloc/signup/signup_cubit.dart';
 import 'features/settings/presentations/bloc/contact/contact_cubit.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'services/firestore_service.dart';
@@ -67,4 +69,7 @@ Future<void> initializeDependencies() async {
   // Cubit
   getIt.registerSingleton<SettingsCubit>(SettingsCubit(getIt()));
   getIt.registerSingleton<ContactCubit>(ContactCubit());
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+  getIt.registerFactory<SignUpCubit>(() => SignUpCubit(getIt()));
+  getIt.registerFactory<ResetPasswordCubit>(() => ResetPasswordCubit(getIt()));
 }

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 import 'config/localization/app_localization.dart';
 import 'config/themes/app_theme.dart';
@@ -8,6 +9,7 @@ import 'cores/constants/commons.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'features/shared/presentations/pages/app_view.dart';
+import 'features/shared/presentations/widgets/app_loading_indicator.dart';
 import 'firebase_options.dart';
 import 'injection_container.dart';
 
@@ -41,14 +43,17 @@ class AppContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: AppCommons.appName,
-      theme: context.select((SettingsCubit settings) =>
-          settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),
-      localizationsDelegates: AppLocalization.delegates,
-      supportedLocales: AppLocalization.supportedLanguages,
-      home: const AppView(),
+    return GlobalLoaderOverlay(
+      overlayWidgetBuilder: (progress) => const AppLoadingIndicator(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: AppCommons.appName,
+        theme: context.select((SettingsCubit settings) =>
+            settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),
+        localizationsDelegates: AppLocalization.delegates,
+        supportedLocales: AppLocalization.supportedLanguages,
+        home: const AppView(),
+      ),
     );
   }
 }

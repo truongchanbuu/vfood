@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "about_us_title": MessageLookupByLibrary.simpleMessage("About us"),
     "account_exists_with_different_credential":
         MessageLookupByLibrary.simpleMessage(
-          "An account already exists with a different credential",
+          "This account is linked with a different sign-in method",
         ),
     "account_setting_section_title": MessageLookupByLibrary.simpleMessage(
       "Account Settings",
@@ -61,11 +61,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Create Account",
     ),
     "dark_mode_option": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+    "different_confirm_password": MessageLookupByLibrary.simpleMessage(
+      "The confirm password does not match",
+    ),
     "do_not_have_account_title": MessageLookupByLibrary.simpleMessage(
       "Don\\\'t have an account?",
     ),
     "email_already_in_use": MessageLookupByLibrary.simpleMessage(
-      "This email address is already in use",
+      "This email address is already registered",
     ),
     "email_body_contact": MessageLookupByLibrary.simpleMessage(
       "I need your help for ",
@@ -82,12 +85,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "english_option": MessageLookupByLibrary.simpleMessage("English"),
     "explore_page": MessageLookupByLibrary.simpleMessage("Explore"),
+    "failure_notification_title": MessageLookupByLibrary.simpleMessage(
+      "Failure",
+    ),
     "faqs_title": MessageLookupByLibrary.simpleMessage("FAQs"),
     "favorite_food_section_title": MessageLookupByLibrary.simpleMessage(
       "Favorite Food",
     ),
     "fb_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to open facebook",
+    ),
+    "forgot_password_title": MessageLookupByLibrary.simpleMessage(
+      "Forgot password",
     ),
     "full_name_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your full name",
@@ -104,16 +113,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Incorrect food recognition",
     ),
     "invalid_credential": MessageLookupByLibrary.simpleMessage(
-      "The credential is invalid",
+      "Invalid email or password",
     ),
     "invalid_email": MessageLookupByLibrary.simpleMessage(
       "Invalid email address",
     ),
     "invalid_verification_code": MessageLookupByLibrary.simpleMessage(
-      "The verification code is invalid",
+      "The verification is failed",
     ),
     "invalid_verification_id": MessageLookupByLibrary.simpleMessage(
-      "The verification ID is invalid",
+      "The verification is failed",
     ),
     "issue_type": MessageLookupByLibrary.simpleMessage("Issue Types"),
     "issues_empty": MessageLookupByLibrary.simpleMessage(
@@ -121,8 +130,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
     "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
-      "This operation is not allowed",
+      "This action is not allowed",
     ),
     "other_contact": MessageLookupByLibrary.simpleMessage("Other contacts"),
     "others_option": MessageLookupByLibrary.simpleMessage("Others"),
@@ -138,17 +148,26 @@ class MessageLookup extends MessageLookupByLibrary {
     "recent_searches_section_title": MessageLookupByLibrary.simpleMessage(
       "Recent Searches",
     ),
+    "reset_email_sent": MessageLookupByLibrary.simpleMessage(
+      "A reset email is sent. Please check your mailbox",
+    ),
+    "reset_failed": MessageLookupByLibrary.simpleMessage("Reset Failed"),
     "search_button": MessageLookupByLibrary.simpleMessage("Search"),
+    "send_button": MessageLookupByLibrary.simpleMessage("Send"),
     "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
     "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
+    "sign_up_failed": MessageLookupByLibrary.simpleMessage("Sign Up Failed"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your subject",
     ),
     "subject_field": MessageLookupByLibrary.simpleMessage("Subject"),
     "submit_support_request": MessageLookupByLibrary.simpleMessage(
       "Submit support request",
+    ),
+    "success_notification_title": MessageLookupByLibrary.simpleMessage(
+      "Success",
     ),
     "suggest_new_food_option": MessageLookupByLibrary.simpleMessage(
       "Suggest new food",
@@ -174,18 +193,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "upload_button": MessageLookupByLibrary.simpleMessage("Upload"),
     "user_disabled": MessageLookupByLibrary.simpleMessage(
-      "This user account has been disabled",
+      "This user account has been disabled. Please contact support",
     ),
     "user_not_found": MessageLookupByLibrary.simpleMessage(
-      "No user found with this email address",
+      "Invalid email or password",
     ),
     "vietnamese_option": MessageLookupByLibrary.simpleMessage("Vietnamese"),
     "weak_password": MessageLookupByLibrary.simpleMessage(
-      "The password provided is too weak",
+      "The password is too weak",
     ),
     "welcome_title": MessageLookupByLibrary.simpleMessage("Welcome"),
     "wrong_password": MessageLookupByLibrary.simpleMessage(
-      "The password is incorrect",
+      "Invalid email or password",
     ),
   };
 }

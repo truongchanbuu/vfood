@@ -10,6 +10,8 @@ import '../../../../cores/helpers/setting_helper.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../injection_container.dart';
 import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
+import '../../../auth/presentations/bloc/login/login_cubit.dart';
+import '../../../auth/presentations/bloc/signup/signup_cubit.dart';
 import '../../../auth/presentations/pages/auth_page.dart';
 import '../bloc/contact/contact_cubit.dart';
 import '../bloc/setting/settings_cubit.dart';
@@ -285,7 +287,13 @@ class SettingsPage extends StatelessWidget {
       context,
       PageTransition(
         type: PageTransitionType.leftToRight,
-        child: const AuthPage(),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(create: (_) => getIt.get<LoginCubit>()),
+            BlocProvider(create: (_) => getIt.get<SignUpCubit>()),
+          ],
+          child: const AuthPage(),
+        ),
       ),
     );
   }
