@@ -19,6 +19,7 @@
   "invalid_credential": "Invalid email or password",
   "invalid_verification_code": "The verification is failed",
   "invalid_verification_id": "The verification is failed",
+  "invalid_phone": "Invalid phone",
   "login_failed": "Login Failed",
   "sign_up_failed": "Sign Up Failed",
   "reset_failed": "Reset Failed",
@@ -29,6 +30,8 @@
   "content_field": "Content",
   "password_field": "Password",
   "confirm_password_field": "Confirm Password",
+  "display_name_field": "Display Name",
+  "phone_number_field": "Phone Number",
 
   "@__FORM_EXCEPTION__": {},
   "full_name_empty": "Please enter your full name",
@@ -100,5 +103,12 @@
   "already_have_account_title": "Already have an account?",
   "do_not_have_account_title": "Don\\'t have an account?",
   "forgot_password_title": "Forgot password",
-  "reset_email_sent": "A reset email is sent. Please check your mailbox"
+  "reset_email_sent": "A reset email is sent. Please check your mailbox",
+
+  "@__PROFILE_PAGE__": {},
+  "profile_title": "Profile",
+  "logout_button": "Logout",
+  "re_auth_with_google": "Re-authenticate with Google",
+  "re_auth_with_email": "Re-authentication with password",
+  "verified_email_sent": "An verified email has been sent"
 }

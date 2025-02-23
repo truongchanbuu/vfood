@@ -141,8 +141,14 @@ class AuthRepositoryImpl implements AuthRepository {
             email: email,
             password: password,
           );
-          await _updateCachedUser(
-              UserModel.fromEntity(userCredential.user!.toUser));
+
+          final User? user = userCredential.user;
+          if (user == null) {
+            throw const LogInWithEmailAndPasswordFailure('invalid-email');
+          }
+
+          await _updateCachedUser(UserModel.fromEntity(user.toUser));
+          await addUserDatabase(user.toUser);
         },
         'email login',
       );

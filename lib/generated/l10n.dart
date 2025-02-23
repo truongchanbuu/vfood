@@ -200,6 +200,16 @@ class S {
     );
   }
 
+  /// `Invalid phone`
+  String get invalid_phone {
+    return Intl.message(
+      'Invalid phone',
+      name: 'invalid_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Login Failed`
   String get login_failed {
     return Intl.message(
@@ -260,6 +270,26 @@ class S {
     return Intl.message(
       'Confirm Password',
       name: 'confirm_password_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display Name`
+  String get display_name_field {
+    return Intl.message(
+      'Display Name',
+      name: 'display_name_field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phone_number_field {
+    return Intl.message(
+      'Phone Number',
+      name: 'phone_number_field',
       desc: '',
       args: [],
     );
@@ -780,6 +810,46 @@ class S {
     return Intl.message(
       'A reset email is sent. Please check your mailbox',
       name: 'reset_email_sent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile_title {
+    return Intl.message('Profile', name: 'profile_title', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get logout_button {
+    return Intl.message('Logout', name: 'logout_button', desc: '', args: []);
+  }
+
+  /// `Re-authenticate with Google`
+  String get re_auth_with_google {
+    return Intl.message(
+      'Re-authenticate with Google',
+      name: 're_auth_with_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Re-authentication with password`
+  String get re_auth_with_email {
+    return Intl.message(
+      'Re-authentication with password',
+      name: 're_auth_with_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An verified email has been sent`
+  String get verified_email_sent {
+    return Intl.message(
+      'An verified email has been sent',
+      name: 'verified_email_sent',
       desc: '',
       args: [],
     );

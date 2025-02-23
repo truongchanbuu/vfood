@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "different_confirm_password": MessageLookupByLibrary.simpleMessage(
       "The confirm password does not match",
     ),
+    "display_name_field": MessageLookupByLibrary.simpleMessage("Display Name"),
     "do_not_have_account_title": MessageLookupByLibrary.simpleMessage(
       "Don\\\'t have an account?",
     ),
@@ -118,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalid_email": MessageLookupByLibrary.simpleMessage(
       "Invalid email address",
     ),
+    "invalid_phone": MessageLookupByLibrary.simpleMessage("Invalid phone"),
     "invalid_verification_code": MessageLookupByLibrary.simpleMessage(
       "The verification is failed",
     ),
@@ -131,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
     "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
+    "logout_button": MessageLookupByLibrary.simpleMessage("Logout"),
     "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
       "This action is not allowed",
     ),
@@ -142,8 +145,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Failed to make a call",
     ),
     "phone_contact_option": MessageLookupByLibrary.simpleMessage("Phone"),
+    "phone_number_field": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "profile_management_section_title": MessageLookupByLibrary.simpleMessage(
       "Profile Management",
+    ),
+    "profile_title": MessageLookupByLibrary.simpleMessage("Profile"),
+    "re_auth_with_email": MessageLookupByLibrary.simpleMessage(
+      "Re-authentication with password",
+    ),
+    "re_auth_with_google": MessageLookupByLibrary.simpleMessage(
+      "Re-authenticate with Google",
     ),
     "recent_searches_section_title": MessageLookupByLibrary.simpleMessage(
       "Recent Searches",
@@ -197,6 +208,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "user_not_found": MessageLookupByLibrary.simpleMessage(
       "Invalid email or password",
+    ),
+    "verified_email_sent": MessageLookupByLibrary.simpleMessage(
+      "An verified email has been sent",
     ),
     "vietnamese_option": MessageLookupByLibrary.simpleMessage("Vietnamese"),
     "weak_password": MessageLookupByLibrary.simpleMessage(

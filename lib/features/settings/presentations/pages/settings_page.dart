@@ -13,6 +13,8 @@ import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import '../../../auth/presentations/bloc/login/login_cubit.dart';
 import '../../../auth/presentations/bloc/signup/signup_cubit.dart';
 import '../../../auth/presentations/pages/auth_page.dart';
+import '../../../user/presentation/bloc/update_info/update_info_cubit.dart';
+import '../../../user/presentation/pages/profile_page.dart';
 import '../bloc/contact/contact_cubit.dart';
 import '../bloc/setting/settings_cubit.dart';
 import '../widgets/setting_selection_bottom_sheet.dart';
@@ -23,8 +25,8 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentAuthStatus = context.select(
-      (AuthBloc auth) => auth.state.status,
+    final currentUser = context.select(
+      (AuthBloc auth) => auth.state.user,
     );
 
     final backgroundColor =
@@ -60,12 +62,12 @@ class SettingsPage extends StatelessWidget {
               ),
               _buildSettingsCard(
                 context,
-                currentAuthStatus == AuthStatus.authenticated
+                currentUser.isLoggedIn
                     ? [
                         _buildNavigationTile(
                           context,
                           S.current.profile_management_section_title,
-                          () {},
+                          () => _onProfile(context),
                         ),
                         const Divider(height: 1),
                         _buildNavigationTile(
@@ -293,6 +295,19 @@ class SettingsPage extends StatelessWidget {
             BlocProvider(create: (_) => getIt.get<SignUpCubit>()),
           ],
           child: const AuthPage(),
+        ),
+      ),
+    );
+  }
+
+  void _onProfile(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.leftToRight,
+        child: BlocProvider(
+          create: (_) => getIt.get<UpdateInfoCubit>(),
+          child: const ProfilePage(),
         ),
       ),
     );
