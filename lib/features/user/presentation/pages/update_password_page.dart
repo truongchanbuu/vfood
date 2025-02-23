@@ -9,6 +9,7 @@ import '../../../../cores/extensions/context_extension.dart';
 import '../../../../generated/l10n.dart';
 import '../../../auth/data/models/confirm_password.dart';
 import '../../../auth/data/models/password.dart';
+import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../bloc/update_info/update_info_cubit.dart';
 
 class UpdatePasswordPage extends StatefulWidget {
@@ -19,6 +20,7 @@ class UpdatePasswordPage extends StatefulWidget {
 }
 
 class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
+  late final FocusNode _focusNode;
   late Password _password;
   late ConfirmPassword _confirmPassword;
   bool _isPasswordHidden = true;
@@ -27,8 +29,15 @@ class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
   @override
   void initState() {
     super.initState();
+    _focusNode = FocusNode()..requestFocus();
     _password = const Password.pure();
     _confirmPassword = const ConfirmPassword.pure();
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
   }
 
   static const SizedBox _spacing = SizedBox(height: AppSpacing.marginL);
@@ -60,136 +69,127 @@ class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
       },
       child: SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-            iconTheme: IconThemeData(
-              color:
-                  context.isDarkMode ? AppColors.textLight : AppColors.textDark,
-            ),
-            backgroundColor:
-                context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-            elevation: 0,
-          ),
+          appBar: defaultAppBar(context: context),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(AppSpacing.marginL),
-              child: Form(
-                child: Column(
-                  children: [
-                    TextFormField(
-                      obscureText: _isPasswordHidden,
-                      decoration: InputDecoration(
-                        labelText: S.current.password_field,
-                        labelStyle: TextStyle(color: textColor),
-                        prefixIcon: Icon(Icons.lock_outline, color: textColor),
-                        suffixIcon: GestureDetector(
-                          onTap: () => setState(
-                            () => _isPasswordHidden = !_isPasswordHidden,
-                          ),
-                          child: Icon(
-                            _isPasswordHidden
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                          ),
+              child: Column(
+                children: [
+                  TextFormField(
+                    focusNode: _focusNode,
+                    obscureText: _isPasswordHidden,
+                    decoration: InputDecoration(
+                      labelText: S.current.password_field,
+                      labelStyle: TextStyle(color: textColor),
+                      prefixIcon: Icon(Icons.lock_outline, color: textColor),
+                      suffixIcon: GestureDetector(
+                        onTap: () => setState(
+                          () => _isPasswordHidden = !_isPasswordHidden,
                         ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(
-                            AppSpacing.radiusM,
-                          ),
+                        child: Icon(
+                          _isPasswordHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                         ),
-                        floatingLabelStyle: TextStyle(
-                          color: _password.isNotValid ? Colors.red : null,
-                        ),
-                        errorText: _password.displayError != null
-                            ? S.current.weak_password
-                            : null,
                       ),
-                      textInputAction: TextInputAction.next,
-                      keyboardType: TextInputType.visiblePassword,
-                      onChanged: (value) {
-                        setState(() {
-                          _password = Password.dirty(value);
-                          _confirmPassword = ConfirmPassword.dirty(
-                            password: _password.value,
-                            value: _confirmPassword.value,
-                          );
-                        });
-                      },
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          AppSpacing.radiusM,
+                        ),
+                      ),
+                      floatingLabelStyle: TextStyle(
+                        color: _password.isNotValid ? Colors.red : null,
+                      ),
+                      errorText: _password.displayError != null
+                          ? S.current.weak_password
+                          : null,
                     ),
-                    _spacing,
-                    TextFormField(
-                      obscureText: _isConfirmPasswordHidden,
-                      decoration: InputDecoration(
-                        labelText: S.current.confirm_password_field,
-                        labelStyle: TextStyle(color: textColor),
-                        prefixIcon:
-                            Icon(Icons.password_outlined, color: textColor),
-                        suffixIcon: GestureDetector(
-                          onTap: () => setState(
-                            () => _isConfirmPasswordHidden =
-                                !_isConfirmPasswordHidden,
-                          ),
-                          child: Icon(
-                            _isConfirmPasswordHidden
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                          ),
+                    textInputAction: TextInputAction.next,
+                    keyboardType: TextInputType.visiblePassword,
+                    onChanged: (value) {
+                      setState(() {
+                        _password = Password.dirty(value);
+                        _confirmPassword = ConfirmPassword.dirty(
+                          password: _password.value,
+                          value: _confirmPassword.value,
+                        );
+                      });
+                    },
+                  ),
+                  _spacing,
+                  TextFormField(
+                    obscureText: _isConfirmPasswordHidden,
+                    decoration: InputDecoration(
+                      labelText: S.current.confirm_password_field,
+                      labelStyle: TextStyle(color: textColor),
+                      prefixIcon:
+                          Icon(Icons.password_outlined, color: textColor),
+                      suffixIcon: GestureDetector(
+                        onTap: () => setState(
+                          () => _isConfirmPasswordHidden =
+                              !_isConfirmPasswordHidden,
                         ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(
-                            AppSpacing.radiusM,
-                          ),
+                        child: Icon(
+                          _isConfirmPasswordHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                         ),
-                        floatingLabelStyle: TextStyle(
-                          color: _confirmPassword.isNotValid &&
-                                  !_confirmPassword.isPure
-                              ? Colors.red
-                              : null,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          AppSpacing.radiusM,
                         ),
-                        errorText: _confirmPassword.displayError != null &&
+                      ),
+                      floatingLabelStyle: TextStyle(
+                        color: _confirmPassword.isNotValid &&
                                 !_confirmPassword.isPure
-                            ? S.current.different_confirm_password
+                            ? Colors.red
                             : null,
                       ),
-                      textInputAction: TextInputAction.done,
-                      keyboardType: TextInputType.visiblePassword,
-                      onChanged: (value) {
-                        setState(() {
-                          _confirmPassword = ConfirmPassword.dirty(
-                            password: _password.value,
-                            value: value,
-                          );
-                        });
-                      },
-                      onFieldSubmitted:
-                          _password.isValid && _confirmPassword.isValid
-                              ? (value) => _onSubmit()
-                              : null,
+                      errorText: _confirmPassword.displayError != null &&
+                              !_confirmPassword.isPure
+                          ? S.current.different_confirm_password
+                          : null,
                     ),
-                    _spacing,
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: ElevatedButton(
-                        onPressed: _password.isValid && _confirmPassword.isValid
-                            ? _onSubmit
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.visiblePassword,
+                    onChanged: (value) {
+                      setState(() {
+                        _confirmPassword = ConfirmPassword.dirty(
+                          password: _password.value,
+                          value: value,
+                        );
+                      });
+                    },
+                    onFieldSubmitted:
+                        _password.isValid && _confirmPassword.isValid
+                            ? (value) => _onSubmit()
                             : null,
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              AppSpacing.radiusM,
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          S.current.send_button,
-                          style: const TextStyle(
-                            fontSize: AppFontSize.bodyLarge,
+                  ),
+                  _spacing,
+                  SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: _password.isValid && _confirmPassword.isValid
+                          ? _onSubmit
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            AppSpacing.radiusM,
                           ),
                         ),
                       ),
+                      child: Text(
+                        S.current.send_button,
+                        style: const TextStyle(
+                          fontSize: AppFontSize.bodyLarge,
+                        ),
+                      ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -8,6 +8,7 @@ import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../generated/l10n.dart';
+import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../bloc/update_info/update_info_cubit.dart';
 
 class UpdateDisplayNamePage extends StatefulWidget {
@@ -18,12 +19,20 @@ class UpdateDisplayNamePage extends StatefulWidget {
 }
 
 class _UpdateDisplayNamePageState extends State<UpdateDisplayNamePage> {
+  late final FocusNode _focusNode;
   late String _displayName;
 
   @override
   void initState() {
-    _displayName = '';
     super.initState();
+    _focusNode = FocusNode()..requestFocus();
+    _displayName = '';
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
   }
 
   @override
@@ -52,64 +61,64 @@ class _UpdateDisplayNamePageState extends State<UpdateDisplayNamePage> {
           ).show(context);
         }
       },
-      child: Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(
-            color:
-                context.isDarkMode ? AppColors.textLight : AppColors.textDark,
-          ),
-          backgroundColor:
-              context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-          elevation: 0,
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.marginL),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: S.current.display_name_field,
-                    labelStyle: TextStyle(color: textColor),
-                    prefixIcon: Icon(Icons.person_outline, color: textColor),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(
-                        AppSpacing.radiusM,
+      child: GestureDetector(
+        onTap: () => _focusNode.unfocus(),
+        child: SafeArea(
+          child: Scaffold(
+            appBar: defaultAppBar(context: context),
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(AppSpacing.marginL),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      focusNode: _focusNode,
+                      decoration: InputDecoration(
+                        labelText: S.current.display_name_field,
+                        labelStyle: TextStyle(color: textColor),
+                        prefixIcon:
+                            Icon(Icons.person_outline, color: textColor),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            AppSpacing.radiusM,
+                          ),
+                        ),
                       ),
+                      textInputAction: TextInputAction.done,
+                      keyboardType: TextInputType.emailAddress,
+                      onChanged: (value) {
+                        setState(() {
+                          _displayName = value;
+                        });
+                      },
+                      onFieldSubmitted: _displayName.isNotEmpty
+                          ? (value) => _onUpdate()
+                          : null,
                     ),
-                  ),
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.emailAddress,
-                  onChanged: (value) {
-                    setState(() {
-                      _displayName = value;
-                    });
-                  },
-                  onFieldSubmitted:
-                      _displayName.isNotEmpty ? (value) => _onUpdate() : null,
-                ),
-                const SizedBox(height: AppSpacing.marginL),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: _displayName.isEmpty ? null : _onUpdate,
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          AppSpacing.radiusM,
+                    const SizedBox(height: AppSpacing.marginL),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: _displayName.isEmpty ? null : _onUpdate,
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              AppSpacing.radiusM,
+                            ),
+                          ),
+                        ),
+                        child: Text(
+                          S.current.send_button,
+                          style: const TextStyle(
+                            fontSize: AppFontSize.bodyLarge,
+                          ),
                         ),
                       ),
                     ),
-                    child: Text(
-                      S.current.send_button,
-                      style: const TextStyle(
-                        fontSize: AppFontSize.bodyLarge,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),

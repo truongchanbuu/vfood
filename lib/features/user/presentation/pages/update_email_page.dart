@@ -9,6 +9,7 @@ import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../generated/l10n.dart';
 import '../../../auth/data/models/email.dart';
+import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../bloc/update_info/update_info_cubit.dart';
 
 class UpdateEmailPage extends StatefulWidget {
@@ -19,12 +20,20 @@ class UpdateEmailPage extends StatefulWidget {
 }
 
 class _UpdateEmailPageState extends State<UpdateEmailPage> {
+  late final FocusNode _focusNode;
   late Email _email;
 
   @override
   void initState() {
     super.initState();
+    _focusNode = FocusNode()..requestFocus();
     _email = const Email.pure();
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
   }
 
   @override
@@ -54,70 +63,69 @@ class _UpdateEmailPageState extends State<UpdateEmailPage> {
           ).show(context);
         }
       },
-      child: Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(
-            color:
-                context.isDarkMode ? AppColors.textLight : AppColors.textDark,
-          ),
-          backgroundColor:
-              context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-          elevation: 0,
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.marginL),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'Email',
-                    labelStyle: TextStyle(color: textColor),
-                    prefixIcon: Icon(Icons.email_outlined, color: textColor),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(
-                        AppSpacing.radiusM,
+      child: GestureDetector(
+        onTap: () => _focusNode.unfocus(),
+        child: SafeArea(
+          child: Scaffold(
+            appBar: defaultAppBar(context: context),
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(AppSpacing.marginL),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      focusNode: _focusNode,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: TextStyle(color: textColor),
+                        prefixIcon:
+                            Icon(Icons.email_outlined, color: textColor),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            AppSpacing.radiusM,
+                          ),
+                        ),
+                        floatingLabelStyle: TextStyle(
+                          color: _email.isNotValid ? Colors.red : null,
+                        ),
+                        errorText: _email.displayError != null
+                            ? S.current.invalid_email
+                            : null,
                       ),
+                      textInputAction: TextInputAction.done,
+                      keyboardType: TextInputType.emailAddress,
+                      onChanged: (value) {
+                        setState(() {
+                          _email = Email.dirty(value);
+                        });
+                      },
+                      onFieldSubmitted:
+                          _email.isValid ? (value) => _onUpdate() : null,
                     ),
-                    floatingLabelStyle: TextStyle(
-                      color: _email.isNotValid ? Colors.red : null,
-                    ),
-                    errorText: _email.displayError != null
-                        ? S.current.invalid_email
-                        : null,
-                  ),
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.emailAddress,
-                  onChanged: (value) {
-                    setState(() {
-                      _email = Email.dirty(value);
-                    });
-                  },
-                  onFieldSubmitted:
-                      _email.isValid ? (value) => _onUpdate() : null,
-                ),
-                const SizedBox(height: AppSpacing.marginL),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: _email.isValid ? _onUpdate : null,
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          AppSpacing.radiusM,
+                    const SizedBox(height: AppSpacing.marginL),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: _email.isValid ? _onUpdate : null,
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              AppSpacing.radiusM,
+                            ),
+                          ),
+                        ),
+                        child: Text(
+                          S.current.send_button,
+                          style: const TextStyle(
+                            fontSize: AppFontSize.bodyLarge,
+                          ),
                         ),
                       ),
                     ),
-                    child: Text(
-                      S.current.send_button,
-                      style: const TextStyle(
-                        fontSize: AppFontSize.bodyLarge,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),
