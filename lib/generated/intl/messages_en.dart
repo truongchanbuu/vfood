@@ -93,9 +93,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "favorite_food_section_title": MessageLookupByLibrary.simpleMessage(
       "Favorite Food",
     ),
+    "favorite_food_title": MessageLookupByLibrary.simpleMessage(
+      "Favorite Food",
+    ),
     "fb_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to open facebook",
     ),
+    "food_category_title": MessageLookupByLibrary.simpleMessage(
+      "Food Category",
+    ),
+    "food_flavor_title": MessageLookupByLibrary.simpleMessage("Food Flavor"),
+    "food_region_title": MessageLookupByLibrary.simpleMessage("Food Region"),
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot password",
     ),
@@ -134,6 +142,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
     "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
     "logout_button": MessageLookupByLibrary.simpleMessage("Logout"),
+    "no_item_found_title": MessageLookupByLibrary.simpleMessage(
+      "No items found",
+    ),
+    "noodles": MessageLookupByLibrary.simpleMessage("Noodles"),
     "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
       "This action is not allowed",
     ),
@@ -163,13 +175,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "A reset email is sent. Please check your mailbox",
     ),
     "reset_failed": MessageLookupByLibrary.simpleMessage("Reset Failed"),
+    "rice_dishes": MessageLookupByLibrary.simpleMessage("Rice Dishes"),
+    "salty_flavor": MessageLookupByLibrary.simpleMessage("Salty"),
+    "savory_flavor": MessageLookupByLibrary.simpleMessage("Savory"),
     "search_button": MessageLookupByLibrary.simpleMessage("Search"),
+    "searching_hint_text": MessageLookupByLibrary.simpleMessage("Searching..."),
     "send_button": MessageLookupByLibrary.simpleMessage("Send"),
     "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
     "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
     "sign_up_failed": MessageLookupByLibrary.simpleMessage("Sign Up Failed"),
+    "soup": MessageLookupByLibrary.simpleMessage("Soup"),
+    "sour_flavor": MessageLookupByLibrary.simpleMessage("Sour"),
+    "spicy_flavor": MessageLookupByLibrary.simpleMessage("Spicy"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your subject",
     ),
@@ -190,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "We will response within 24 hours",
     ),
     "support_title": MessageLookupByLibrary.simpleMessage("Support"),
+    "sweet_flavor": MessageLookupByLibrary.simpleMessage("Sweet"),
     "technical_issue_option": MessageLookupByLibrary.simpleMessage(
       "Technical Issues",
     ),

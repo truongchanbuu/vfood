@@ -7,6 +7,7 @@ import 'config/localization/app_localization.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
+import 'features/food/presentations/pages/favorite_food_page.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'features/shared/presentations/pages/app_view.dart';
 import 'features/shared/presentations/widgets/app_loading_indicator.dart';
@@ -52,7 +53,8 @@ class AppContainer extends StatelessWidget {
             settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),
         localizationsDelegates: AppLocalization.delegates,
         supportedLocales: AppLocalization.supportedLanguages,
-        home: const AppView(),
+        // home: const AppView(),
+        home: FavoriteFoodPage(),
       ),
     );
   }

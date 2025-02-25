@@ -5,6 +5,9 @@
   "failure_notification_title": "Failure",
   "success_notification_title": "Success",
   "send_button": "Send",
+  "searching_hint_text": "Searching...",
+  "no_item_found_title": "No items found",
+
 
   "@__AUTH_EXCEPTION__": {},
   "unknown_exception": "Unknown Exception",
@@ -110,5 +113,23 @@
   "logout_button": "Logout",
   "re_auth_with_google": "Re-authenticate with Google",
   "re_auth_with_email": "Re-authentication with password",
-  "verified_email_sent": "An verified email has been sent"
+  "verified_email_sent": "An verified email has been sent",
+
+  "@__FOOD_CATEGORY__": {},
+  "noodles": "Noodles",
+  "rice_dishes": "Rice Dishes",
+  "soup": "Soup",
+
+  "@__FAVORITE_PAGE__": {},
+  "favorite_food_title": "Favorite Food",
+  "food_category_title": "Food Category",
+  "food_region_title": "Food Region",
+  "food_flavor_title": "Food Flavor",
+
+  "@__FOOD_FLAVOR__": {},
+  "sweet_flavor": "Sweet",
+  "sour_flavor": "Sour",
+  "savory_flavor": "Savory",
+  "spicy_flavor": "Spicy",
+  "salty_flavor": "Salty"
 }

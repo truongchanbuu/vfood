@@ -13,6 +13,7 @@ import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import '../../../auth/presentations/bloc/login/login_cubit.dart';
 import '../../../auth/presentations/bloc/signup/signup_cubit.dart';
 import '../../../auth/presentations/pages/auth_page.dart';
+import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../../../user/presentation/bloc/update_info/update_info_cubit.dart';
 import '../../../user/presentation/pages/profile_page.dart';
 import '../bloc/contact/contact_cubit.dart';
@@ -29,20 +30,11 @@ class SettingsPage extends StatelessWidget {
       (AuthBloc auth) => auth.state.user,
     );
 
-    final backgroundColor =
-        context.isDarkMode ? AppColors.backgroundDark : AppColors.background;
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          S.current.setting_title,
-          style: TextStyle(
-            color:
-                context.isDarkMode ? AppColors.textLight : AppColors.textDark,
-          ),
-        ),
+      appBar: defaultAppBar(
+        context: context,
+        title: S.current.setting_title,
         centerTitle: false,
-        backgroundColor: backgroundColor,
       ),
       body: SingleChildScrollView(
         child: Padding(

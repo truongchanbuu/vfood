@@ -30,6 +30,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.11.0"
+  animated_switcher_plus:
+    dependency: "direct main"
+    description:
+      name: animated_switcher_plus
+      sha256: "9785b34872d9a3528b712d2de5635fd496baf775f5b678767d12682781fbfd90"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   archive:
     dependency: transitive
     description:
@@ -762,6 +770,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  moment_dart:
+    dependency: "direct main"
+    description:
+      name: moment_dart
+      sha256: "4cad3c6f7600738ec1cbe28fea756969e2db08781335fcc90d1884333ac8ce8f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1"
+  multi_dropdown:
+    dependency: "direct main"
+    description:
+      name: multi_dropdown
+      sha256: da25f6defdc62aaf8ce0842d31ff7875fad29aeb13f5b2de9e157a06d53f4b74
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   nested:
     dependency: transitive
     description:

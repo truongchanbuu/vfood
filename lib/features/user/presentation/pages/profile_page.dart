@@ -12,6 +12,7 @@ import '../../../../generated/l10n.dart';
 import '../../../../injection_container.dart';
 import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import '../../../auth/presentations/bloc/login/login_cubit.dart';
+import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../bloc/update_info/update_info_cubit.dart';
 import '../widgets/re_auth_bottom_sheet.dart';
 import '../widgets/user_avatar.dart';
@@ -39,26 +40,8 @@ class ProfilePage extends StatelessWidget {
         child: Scaffold(
           backgroundColor:
               context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-          appBar: AppBar(
-            iconTheme: IconThemeData(
-              color:
-                  context.isDarkMode ? AppColors.textLight : AppColors.textDark,
-            ),
-            backgroundColor:
-                context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-            elevation: 0,
-            title: Text(
-              S.current.profile_title,
-              style: TextStyle(
-                color: context.isDarkMode
-                    ? AppColors.textLight
-                    : AppColors.textDark,
-                fontSize: AppFontSize.appBarTitle,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            centerTitle: true,
-          ),
+          appBar:
+              defaultAppBar(context: context, title: S.current.profile_title),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(AppSpacing.marginM),

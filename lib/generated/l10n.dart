@@ -80,6 +80,26 @@ class S {
     return Intl.message('Send', name: 'send_button', desc: '', args: []);
   }
 
+  /// `Searching...`
+  String get searching_hint_text {
+    return Intl.message(
+      'Searching...',
+      name: 'searching_hint_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No items found`
+  String get no_item_found_title {
+    return Intl.message(
+      'No items found',
+      name: 'no_item_found_title',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Unknown Exception`
   String get unknown_exception {
     return Intl.message(
@@ -853,6 +873,86 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Noodles`
+  String get noodles {
+    return Intl.message('Noodles', name: 'noodles', desc: '', args: []);
+  }
+
+  /// `Rice Dishes`
+  String get rice_dishes {
+    return Intl.message('Rice Dishes', name: 'rice_dishes', desc: '', args: []);
+  }
+
+  /// `Soup`
+  String get soup {
+    return Intl.message('Soup', name: 'soup', desc: '', args: []);
+  }
+
+  /// `Favorite Food`
+  String get favorite_food_title {
+    return Intl.message(
+      'Favorite Food',
+      name: 'favorite_food_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food Category`
+  String get food_category_title {
+    return Intl.message(
+      'Food Category',
+      name: 'food_category_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food Region`
+  String get food_region_title {
+    return Intl.message(
+      'Food Region',
+      name: 'food_region_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food Flavor`
+  String get food_flavor_title {
+    return Intl.message(
+      'Food Flavor',
+      name: 'food_flavor_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sweet`
+  String get sweet_flavor {
+    return Intl.message('Sweet', name: 'sweet_flavor', desc: '', args: []);
+  }
+
+  /// `Sour`
+  String get sour_flavor {
+    return Intl.message('Sour', name: 'sour_flavor', desc: '', args: []);
+  }
+
+  /// `Savory`
+  String get savory_flavor {
+    return Intl.message('Savory', name: 'savory_flavor', desc: '', args: []);
+  }
+
+  /// `Spicy`
+  String get spicy_flavor {
+    return Intl.message('Spicy', name: 'spicy_flavor', desc: '', args: []);
+  }
+
+  /// `Salty`
+  String get salty_flavor {
+    return Intl.message('Salty', name: 'salty_flavor', desc: '', args: []);
   }
 }
 
