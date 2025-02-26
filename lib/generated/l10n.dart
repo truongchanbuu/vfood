@@ -435,6 +435,26 @@ class S {
     return Intl.message('Upload', name: 'upload_button', desc: '', args: []);
   }
 
+  /// `Popular Vietnamese Food`
+  String get popular_vietnamese_food_title {
+    return Intl.message(
+      'Popular Vietnamese Food',
+      name: 'popular_vietnamese_food_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wonderful Food Every Day`
+  String get wonderful_food_every_day_title {
+    return Intl.message(
+      'Wonderful Food Every Day',
+      name: 'wonderful_food_every_day_title',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Settings`
   String get setting_title {
     return Intl.message('Settings', name: 'setting_title', desc: '', args: []);
@@ -923,6 +943,16 @@ class S {
   /// `Soup`
   String get soup {
     return Intl.message('Soup', name: 'soup', desc: '', args: []);
+  }
+
+  /// `Bread`
+  String get bread {
+    return Intl.message('Bread', name: 'bread', desc: '', args: []);
+  }
+
+  /// `Street Food`
+  String get street_food {
+    return Intl.message('Street Food', name: 'street_food', desc: '', args: []);
   }
 
   /// `Favorite Food`

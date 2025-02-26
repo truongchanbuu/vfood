@@ -3,6 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../../../../cores/constants/colors.dart';
 import '../../../../generated/l10n.dart';
+import '../../../food/presentations/pages/homepage.dart';
 import '../../../settings/presentations/pages/settings_page.dart';
 
 class AppView extends StatefulWidget {
@@ -16,7 +17,7 @@ class _AppViewState extends State<AppView> {
   int _currentIndexTab = 0;
 
   final List<Widget> tabs = [
-    Container(),
+    const HomePage(),
     Container(),
     const SettingsPage(),
   ];

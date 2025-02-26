@@ -126,15 +126,18 @@ class _FoodItemState extends State<FoodItem> {
                   ],
                 ),
                 _spacing,
-                Text(
-                  widget.food.foodDesc,
-                  style: const TextStyle(
-                    fontSize: AppFontSize.bodyMedium,
+                SizedBox(
+                  height: AppFontSize.bodyLarge * maxLines,
+                  child: Text(
+                    widget.food.foodDesc,
+                    style: const TextStyle(
+                      fontSize: AppFontSize.bodyLarge,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    textAlign: TextAlign.justify,
                     overflow: TextOverflow.ellipsis,
+                    maxLines: maxLines,
                   ),
-                  textAlign: TextAlign.justify,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: maxLines,
                 ),
                 _spacing,
                 FoodCategoryChipWrap(category: [widget.food.foodCategory]),

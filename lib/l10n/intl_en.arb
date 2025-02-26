@@ -55,6 +55,8 @@
   "@__HOMEPAGE__": {},
   "search_button": "Search",
   "upload_button": "Upload",
+  "popular_vietnamese_food_title": "Popular Vietnamese Food",
+  "wonderful_food_every_day_title": "Wonderful Food Every Day",
 
   "@__SETTINGS_PAGE__": {},
   "setting_title": "Settings",
@@ -122,6 +124,8 @@
   "noodles": "Noodles",
   "rice_dishes": "Rice Dishes",
   "soup": "Soup",
+  "bread": "Bread",
+  "street_food": "Street Food",
 
   "@__FAVORITE_PAGE__": {},
   "favorite_food_title": "Favorite Food",

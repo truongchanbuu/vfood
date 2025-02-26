@@ -58,8 +58,7 @@ class AppContainer extends StatelessWidget {
             settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),
         localizationsDelegates: AppLocalization.delegates,
         supportedLocales: AppLocalization.supportedLanguages,
-        // home: const AppView(),
-        home: FoodDetailPage(),
+        home: const AppView(),
       ),
     );
   }

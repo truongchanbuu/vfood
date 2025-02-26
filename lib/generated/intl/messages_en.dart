@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "authenticate_button": MessageLookupByLibrary.simpleMessage(
       "Sign in/Sign up",
     ),
+    "bread": MessageLookupByLibrary.simpleMessage("Bread"),
     "confirm_password_field": MessageLookupByLibrary.simpleMessage(
       "Confirm Password",
     ),
@@ -162,6 +163,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "phone_contact_option": MessageLookupByLibrary.simpleMessage("Phone"),
     "phone_number_field": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "popular_vietnamese_food_title": MessageLookupByLibrary.simpleMessage(
+      "Popular Vietnamese Food",
+    ),
     "profile_management_section_title": MessageLookupByLibrary.simpleMessage(
       "Profile Management",
     ),
@@ -200,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "soup": MessageLookupByLibrary.simpleMessage("Soup"),
     "sour_flavor": MessageLookupByLibrary.simpleMessage("Sour"),
     "spicy_flavor": MessageLookupByLibrary.simpleMessage("Spicy"),
+    "street_food": MessageLookupByLibrary.simpleMessage("Street Food"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your subject",
     ),
@@ -251,6 +256,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "The password is too weak",
     ),
     "welcome_title": MessageLookupByLibrary.simpleMessage("Welcome"),
+    "wonderful_food_every_day_title": MessageLookupByLibrary.simpleMessage(
+      "Wonderful Food Every Day",
+    ),
     "wrong_password": MessageLookupByLibrary.simpleMessage(
       "Invalid email or password",
     ),
