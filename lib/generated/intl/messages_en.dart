@@ -60,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "create_account_title": MessageLookupByLibrary.simpleMessage(
       "Create Account",
     ),
+    "cup_unit": MessageLookupByLibrary.simpleMessage("cup"),
     "dark_mode_option": MessageLookupByLibrary.simpleMessage("Dark Mode"),
     "different_confirm_password": MessageLookupByLibrary.simpleMessage(
       "The confirm password does not match",
@@ -103,6 +104,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Food Category",
     ),
     "food_flavor_title": MessageLookupByLibrary.simpleMessage("Food Flavor"),
+    "food_flavors": MessageLookupByLibrary.simpleMessage("Flavors"),
+    "food_history": MessageLookupByLibrary.simpleMessage("History"),
+    "food_ingredients": MessageLookupByLibrary.simpleMessage("Ingredients"),
     "food_region_title": MessageLookupByLibrary.simpleMessage("Food Region"),
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot password",
@@ -171,10 +175,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "recent_searches_section_title": MessageLookupByLibrary.simpleMessage(
       "Recent Searches",
     ),
+    "recommended_food_title": MessageLookupByLibrary.simpleMessage(
+      "Food You May Like",
+    ),
     "reset_email_sent": MessageLookupByLibrary.simpleMessage(
       "A reset email is sent. Please check your mailbox",
     ),
     "reset_failed": MessageLookupByLibrary.simpleMessage("Reset Failed"),
+    "review_button": MessageLookupByLibrary.simpleMessage("Review"),
+    "reviews_title": MessageLookupByLibrary.simpleMessage("Reviews"),
     "rice_dishes": MessageLookupByLibrary.simpleMessage("Rice Dishes"),
     "salty_flavor": MessageLookupByLibrary.simpleMessage("Salty"),
     "savory_flavor": MessageLookupByLibrary.simpleMessage("Savory"),
@@ -183,6 +192,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "send_button": MessageLookupByLibrary.simpleMessage("Send"),
     "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
     "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
+    "show_less_text": MessageLookupByLibrary.simpleMessage("Show less"),
+    "show_more_text": MessageLookupByLibrary.simpleMessage("Show more"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
     "sign_up_failed": MessageLookupByLibrary.simpleMessage("Sign Up Failed"),
@@ -210,6 +221,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "support_title": MessageLookupByLibrary.simpleMessage("Support"),
     "sweet_flavor": MessageLookupByLibrary.simpleMessage("Sweet"),
+    "tablespoon_unit": MessageLookupByLibrary.simpleMessage("tablespoon"),
+    "teaspoon_unit": MessageLookupByLibrary.simpleMessage("teaspoon"),
     "technical_issue_option": MessageLookupByLibrary.simpleMessage(
       "Technical Issues",
     ),
@@ -233,6 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "An verified email has been sent",
     ),
     "vietnamese_option": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+    "view_all_button": MessageLookupByLibrary.simpleMessage("View all"),
     "weak_password": MessageLookupByLibrary.simpleMessage(
       "The password is too weak",
     ),

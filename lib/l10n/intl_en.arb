@@ -5,9 +5,12 @@
   "failure_notification_title": "Failure",
   "success_notification_title": "Success",
   "send_button": "Send",
+  "view_all_button": "View all",
+  "review_button": "Review",
   "searching_hint_text": "Searching...",
   "no_item_found_title": "No items found",
-
+  "show_more_text": "Show more",
+  "show_less_text": "Show less",
 
   "@__AUTH_EXCEPTION__": {},
   "unknown_exception": "Unknown Exception",
@@ -131,5 +134,17 @@
   "sour_flavor": "Sour",
   "savory_flavor": "Savory",
   "spicy_flavor": "Spicy",
-  "salty_flavor": "Salty"
+  "salty_flavor": "Salty",
+
+  "@__FOOD_DETAIL_PAGE__": {},
+  "food_ingredients": "Ingredients",
+  "food_flavors": "Flavors",
+  "food_history": "History",
+  "reviews_title": "Reviews",
+  "recommended_food_title": "Food You May Like",
+
+  "@__FOOD_INGREDIENT_UNIT__": {},
+  "teaspoon_unit": "teaspoon",
+  "tablespoon_unit": "tablespoon",
+  "cup_unit": "cup"
 }

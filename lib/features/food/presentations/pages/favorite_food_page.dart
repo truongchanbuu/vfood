@@ -6,7 +6,9 @@ import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../../domain/entities/food_category.dart';
 import '../../domain/entities/food_entity.dart';
 import '../../domain/entities/food_flavor.dart';
+import '../../domain/entities/food_ingredient.dart';
 import '../../domain/entities/food_region.dart';
+import '../../domain/entities/ingredient_unit.dart';
 import '../widgets/food_filter_section.dart';
 import '../widgets/food_item.dart';
 
@@ -16,11 +18,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Phở Bò",
     foodDesc:
         "Traditional Vietnamese beef noodle soup with aromatic herbs and a balanced broth.",
+    foodHistory:
+        "Traditional Vietnamese beef noodle soup with aromatic herbs and a balanced broth.",
     foodRegion: FoodRegion.north,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Beef", "Rice noodles", "Herbs", "Broth", "Onion"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour, FoodFlavor.spicy],
     isFavorite: true,
     rating: 4.7,
@@ -30,11 +50,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Bánh Mì",
     foodDesc:
         "A Vietnamese sandwich filled with savory meats, pickled vegetables, and fresh herbs.",
+    foodHistory:
+        "A Vietnamese sandwich filled with savory meats, pickled vegetables, and fresh herbs.",
     foodRegion: FoodRegion.north,
     foodCategory: FoodCategory.riceDishes,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Baguette", "Pork", "Pickled carrots", "Daikon", "Cilantro"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour, FoodFlavor.sweet],
     isFavorite: false,
     rating: 4.3,
@@ -44,11 +82,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Sushi",
     foodDesc:
         "Classic Japanese dish of vinegared rice with various fresh seafood toppings.",
+    foodHistory:
+        "Classic Japanese dish of vinegared rice with various fresh seafood toppings.",
     foodRegion: FoodRegion.north,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Rice", "Fish", "Seaweed", "Wasabi"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour],
     isFavorite: true,
     rating: 4.8,
@@ -58,11 +114,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Pizza Margherita",
     foodDesc:
         "Iconic Italian pizza topped with fresh tomatoes, mozzarella, and basil.",
+    foodHistory:
+        "Iconic Italian pizza topped with fresh tomatoes, mozzarella, and basil.",
     foodRegion: FoodRegion.south,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Dough", "Tomato sauce", "Mozzarella", "Basil"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sweet],
     isFavorite: true,
     rating: 4.5,
@@ -72,11 +146,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Spaghetti Carbonara",
     foodDesc:
         "Classic Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
+    foodHistory:
+        "Classic Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
     foodRegion: FoodRegion.south,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Spaghetti", "Eggs", "Pancetta", "Parmesan cheese"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour],
     isFavorite: false,
     rating: 4.4,
@@ -86,11 +178,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Pad Thai",
     foodDesc:
         "Famous Thai stir-fried rice noodle dish with shrimp, tofu, peanuts, and bean sprouts.",
+    foodHistory:
+        "Famous Thai stir-fried rice noodle dish with shrimp, tofu, peanuts, and bean sprouts.",
     foodRegion: FoodRegion.north,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Rice noodles", "Shrimp", "Tofu", "Peanuts", "Bean sprouts"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour, FoodFlavor.spicy, FoodFlavor.sweet],
     isFavorite: true,
     rating: 4.6,
@@ -100,11 +210,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Cheeseburger",
     foodDesc:
         "An American classic featuring a juicy beef patty, melted cheese, and fresh vegetables.",
+    foodHistory:
+        "An American classic featuring a juicy beef patty, melted cheese, and fresh vegetables.",
     foodRegion: FoodRegion.central,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Bun", "Beef patty", "Cheddar cheese", "Lettuce", "Tomato"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sour, FoodFlavor.sweet],
     isFavorite: false,
     rating: 4.2,
@@ -114,11 +242,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Tacos",
     foodDesc:
         "Traditional Mexican dish with soft corn tortillas and a variety of savory fillings.",
+    foodHistory:
+        "Traditional Mexican dish with soft corn tortillas and a variety of savory fillings.",
     foodRegion: FoodRegion.central,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Tortillas", "Beef", "Cheese", "Salsa"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.spicy, FoodFlavor.sour],
     isFavorite: true,
     rating: 4.3,
@@ -128,11 +274,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Chicken Curry",
     foodDesc:
         "Rich and aromatic curry made with tender chicken pieces and a blend of spices.",
+    foodHistory:
+        "Rich and aromatic curry made with tender chicken pieces and a blend of spices.",
     foodRegion: FoodRegion.north,
     foodCategory: FoodCategory.noodles,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Chicken", "Curry powder", "Coconut milk", "Onion", "Garlic"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.spicy, FoodFlavor.sour],
     isFavorite: false,
     rating: 4.7,
@@ -142,11 +306,29 @@ final List<FoodEntity> _foodEntities = [
     foodName: "Chocolate Cake",
     foodDesc:
         "Decadent dessert with rich chocolate flavor and creamy frosting.",
+    foodHistory:
+        "Decadent dessert with rich chocolate flavor and creamy frosting.",
     foodRegion: FoodRegion.south,
     foodCategory: FoodCategory.soup,
     imageUrl:
         "https://th.bing.com/th?id=OIP.6R9VrPEw-I5FIpdkB5fDowHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    ingredients: ["Flour", "Cocoa powder", "Sugar", "Eggs", "Butter"],
+    ingredients: [
+      FoodIngredient(
+        ingredientName: 'Noodles',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Beef',
+        ingredientQuantity: 200,
+        ingredientUnit: IngredientUnit.g,
+      ),
+      FoodIngredient(
+        ingredientName: 'Salt',
+        ingredientQuantity: 2,
+        ingredientUnit: IngredientUnit.teaspoon,
+      ),
+    ],
     flavors: [FoodFlavor.sweet],
     isFavorite: true,
     rating: 4.9,

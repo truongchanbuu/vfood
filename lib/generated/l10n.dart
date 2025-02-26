@@ -80,6 +80,21 @@ class S {
     return Intl.message('Send', name: 'send_button', desc: '', args: []);
   }
 
+  /// `View all`
+  String get view_all_button {
+    return Intl.message(
+      'View all',
+      name: 'view_all_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Review`
+  String get review_button {
+    return Intl.message('Review', name: 'review_button', desc: '', args: []);
+  }
+
   /// `Searching...`
   String get searching_hint_text {
     return Intl.message(
@@ -95,6 +110,26 @@ class S {
     return Intl.message(
       'No items found',
       name: 'no_item_found_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show more`
+  String get show_more_text {
+    return Intl.message(
+      'Show more',
+      name: 'show_more_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show less`
+  String get show_less_text {
+    return Intl.message(
+      'Show less',
+      name: 'show_less_text',
       desc: '',
       args: [],
     );
@@ -953,6 +988,61 @@ class S {
   /// `Salty`
   String get salty_flavor {
     return Intl.message('Salty', name: 'salty_flavor', desc: '', args: []);
+  }
+
+  /// `Ingredients`
+  String get food_ingredients {
+    return Intl.message(
+      'Ingredients',
+      name: 'food_ingredients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flavors`
+  String get food_flavors {
+    return Intl.message('Flavors', name: 'food_flavors', desc: '', args: []);
+  }
+
+  /// `History`
+  String get food_history {
+    return Intl.message('History', name: 'food_history', desc: '', args: []);
+  }
+
+  /// `Reviews`
+  String get reviews_title {
+    return Intl.message('Reviews', name: 'reviews_title', desc: '', args: []);
+  }
+
+  /// `Food You May Like`
+  String get recommended_food_title {
+    return Intl.message(
+      'Food You May Like',
+      name: 'recommended_food_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `teaspoon`
+  String get teaspoon_unit {
+    return Intl.message('teaspoon', name: 'teaspoon_unit', desc: '', args: []);
+  }
+
+  /// `tablespoon`
+  String get tablespoon_unit {
+    return Intl.message(
+      'tablespoon',
+      name: 'tablespoon_unit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `cup`
+  String get cup_unit {
+    return Intl.message('cup', name: 'cup_unit', desc: '', args: []);
   }
 }
 

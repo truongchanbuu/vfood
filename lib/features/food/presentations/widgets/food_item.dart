@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:iconify_flutter_plus/iconify_flutter_plus.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moment_dart/moment_dart.dart';
 
@@ -8,7 +7,10 @@ import '../../../../cores/constants/colors.dart';
 import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
+import '../../../shared/presentations/widgets/error_image.dart';
 import '../../domain/entities/food_entity.dart';
+import 'food_category_chip_wrap.dart';
+import 'food_flavor_chip_wrap.dart';
 
 class FoodItem extends StatefulWidget {
   final FoodEntity food;
@@ -23,6 +25,9 @@ class _FoodItemState extends State<FoodItem> {
 
   static const double itemImageHeight = 250;
   static const double itemImageWidth = double.infinity;
+  static const _spacing = SizedBox(height: AppSpacing.marginS);
+  static const int maxLines = 3;
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -49,15 +54,9 @@ class _FoodItemState extends State<FoodItem> {
                     width: itemImageWidth,
                   ),
                 ),
-                errorWidget: (context, error, stackTrace) => Container(
-                  color: Colors.black12.withValues(alpha: 0.1),
+                errorWidget: (context, error, stackTrace) => const ErrorImage(
                   width: itemImageWidth,
                   height: itemImageHeight,
-                  child: const Icon(
-                    Icons.image_not_supported,
-                    size: 30,
-                    color: AppColors.textGray,
-                  ),
                 ),
               ),
               Positioned(
@@ -93,65 +92,55 @@ class _FoodItemState extends State<FoodItem> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.paddingS,
-                        vertical: AppSpacing.paddingXS,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.textGray.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(AppSpacing.radiusM),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            size: 16,
-                            color: Colors.amber,
-                          ),
-                          const SizedBox(width: AppSpacing.marginXS),
-                          Text(
-                            '${widget.food.rating}/5.0',
-                            style: TextStyle(
-                              color: context.isDarkMode
-                                  ? AppColors.textLight
-                                  : AppColors.textDark,
-                              fontWeight: FontWeight.bold,
+                    if (widget.food.rating != null)
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSpacing.paddingS,
+                          vertical: AppSpacing.paddingXS,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.textGray.withValues(alpha: 0.1),
+                          borderRadius:
+                              BorderRadius.circular(AppSpacing.radiusM),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              size: 16,
+                              color: Colors.amber,
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: AppSpacing.marginXS),
+                            Text(
+                              '${widget.food.rating}/5.0',
+                              style: TextStyle(
+                                color: context.isDarkMode
+                                    ? AppColors.textLight
+                                    : AppColors.textDark,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
-                const SizedBox(height: AppSpacing.marginS),
-                Wrap(
-                  spacing: 8,
-                  children: widget.food.flavors.map((flavor) {
-                    return Chip(
-                      shape: StadiumBorder(
-                        side: BorderSide(width: 1, color: flavor.color),
-                      ),
-                      label: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Iconify(flavor.icon, color: flavor.color),
-                          const SizedBox(width: AppSpacing.marginS),
-                          Text(
-                            flavor.normalizedName,
-                            style: TextStyle(
-                              color: context.isDarkMode
-                                  ? AppColors.textLight
-                                  : AppColors.textDark,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }).toList(),
+                _spacing,
+                Text(
+                  widget.food.foodDesc,
+                  style: const TextStyle(
+                    fontSize: AppFontSize.bodyMedium,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  textAlign: TextAlign.justify,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: maxLines,
                 ),
-                const SizedBox(height: AppSpacing.marginS),
+                _spacing,
+                FoodCategoryChipWrap(category: [widget.food.foodCategory]),
+                _spacing,
+                FoodFlavorChipWrap(flavors: widget.food.flavors),
+                _spacing,
                 if (widget.food.viewedAt != null)
                   Text(
                     widget.food.viewedAt!.toMoment().formatDateTimeShort(),

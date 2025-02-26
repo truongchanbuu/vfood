@@ -13,6 +13,7 @@ import 'features/auth/presentations/bloc/reset_password/reset_password_cubit.dar
 import 'features/auth/presentations/bloc/signup/signup_cubit.dart';
 import 'features/settings/presentations/bloc/contact/contact_cubit.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
+import 'features/shared/presentations/bloc/internet/internet_bloc.dart';
 import 'features/user/presentation/bloc/update_info/update_info_cubit.dart';
 import 'services/firestore_service.dart';
 import 'services/impl/api_service_impl.dart';
@@ -65,6 +66,7 @@ Future<void> initializeDependencies() async {
   );
 
   // Bloc
+  getIt.registerSingleton<InternetBloc>(InternetBloc());
   getIt.registerSingleton<AuthBloc>(AuthBloc(getIt()));
 
   // Cubit

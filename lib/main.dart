@@ -7,8 +7,9 @@ import 'config/localization/app_localization.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
-import 'features/food/presentations/pages/favorite_food_page.dart';
+import 'features/food/presentations/pages/food_detail_page.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
+import 'features/shared/presentations/bloc/internet/internet_bloc.dart';
 import 'features/shared/presentations/pages/app_view.dart';
 import 'features/shared/presentations/widgets/app_loading_indicator.dart';
 import 'firebase_options.dart';
@@ -28,6 +29,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(
+          create: (_) =>
+              getIt.get<InternetBloc>()..add(const InternetConnectionChanged()),
+        ),
         BlocProvider(
           create: (_) =>
               getIt.get<AuthBloc>()..add(AuthUserSubscriptionRequest()),
@@ -54,7 +59,7 @@ class AppContainer extends StatelessWidget {
         localizationsDelegates: AppLocalization.delegates,
         supportedLocales: AppLocalization.supportedLanguages,
         // home: const AppView(),
-        home: FavoriteFoodPage(),
+        home: FoodDetailPage(),
       ),
     );
   }

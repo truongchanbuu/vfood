@@ -6,6 +6,8 @@ import '../../cores/constants/spacing.dart';
 import '../../cores/constants/text_styles.dart';
 
 class AppTheme {
+  static const double _buttonHeight = 50;
+
   // Consolidate duplicate code between light and dark themes
   static ThemeData _baseTheme({
     required Brightness brightness,
@@ -45,6 +47,7 @@ class AppTheme {
       // Unified Button theme
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
+          minimumSize: const Size.fromHeight(_buttonHeight),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSpacing.radiusS),
           ),

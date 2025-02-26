@@ -68,6 +68,7 @@ dependencies:
   url_launcher: ^6.3.1
   formz: ^0.8.0
   moment_dart: ^4.0.1
+  internet_connection_checker_plus: ^2.7.0
 
   # Animation
   page_transition: ^2.2.1
@@ -83,6 +84,8 @@ dependencies:
   cached_network_image: ^3.4.1
   hl_image_picker: ^1.2.16
   multi_dropdown: ^3.0.1
+  photo_view: 0.15.0
+  readmore: ^3.0.0
 
 dev_dependencies:
   flutter_test:
