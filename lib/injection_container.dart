@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/auth/data/models/user.model.dart';
 import 'features/auth/data/repositories/auth_repository_impl.dart';
@@ -29,6 +30,8 @@ import 'services/impl/firestore_service_impl.dart';
 
 final getIt = GetIt.I;
 Future<void> initializeDependencies() async {
+  await Hive.initFlutter();
+
   // Logger
   getIt.registerLazySingleton(() => AppLogger());
 

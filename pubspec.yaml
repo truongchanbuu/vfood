@@ -49,6 +49,8 @@ dependencies:
 
   # Storage
   shared_preferences: ^2.5.2
+  hive_ce: ^2.10.1
+  hive_ce_flutter: ^2.2.0
 
   # Fonts
   google_fonts: ^6.2.1
