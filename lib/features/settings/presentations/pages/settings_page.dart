@@ -13,6 +13,7 @@ import '../../../auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import '../../../auth/presentations/bloc/login/login_cubit.dart';
 import '../../../auth/presentations/bloc/signup/signup_cubit.dart';
 import '../../../auth/presentations/pages/auth_page.dart';
+import '../../../food/presentations/pages/favorite_food_page.dart';
 import '../../../shared/presentations/widgets/default_app_bar.dart';
 import '../../../user/presentation/bloc/update_info/update_info_cubit.dart';
 import '../../../user/presentation/pages/profile_page.dart';
@@ -71,7 +72,7 @@ class SettingsPage extends StatelessWidget {
                         _buildNavigationTile(
                           context,
                           S.current.favorite_food_section_title,
-                          () {},
+                          () => _onFavoriteFood(context),
                         ),
                       ]
                     : [
@@ -300,6 +301,19 @@ class SettingsPage extends StatelessWidget {
         child: BlocProvider(
           create: (_) => getIt.get<UpdateInfoCubit>(),
           child: const ProfilePage(),
+        ),
+      ),
+    );
+  }
+
+  void _onFavoriteFood(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.leftToRight,
+        child: BlocProvider(
+          create: (_) => getIt.get<UpdateInfoCubit>(),
+          child: const FavoriteFoodPage(),
         ),
       ),
     );

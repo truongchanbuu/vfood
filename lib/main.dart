@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
 import 'config/localization/app_localization.dart';
+import 'config/routes/app_router.dart';
 import 'config/themes/app_theme.dart';
 import 'cores/constants/commons.dart';
 import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
@@ -53,6 +54,7 @@ class AppContainer extends StatelessWidget {
       overlayWidgetBuilder: (progress) => const AppLoadingIndicator(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        navigatorKey: AppRouter.navigatorKey,
         title: AppCommons.appName,
         theme: context.select((SettingsCubit settings) =>
             settings.isDarkMode ? AppTheme.darkTheme : AppTheme.lightTheme),

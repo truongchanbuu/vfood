@@ -48,7 +48,7 @@ class _FoodItemState extends State<FoodItem> {
                 fit: BoxFit.cover,
                 placeholder: (context, url) => ClipRect(
                   child: Lottie.asset(
-                    'assets/shared/json/image_food_loading.json',
+                    'assets/shared/json/loading/image_food_loading.json',
                     fit: BoxFit.contain,
                     height: itemImageHeight,
                     width: itemImageWidth,

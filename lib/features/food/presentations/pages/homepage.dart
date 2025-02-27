@@ -188,7 +188,7 @@ class _HomePageState extends State<HomePage> {
             ),
             padding: const EdgeInsets.all(AppSpacing.marginS),
             child: Lottie.asset(
-              'assets/shared/json/food-bowl.json',
+              'assets/shared/json/loading/food_bowl_loading.json',
               fit: BoxFit.cover,
               width: 150,
               height: 150,

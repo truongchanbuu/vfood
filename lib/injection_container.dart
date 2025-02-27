@@ -11,6 +11,7 @@ import 'features/auth/presentations/bloc/auth_bloc/auth_bloc.dart';
 import 'features/auth/presentations/bloc/login/login_cubit.dart';
 import 'features/auth/presentations/bloc/reset_password/reset_password_cubit.dart';
 import 'features/auth/presentations/bloc/signup/signup_cubit.dart';
+import 'features/food/presentations/bloc/find_restaurant/find_restaurant_bloc.dart';
 import 'features/settings/presentations/bloc/contact/contact_cubit.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'features/shared/presentations/bloc/internet/internet_bloc.dart';
@@ -68,6 +69,7 @@ Future<void> initializeDependencies() async {
   // Bloc
   getIt.registerSingleton<InternetBloc>(InternetBloc());
   getIt.registerSingleton<AuthBloc>(AuthBloc(getIt()));
+  getIt.registerFactory<FindRestaurantBloc>(() => FindRestaurantBloc());
 
   // Cubit
   getIt.registerSingleton<SettingsCubit>(SettingsCubit(getIt()));

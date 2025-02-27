@@ -95,6 +95,36 @@ class S {
     return Intl.message('Review', name: 'review_button', desc: '', args: []);
   }
 
+  /// `Cancel`
+  String get cancel_button {
+    return Intl.message('Cancel', name: 'cancel_button', desc: '', args: []);
+  }
+
+  /// `Not Now`
+  String get not_now_button {
+    return Intl.message('Not Now', name: 'not_now_button', desc: '', args: []);
+  }
+
+  /// `Enable`
+  String get enable_button {
+    return Intl.message('Enable', name: 'enable_button', desc: '', args: []);
+  }
+
+  /// `Sort By`
+  String get sort_by_button {
+    return Intl.message('Sort By', name: 'sort_by_button', desc: '', args: []);
+  }
+
+  /// `Open Setting`
+  String get open_setting_button {
+    return Intl.message(
+      'Open Setting',
+      name: 'open_setting_button',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Searching...`
   String get searching_hint_text {
     return Intl.message(
@@ -1055,6 +1085,16 @@ class S {
     );
   }
 
+  /// `Find Nearby Restaurant`
+  String get find_nearby_restaurant_button {
+    return Intl.message(
+      'Find Nearby Restaurant',
+      name: 'find_nearby_restaurant_button',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `teaspoon`
   String get teaspoon_unit {
     return Intl.message('teaspoon', name: 'teaspoon_unit', desc: '', args: []);
@@ -1073,6 +1113,66 @@ class S {
   /// `cup`
   String get cup_unit {
     return Intl.message('cup', name: 'cup_unit', desc: '', args: []);
+  }
+
+  /// `Permission Required`
+  String get permission_required {
+    return Intl.message(
+      'Permission Required',
+      name: 'permission_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please open setting and grant the permission manually`
+  String get open_setting_required_message {
+    return Intl.message(
+      'Please open setting and grant the permission manually',
+      name: 'open_setting_required_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission is required to find nearby restaurants`
+  String get location_permission_request {
+    return Intl.message(
+      'Location permission is required to find nearby restaurants',
+      name: 'location_permission_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission is denied`
+  String get location_permission_denied {
+    return Intl.message(
+      'Location permission is denied',
+      name: 'location_permission_denied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Restaurants Nearby`
+  String get restaurants_nearby_title {
+    return Intl.message(
+      'Restaurants Nearby',
+      name: 'restaurants_nearby_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to open map`
+  String get map_opened_failed {
+    return Intl.message(
+      'Failed to open map',
+      name: 'map_opened_failed',
+      desc: '',
+      args: [],
+    );
   }
 }
 

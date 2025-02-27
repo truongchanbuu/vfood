@@ -1,5 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iconify_flutter_plus/iconify_flutter_plus.dart';
+import 'package:iconify_flutter_plus/icons/bx.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:readmore/readmore.dart';
 
@@ -10,6 +13,7 @@ import '../../../../cores/constants/text_styles.dart';
 import '../../../../cores/extensions/context_extension.dart';
 import '../../../../cores/extensions/num_extension.dart';
 import '../../../../generated/l10n.dart';
+import '../../../../injection_container.dart';
 import '../../../shared/presentations/pages/full_screen_image_page.dart';
 import '../../domain/entities/food_category.dart';
 import '../../domain/entities/food_entity.dart';
@@ -17,9 +21,11 @@ import '../../domain/entities/food_flavor.dart';
 import '../../domain/entities/food_ingredient.dart';
 import '../../domain/entities/food_region.dart';
 import '../../domain/entities/ingredient_unit.dart';
+import '../bloc/find_restaurant/find_restaurant_bloc.dart';
 import '../widgets/food_category_chip_wrap.dart';
 import '../widgets/food_flavor_chip_wrap.dart';
 import '../widgets/recommend_food_tab.dart';
+import 'find_restaurant_page.dart';
 
 const FoodEntity _foodEntity = FoodEntity(
   foodId: "food_001",
@@ -225,6 +231,30 @@ class FoodDetailPage extends StatelessWidget {
 
                     const SizedBox(height: AppSpacing.marginL),
 
+                    // Find Food Feature
+                    ElevatedButton(
+                      onPressed: () => _onFindRestaurant(context),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Iconify(
+                            Bx.restaurant,
+                            color: AppColors.primary,
+                          ),
+                          const SizedBox(width: AppSpacing.marginS),
+                          Text(
+                            S.current.find_nearby_restaurant_button,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: AppFontSize.h4,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: AppSpacing.marginL),
+
                     // Recommend Food
                     const RecommendFoodTab(),
                   ],
@@ -308,6 +338,21 @@ class FoodDetailPage extends StatelessWidget {
         child: FullScreenImagePage(
           collectionId: _foodEntity.foodId,
           imageUrls: [_foodEntity.imageUrl],
+        ),
+      ),
+    );
+  }
+
+  void _onFindRestaurant(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.scale,
+        alignment: Alignment.center,
+        child: BlocProvider(
+          create: (_) =>
+              getIt.get<FindRestaurantBloc>()..add(RequestLocation()),
+          child: const FindRestaurantPage(),
         ),
       ),
     );

@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sign in/Sign up",
     ),
     "bread": MessageLookupByLibrary.simpleMessage("Bread"),
+    "cancel_button": MessageLookupByLibrary.simpleMessage("Cancel"),
     "confirm_password_field": MessageLookupByLibrary.simpleMessage(
       "Confirm Password",
     ),
@@ -86,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "email_subject_contact": MessageLookupByLibrary.simpleMessage(
       "Support Request",
     ),
+    "enable_button": MessageLookupByLibrary.simpleMessage("Enable"),
     "english_option": MessageLookupByLibrary.simpleMessage("English"),
     "explore_page": MessageLookupByLibrary.simpleMessage("Explore"),
     "failure_notification_title": MessageLookupByLibrary.simpleMessage(
@@ -100,6 +102,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fb_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to open facebook",
+    ),
+    "find_nearby_restaurant_button": MessageLookupByLibrary.simpleMessage(
+      "Find Nearby Restaurant",
     ),
     "food_category_title": MessageLookupByLibrary.simpleMessage(
       "Food Category",
@@ -145,12 +150,26 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "location_permission_denied": MessageLookupByLibrary.simpleMessage(
+      "Location permission is denied",
+    ),
+    "location_permission_request": MessageLookupByLibrary.simpleMessage(
+      "Location permission is required to find nearby restaurants",
+    ),
     "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
     "logout_button": MessageLookupByLibrary.simpleMessage("Logout"),
+    "map_opened_failed": MessageLookupByLibrary.simpleMessage(
+      "Failed to open map",
+    ),
     "no_item_found_title": MessageLookupByLibrary.simpleMessage(
       "No items found",
     ),
     "noodles": MessageLookupByLibrary.simpleMessage("Noodles"),
+    "not_now_button": MessageLookupByLibrary.simpleMessage("Not Now"),
+    "open_setting_button": MessageLookupByLibrary.simpleMessage("Open Setting"),
+    "open_setting_required_message": MessageLookupByLibrary.simpleMessage(
+      "Please open setting and grant the permission manually",
+    ),
     "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
       "This action is not allowed",
     ),
@@ -158,6 +177,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "others_option": MessageLookupByLibrary.simpleMessage("Others"),
     "password_field": MessageLookupByLibrary.simpleMessage("Password"),
     "payment_option": MessageLookupByLibrary.simpleMessage("Payment"),
+    "permission_required": MessageLookupByLibrary.simpleMessage(
+      "Permission Required",
+    ),
     "phone_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to make a call",
     ),
@@ -186,6 +208,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "A reset email is sent. Please check your mailbox",
     ),
     "reset_failed": MessageLookupByLibrary.simpleMessage("Reset Failed"),
+    "restaurants_nearby_title": MessageLookupByLibrary.simpleMessage(
+      "Restaurants Nearby",
+    ),
     "review_button": MessageLookupByLibrary.simpleMessage("Review"),
     "reviews_title": MessageLookupByLibrary.simpleMessage("Reviews"),
     "rice_dishes": MessageLookupByLibrary.simpleMessage("Rice Dishes"),
@@ -201,6 +226,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
     "sign_up_failed": MessageLookupByLibrary.simpleMessage("Sign Up Failed"),
+    "sort_by_button": MessageLookupByLibrary.simpleMessage("Sort By"),
     "soup": MessageLookupByLibrary.simpleMessage("Soup"),
     "sour_flavor": MessageLookupByLibrary.simpleMessage("Sour"),
     "spicy_flavor": MessageLookupByLibrary.simpleMessage("Spicy"),
