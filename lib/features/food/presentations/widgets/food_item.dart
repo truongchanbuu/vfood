@@ -1,16 +1,14 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:moment_dart/moment_dart.dart';
 
 import '../../../../cores/constants/colors.dart';
 import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
-import '../../../shared/presentations/widgets/error_image.dart';
 import '../../domain/entities/food_entity.dart';
 import 'food_category_chip_wrap.dart';
 import 'food_flavor_chip_wrap.dart';
+import 'food_image.dart';
 
 class FoodItem extends StatefulWidget {
   final FoodEntity food;
@@ -23,8 +21,6 @@ class FoodItem extends StatefulWidget {
 class _FoodItemState extends State<FoodItem> {
   bool isFavorite = false;
 
-  static const double itemImageHeight = 250;
-  static const double itemImageWidth = double.infinity;
   static const _spacing = SizedBox(height: AppSpacing.marginS);
   static const int maxLines = 3;
 
@@ -40,24 +36,9 @@ class _FoodItemState extends State<FoodItem> {
         children: [
           Stack(
             children: [
-              CachedNetworkImage(
-                imageUrl: widget.food.imageUrl,
+              FoodImage(
+                photoUrl: widget.food.imageUrl,
                 cacheKey: widget.food.foodId,
-                width: itemImageWidth,
-                height: itemImageHeight,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => ClipRect(
-                  child: Lottie.asset(
-                    'assets/shared/json/loading/image_food_loading.json',
-                    fit: BoxFit.contain,
-                    height: itemImageHeight,
-                    width: itemImageWidth,
-                  ),
-                ),
-                errorWidget: (context, error, stackTrace) => const ErrorImage(
-                  width: itemImageWidth,
-                  height: itemImageHeight,
-                ),
               ),
               Positioned(
                 top: 8,
@@ -132,9 +113,7 @@ class _FoodItemState extends State<FoodItem> {
                     widget.food.foodDesc,
                     style: const TextStyle(
                       fontSize: AppFontSize.bodyLarge,
-                      overflow: TextOverflow.ellipsis,
                     ),
-                    textAlign: TextAlign.justify,
                     overflow: TextOverflow.ellipsis,
                     maxLines: maxLines,
                   ),

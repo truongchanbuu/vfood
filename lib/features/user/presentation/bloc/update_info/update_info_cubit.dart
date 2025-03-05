@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hl_image_picker/hl_image_picker.dart';
 
 import '../../../../../cores/exceptions/firebase_auth_exception.dart';
+import '../../../../../cores/helpers/image_helper.dart';
 import '../../../../auth/domain/repositories/auth_repository.dart';
 
 part 'update_info_state.dart';
@@ -43,24 +44,7 @@ class UpdateInfoCubit extends Cubit<UpdateInfoState> {
       _updateInfo(() => _authRepository.updatePhotoUrl(photoUrl));
 
   Future<void> pickImage() async {
-    final HLImagePicker picker = HLImagePicker();
-
-    final List<HLPickerItem> images = await picker.openPicker(
-      cropping: true,
-      cropOptions: const HLCropOptions(
-        aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
-        compressQuality: 0.9,
-        croppingStyle: CroppingStyle.circular,
-      ),
-      pickerOptions: const HLPickerOptions(
-        mediaType: MediaType.image,
-        maxSelectedAssets: 1,
-        maxFileSize: 100,
-        enablePreview: true,
-        usedCameraButton: true,
-      ),
-    );
-
+    final List<HLPickerItem> images = await ImageHelper.pickImages();
     await updatePhotoUrl(images.first.path);
   }
 }

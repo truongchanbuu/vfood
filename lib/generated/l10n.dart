@@ -110,6 +110,11 @@ class S {
     return Intl.message('Enable', name: 'enable_button', desc: '', args: []);
   }
 
+  /// `Clear`
+  String get clear_button {
+    return Intl.message('Clear', name: 'clear_button', desc: '', args: []);
+  }
+
   /// `Sort By`
   String get sort_by_button {
     return Intl.message('Sort By', name: 'sort_by_button', desc: '', args: []);
@@ -163,6 +168,21 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Not Found`
+  String get not_found_title {
+    return Intl.message(
+      'Not Found',
+      name: 'not_found_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Step`
+  String get step_title {
+    return Intl.message('Step', name: 'step_title', desc: '', args: []);
   }
 
   /// `Unknown Exception`
@@ -1050,6 +1070,11 @@ class S {
     return Intl.message('Salty', name: 'salty_flavor', desc: '', args: []);
   }
 
+  /// `Bitter`
+  String get bitter_flavor {
+    return Intl.message('Bitter', name: 'bitter_flavor', desc: '', args: []);
+  }
+
   /// `Ingredients`
   String get food_ingredients {
     return Intl.message(
@@ -1073,6 +1098,16 @@ class S {
   /// `Reviews`
   String get reviews_title {
     return Intl.message('Reviews', name: 'reviews_title', desc: '', args: []);
+  }
+
+  /// `Instruction`
+  String get food_instruction {
+    return Intl.message(
+      'Instruction',
+      name: 'food_instruction',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Food You May Like`
@@ -1113,6 +1148,31 @@ class S {
   /// `cup`
   String get cup_unit {
     return Intl.message('cup', name: 'cup_unit', desc: '', args: []);
+  }
+
+  /// `bulb`
+  String get bulb_unit {
+    return Intl.message('bulb', name: 'bulb_unit', desc: '', args: []);
+  }
+
+  /// `pinch`
+  String get pinch_unit {
+    return Intl.message('pinch', name: 'pinch_unit', desc: '', args: []);
+  }
+
+  /// `slice`
+  String get slice_unit {
+    return Intl.message('slice', name: 'slice_unit', desc: '', args: []);
+  }
+
+  /// `clove`
+  String get clove_unit {
+    return Intl.message('clove', name: 'clove_unit', desc: '', args: []);
+  }
+
+  /// `stalk`
+  String get stalk_unit {
+    return Intl.message('stalk', name: 'stalk_unit', desc: '', args: []);
   }
 
   /// `Permission Required`
@@ -1170,6 +1230,146 @@ class S {
     return Intl.message(
       'Failed to open map',
       name: 'map_opened_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phở is a traditional Vietnamese noodle soup known for its aromatic broth, tender meat, and fresh herbs. The dish features a clear, savory broth, typically made by simmering beef bones with spices such as star anise, cloves, cinnamon, and cardamom. This flavorful base is poured over flat rice noodles and thinly sliced beef, which cooks gently in the hot liquid. Common garnishes include bean sprouts, Thai basil, lime wedges, and chili slices, allowing each diner to customize their bowl to taste. Variations of phở may also feature chicken, tofu, or other proteins, reflecting its versatility and widespread appeal.`
+  String get pho_desc {
+    return Intl.message(
+      'Phở is a traditional Vietnamese noodle soup known for its aromatic broth, tender meat, and fresh herbs. The dish features a clear, savory broth, typically made by simmering beef bones with spices such as star anise, cloves, cinnamon, and cardamom. This flavorful base is poured over flat rice noodles and thinly sliced beef, which cooks gently in the hot liquid. Common garnishes include bean sprouts, Thai basil, lime wedges, and chili slices, allowing each diner to customize their bowl to taste. Variations of phở may also feature chicken, tofu, or other proteins, reflecting its versatility and widespread appeal.',
+      name: 'pho_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phở, Vietnam's iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.`
+  String get pho_history {
+    return Intl.message(
+      'Phở, Vietnam\'s iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.',
+      name: 'pho_history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beef Leg Bones`
+  String get beef_leg_bones {
+    return Intl.message(
+      'Beef Leg Bones',
+      name: 'beef_leg_bones',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beef Tenderloin`
+  String get beef_tenderloin {
+    return Intl.message(
+      'Beef Tenderloin',
+      name: 'beef_tenderloin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beef Brisket`
+  String get beef_brisket {
+    return Intl.message(
+      'Beef Brisket',
+      name: 'beef_brisket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Onion`
+  String get onion {
+    return Intl.message('Onion', name: 'onion', desc: '', args: []);
+  }
+
+  /// `Green Onion`
+  String get green_onion {
+    return Intl.message('Green Onion', name: 'green_onion', desc: '', args: []);
+  }
+
+  /// `Ginger`
+  String get ginger {
+    return Intl.message('Ginger', name: 'ginger', desc: '', args: []);
+  }
+
+  /// `Herb`
+  String get herb {
+    return Intl.message('Herb', name: 'herb', desc: '', args: []);
+  }
+
+  /// `Vegetable`
+  String get vegetable {
+    return Intl.message('Vegetable', name: 'vegetable', desc: '', args: []);
+  }
+
+  /// `Shallot`
+  String get shallot {
+    return Intl.message('Shallot', name: 'shallot', desc: '', args: []);
+  }
+
+  /// `Rock Sugar`
+  String get rock_sugar {
+    return Intl.message('Rock Sugar', name: 'rock_sugar', desc: '', args: []);
+  }
+
+  /// `Salt`
+  String get salt {
+    return Intl.message('Salt', name: 'salt', desc: '', args: []);
+  }
+
+  /// `MSG (Monosodium Glutamate)`
+  String get msg {
+    return Intl.message(
+      'MSG (Monosodium Glutamate)',
+      name: 'msg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rinse the beef bones and meat thoroughly with water, then let them drain.\nCut the brisket into thin, bite-sized slices about the length of three finger joints.\nPlace the bones in a bowl, pour boiling water over them until fully submerged, and blanch for about 3–5 minutes to remove impurities and odors.\nThen, take the bones out and rinse them several times with clean water.`
+  String get pho_recipe_step_1 {
+    return Intl.message(
+      'Rinse the beef bones and meat thoroughly with water, then let them drain.\nCut the brisket into thin, bite-sized slices about the length of three finger joints.\nPlace the bones in a bowl, pour boiling water over them until fully submerged, and blanch for about 3–5 minutes to remove impurities and odors.\nThen, take the bones out and rinse them several times with clean water.',
+      name: 'pho_recipe_step_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Peel the onion, wash it thoroughly, and let it drain. Cut one onion in half for roasting later, while thinly slicing the other two.\nPeel the shallots, then wash them along with the green onions and ginger. Finely chop the green onion leaves, and cut the white stalks into four lengthwise sections.\nPlace the halved onion, shallots, and ginger in a pan and roast over low to medium heat for 3–5 minutes until they become fragrant and slightly charred, then turn off the heat.\nUsing the same pan, add the pho seasoning spices and dry-roast over medium heat for about 4–6 minutes until aromatic. Transfer the spices immediately into a filter bag and tie it securely.`
+  String get pho_recipe_step_2 {
+    return Intl.message(
+      'Peel the onion, wash it thoroughly, and let it drain. Cut one onion in half for roasting later, while thinly slicing the other two.\nPeel the shallots, then wash them along with the green onions and ginger. Finely chop the green onion leaves, and cut the white stalks into four lengthwise sections.\nPlace the halved onion, shallots, and ginger in a pan and roast over low to medium heat for 3–5 minutes until they become fragrant and slightly charred, then turn off the heat.\nUsing the same pan, add the pho seasoning spices and dry-roast over medium heat for about 4–6 minutes until aromatic. Transfer the spices immediately into a filter bag and tie it securely.',
+      name: 'pho_recipe_step_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place the blanched beef bones, brisket, pho spice bag, and the roasted ingredients from step 2 into a pressure cooker.\nAdd enough water to cover the ingredients, along with 1 teaspoon of salt. Close the lid and simmer for 30 minutes until the beef is tender and the broth develops a naturally sweet flavor.\nAfter that, remove all the ingredients and cut the brisket into bite-sized pieces, about the length of three finger joints.\nTransfer the broth to a large pot to continue cooking. Place it back on the stove and return the spice bag to the pot, simmering over medium heat.\nAdd 200g of rock sugar, 2 tablespoons of seasoning powder, 1 teaspoon of salt, and 1/4 teaspoon of MSG, then stir well.\nLet the broth simmer for another 5–7 minutes until it reaches a rolling boil. Adjust the seasoning to taste, then remove the spice bag, and the broth is ready.`
+  String get pho_recipe_step_3 {
+    return Intl.message(
+      'Place the blanched beef bones, brisket, pho spice bag, and the roasted ingredients from step 2 into a pressure cooker.\nAdd enough water to cover the ingredients, along with 1 teaspoon of salt. Close the lid and simmer for 30 minutes until the beef is tender and the broth develops a naturally sweet flavor.\nAfter that, remove all the ingredients and cut the brisket into bite-sized pieces, about the length of three finger joints.\nTransfer the broth to a large pot to continue cooking. Place it back on the stove and return the spice bag to the pot, simmering over medium heat.\nAdd 200g of rock sugar, 2 tablespoons of seasoning powder, 1 teaspoon of salt, and 1/4 teaspoon of MSG, then stir well.\nLet the broth simmer for another 5–7 minutes until it reaches a rolling boil. Adjust the seasoning to taste, then remove the spice bag, and the broth is ready.',
+      name: 'pho_recipe_step_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `And just like that, our beef pho is ready!\nPlace the pho noodles into a bowl, then top with shredded onion, chopped scallions, scallion heads, sliced brisket, and raw beef sirloin. Immediately pour the hot broth over the raw beef to lightly cook it and distribute the broth evenly.\nSprinkle some ground pepper on top, add fresh herbs, and it's ready to enjoy! The rich, naturally sweet broth pairs perfectly with the chewy pho noodles and tender, flavorful beef, enhanced by the fragrant roasted spices, onions, and ginger.\nServe it up and enjoy this delicious meal with your family!`
+  String get pho_recipe_step_4 {
+    return Intl.message(
+      'And just like that, our beef pho is ready!\nPlace the pho noodles into a bowl, then top with shredded onion, chopped scallions, scallion heads, sliced brisket, and raw beef sirloin. Immediately pour the hot broth over the raw beef to lightly cook it and distribute the broth evenly.\nSprinkle some ground pepper on top, add fresh herbs, and it\'s ready to enjoy! The rich, naturally sweet broth pairs perfectly with the chewy pho noodles and tender, flavorful beef, enhanced by the fragrant roasted spices, onions, and ginger.\nServe it up and enjoy this delicious meal with your family!',
+      name: 'pho_recipe_step_4',
       desc: '',
       args: [],
     );

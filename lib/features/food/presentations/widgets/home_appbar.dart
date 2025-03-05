@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../../config/localization/app_localization.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/colors.dart';
+import '../../../search/presentations/bloc/food_search/food_search_cubit.dart';
+import '../../../search/presentations/pages/search_page.dart';
 
 class HomeAppBar extends StatefulWidget {
   final double heightRatio;
@@ -67,7 +71,8 @@ class _AppBarTitle extends StatelessWidget {
             children: [
               Expanded(
                 child: _AppBarActionButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      context.read<FoodSearchCubit>().searchByImage(),
                   title: localization.upload_button,
                   iconData: Icons.upload,
                 ),
@@ -75,7 +80,7 @@ class _AppBarTitle extends StatelessWidget {
               const SizedBox(width: AppSpacing.marginL),
               Expanded(
                 child: _AppBarActionButton(
-                  onPressed: () {},
+                  onPressed: () => _onSearchPage(context),
                   title: localization.search_button,
                   iconData: Icons.search,
                 ),
@@ -84,6 +89,17 @@ class _AppBarTitle extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  void _onSearchPage(BuildContext context) {
+    Navigator.push(
+      context,
+      PageTransition(
+        type: PageTransitionType.scale,
+        alignment: Alignment.center,
+        child: const SearchPage(),
+      ),
     );
   }
 }

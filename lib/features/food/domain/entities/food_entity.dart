@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'food_category.dart';
 import 'food_flavor.dart';
 import 'food_ingredient.dart';
+import 'food_recipe.dart';
 import 'food_region.dart';
 
 class FoodEntity extends Equatable {
@@ -10,7 +11,7 @@ class FoodEntity extends Equatable {
   final String foodName;
   final String foodDesc;
   final String foodHistory;
-  final List<FoodIngredient> ingredients;
+  final FoodRecipe foodRecipe;
   final FoodRegion foodRegion;
   final FoodCategory foodCategory;
   final String imageUrl;
@@ -27,7 +28,7 @@ class FoodEntity extends Equatable {
     required this.foodRegion,
     required this.foodCategory,
     required this.imageUrl,
-    required this.ingredients,
+    required this.foodRecipe,
     required this.flavors,
     this.rating = 0.0,
     this.isFavorite = false,
@@ -43,7 +44,7 @@ class FoodEntity extends Equatable {
         foodRegion,
         foodCategory,
         imageUrl,
-        ingredients,
+        foodRecipe,
         flavors,
         rating,
         isFavorite,
@@ -56,7 +57,7 @@ class FoodEntity extends Equatable {
     String? foodName,
     String? foodDesc,
     String? foodHistory,
-    List<FoodIngredient>? ingredients,
+    FoodRecipe? foodRecipe,
     FoodRegion? foodRegion,
     FoodCategory? foodCategory,
     String? imageUrl,
@@ -70,7 +71,7 @@ class FoodEntity extends Equatable {
       foodName: foodName ?? this.foodName,
       foodDesc: foodDesc ?? this.foodDesc,
       foodHistory: foodHistory ?? this.foodHistory,
-      ingredients: ingredients ?? this.ingredients,
+      foodRecipe: foodRecipe ?? this.foodRecipe,
       foodRegion: foodRegion ?? this.foodRegion,
       foodCategory: foodCategory ?? this.foodCategory,
       imageUrl: imageUrl ?? this.imageUrl,
@@ -89,7 +90,7 @@ class FoodEntity extends Equatable {
   static const String foodRegionField = 'foodRegion';
   static const String foodCategoryField = 'foodCategory';
   static const String imageUrlField = 'imageUrl';
-  static const String ingredientsField = 'ingredients';
+  static const String foodRecipeField = 'foodRecipe';
   static const String flavorsField = 'flavors';
   static const String ratingField = 'rating';
   static const String isFavoriteField = 'isFavorite';

@@ -13,6 +13,7 @@ enum FoodFlavor {
   sour,
   savory,
   salty,
+  bitter,
   spicy;
 
   Color get color => switch (this) {
@@ -21,6 +22,7 @@ enum FoodFlavor {
         FoodFlavor.sour => const Color(0xFFFFFF00),
         FoodFlavor.spicy => const Color(0xFFFF0000),
         FoodFlavor.salty => const Color(0xFF87CEEB),
+        FoodFlavor.bitter => const Color(0xFF556B2F),
       };
 
   String get icon => switch (this) {
@@ -29,6 +31,7 @@ enum FoodFlavor {
         FoodFlavor.sour => Fa.lemon_o,
         FoodFlavor.spicy => EmojioneMonotone.hot_pepper,
         FoodFlavor.salty => Tabler.salt,
+        FoodFlavor.bitter => Fa.leaf,
       };
 
   String get normalizedName => switch (this) {
@@ -37,5 +40,6 @@ enum FoodFlavor {
         FoodFlavor.sour => S.current.sour_flavor,
         FoodFlavor.spicy => S.current.spicy_flavor,
         FoodFlavor.salty => S.current.salty_flavor,
+        FoodFlavor.bitter => S.current.bitter_flavor,
       };
 }

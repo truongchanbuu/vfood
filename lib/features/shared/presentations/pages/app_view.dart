@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../../../../cores/constants/colors.dart';
 import '../../../../generated/l10n.dart';
+import '../../../../injection_container.dart';
 import '../../../food/presentations/pages/homepage.dart';
+import '../../../search/presentations/bloc/food_search/food_search_cubit.dart';
 import '../../../settings/presentations/pages/settings_page.dart';
 
 class AppView extends StatefulWidget {
@@ -17,7 +20,10 @@ class _AppViewState extends State<AppView> {
   int _currentIndexTab = 0;
 
   final List<Widget> tabs = [
-    const HomePage(),
+    BlocProvider(
+      create: (_) => getIt.get<FoodSearchCubit>(),
+      child: const HomePage(),
+    ),
     Container(),
     const SettingsPage(),
   ];

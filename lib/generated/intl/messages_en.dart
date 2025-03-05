@@ -43,8 +43,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "authenticate_button": MessageLookupByLibrary.simpleMessage(
       "Sign in/Sign up",
     ),
+    "beef_brisket": MessageLookupByLibrary.simpleMessage("Beef Brisket"),
+    "beef_leg_bones": MessageLookupByLibrary.simpleMessage("Beef Leg Bones"),
+    "beef_tenderloin": MessageLookupByLibrary.simpleMessage("Beef Tenderloin"),
+    "bitter_flavor": MessageLookupByLibrary.simpleMessage("Bitter"),
     "bread": MessageLookupByLibrary.simpleMessage("Bread"),
+    "bulb_unit": MessageLookupByLibrary.simpleMessage("bulb"),
     "cancel_button": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "clear_button": MessageLookupByLibrary.simpleMessage("Clear"),
+    "clove_unit": MessageLookupByLibrary.simpleMessage("clove"),
     "confirm_password_field": MessageLookupByLibrary.simpleMessage(
       "Confirm Password",
     ),
@@ -113,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "food_flavors": MessageLookupByLibrary.simpleMessage("Flavors"),
     "food_history": MessageLookupByLibrary.simpleMessage("History"),
     "food_ingredients": MessageLookupByLibrary.simpleMessage("Ingredients"),
+    "food_instruction": MessageLookupByLibrary.simpleMessage("Instruction"),
     "food_region_title": MessageLookupByLibrary.simpleMessage("Food Region"),
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot password",
@@ -124,6 +132,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "general_section_title": MessageLookupByLibrary.simpleMessage(
       "General Settings",
     ),
+    "ginger": MessageLookupByLibrary.simpleMessage("Ginger"),
+    "green_onion": MessageLookupByLibrary.simpleMessage("Green Onion"),
+    "herb": MessageLookupByLibrary.simpleMessage("Herb"),
     "homepage": MessageLookupByLibrary.simpleMessage("Home"),
     "incomplete_food_information_option": MessageLookupByLibrary.simpleMessage(
       "Incomplete Food Information",
@@ -161,11 +172,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "map_opened_failed": MessageLookupByLibrary.simpleMessage(
       "Failed to open map",
     ),
+    "msg": MessageLookupByLibrary.simpleMessage("MSG (Monosodium Glutamate)"),
     "no_item_found_title": MessageLookupByLibrary.simpleMessage(
       "No items found",
     ),
     "noodles": MessageLookupByLibrary.simpleMessage("Noodles"),
+    "not_found_title": MessageLookupByLibrary.simpleMessage("Not Found"),
     "not_now_button": MessageLookupByLibrary.simpleMessage("Not Now"),
+    "onion": MessageLookupByLibrary.simpleMessage("Onion"),
     "open_setting_button": MessageLookupByLibrary.simpleMessage("Open Setting"),
     "open_setting_required_message": MessageLookupByLibrary.simpleMessage(
       "Please open setting and grant the permission manually",
@@ -180,11 +194,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "permission_required": MessageLookupByLibrary.simpleMessage(
       "Permission Required",
     ),
+    "pho_desc": MessageLookupByLibrary.simpleMessage(
+      "Phở is a traditional Vietnamese noodle soup known for its aromatic broth, tender meat, and fresh herbs. The dish features a clear, savory broth, typically made by simmering beef bones with spices such as star anise, cloves, cinnamon, and cardamom. This flavorful base is poured over flat rice noodles and thinly sliced beef, which cooks gently in the hot liquid. Common garnishes include bean sprouts, Thai basil, lime wedges, and chili slices, allowing each diner to customize their bowl to taste. Variations of phở may also feature chicken, tofu, or other proteins, reflecting its versatility and widespread appeal.",
+    ),
+    "pho_history": MessageLookupByLibrary.simpleMessage(
+      "Phở, Vietnam\'s iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.",
+    ),
+    "pho_recipe_step_1": MessageLookupByLibrary.simpleMessage(
+      "Rinse the beef bones and meat thoroughly with water, then let them drain.\nCut the brisket into thin, bite-sized slices about the length of three finger joints.\nPlace the bones in a bowl, pour boiling water over them until fully submerged, and blanch for about 3–5 minutes to remove impurities and odors.\nThen, take the bones out and rinse them several times with clean water.",
+    ),
+    "pho_recipe_step_2": MessageLookupByLibrary.simpleMessage(
+      "Peel the onion, wash it thoroughly, and let it drain. Cut one onion in half for roasting later, while thinly slicing the other two.\nPeel the shallots, then wash them along with the green onions and ginger. Finely chop the green onion leaves, and cut the white stalks into four lengthwise sections.\nPlace the halved onion, shallots, and ginger in a pan and roast over low to medium heat for 3–5 minutes until they become fragrant and slightly charred, then turn off the heat.\nUsing the same pan, add the pho seasoning spices and dry-roast over medium heat for about 4–6 minutes until aromatic. Transfer the spices immediately into a filter bag and tie it securely.",
+    ),
+    "pho_recipe_step_3": MessageLookupByLibrary.simpleMessage(
+      "Place the blanched beef bones, brisket, pho spice bag, and the roasted ingredients from step 2 into a pressure cooker.\nAdd enough water to cover the ingredients, along with 1 teaspoon of salt. Close the lid and simmer for 30 minutes until the beef is tender and the broth develops a naturally sweet flavor.\nAfter that, remove all the ingredients and cut the brisket into bite-sized pieces, about the length of three finger joints.\nTransfer the broth to a large pot to continue cooking. Place it back on the stove and return the spice bag to the pot, simmering over medium heat.\nAdd 200g of rock sugar, 2 tablespoons of seasoning powder, 1 teaspoon of salt, and 1/4 teaspoon of MSG, then stir well.\nLet the broth simmer for another 5–7 minutes until it reaches a rolling boil. Adjust the seasoning to taste, then remove the spice bag, and the broth is ready.",
+    ),
+    "pho_recipe_step_4": MessageLookupByLibrary.simpleMessage(
+      "And just like that, our beef pho is ready!\nPlace the pho noodles into a bowl, then top with shredded onion, chopped scallions, scallion heads, sliced brisket, and raw beef sirloin. Immediately pour the hot broth over the raw beef to lightly cook it and distribute the broth evenly.\nSprinkle some ground pepper on top, add fresh herbs, and it\'s ready to enjoy! The rich, naturally sweet broth pairs perfectly with the chewy pho noodles and tender, flavorful beef, enhanced by the fragrant roasted spices, onions, and ginger.\nServe it up and enjoy this delicious meal with your family!",
+    ),
     "phone_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to make a call",
     ),
     "phone_contact_option": MessageLookupByLibrary.simpleMessage("Phone"),
     "phone_number_field": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "pinch_unit": MessageLookupByLibrary.simpleMessage("pinch"),
     "popular_vietnamese_food_title": MessageLookupByLibrary.simpleMessage(
       "Popular Vietnamese Food",
     ),
@@ -214,6 +247,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "review_button": MessageLookupByLibrary.simpleMessage("Review"),
     "reviews_title": MessageLookupByLibrary.simpleMessage("Reviews"),
     "rice_dishes": MessageLookupByLibrary.simpleMessage("Rice Dishes"),
+    "rock_sugar": MessageLookupByLibrary.simpleMessage("Rock Sugar"),
+    "salt": MessageLookupByLibrary.simpleMessage("Salt"),
     "salty_flavor": MessageLookupByLibrary.simpleMessage("Salty"),
     "savory_flavor": MessageLookupByLibrary.simpleMessage("Savory"),
     "search_button": MessageLookupByLibrary.simpleMessage("Search"),
@@ -221,15 +256,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "send_button": MessageLookupByLibrary.simpleMessage("Send"),
     "setting_page": MessageLookupByLibrary.simpleMessage("Settings"),
     "setting_title": MessageLookupByLibrary.simpleMessage("Settings"),
+    "shallot": MessageLookupByLibrary.simpleMessage("Shallot"),
     "show_less_text": MessageLookupByLibrary.simpleMessage("Show less"),
     "show_more_text": MessageLookupByLibrary.simpleMessage("Show more"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_up_button": MessageLookupByLibrary.simpleMessage("Sign up"),
     "sign_up_failed": MessageLookupByLibrary.simpleMessage("Sign Up Failed"),
+    "slice_unit": MessageLookupByLibrary.simpleMessage("slice"),
     "sort_by_button": MessageLookupByLibrary.simpleMessage("Sort By"),
     "soup": MessageLookupByLibrary.simpleMessage("Soup"),
     "sour_flavor": MessageLookupByLibrary.simpleMessage("Sour"),
     "spicy_flavor": MessageLookupByLibrary.simpleMessage("Spicy"),
+    "stalk_unit": MessageLookupByLibrary.simpleMessage("stalk"),
+    "step_title": MessageLookupByLibrary.simpleMessage("Step"),
     "street_food": MessageLookupByLibrary.simpleMessage("Street Food"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your subject",
@@ -273,6 +312,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "user_not_found": MessageLookupByLibrary.simpleMessage(
       "Invalid email or password",
     ),
+    "vegetable": MessageLookupByLibrary.simpleMessage("Vegetable"),
     "verified_email_sent": MessageLookupByLibrary.simpleMessage(
       "An verified email has been sent",
     ),

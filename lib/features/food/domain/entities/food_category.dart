@@ -12,6 +12,13 @@ enum FoodCategory {
   streetFood,
   soup;
 
+  static FoodCategory? fromIndex(int index) {
+    if (index < 0 || index >= values.length) {
+      return null;
+    }
+    return values[index];
+  }
+
   String get normalizedName => switch (this) {
         FoodCategory.noodles => S.current.noodles,
         FoodCategory.riceDishes => S.current.rice_dishes,

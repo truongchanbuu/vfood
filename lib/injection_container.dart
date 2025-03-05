@@ -13,6 +13,7 @@ import 'features/auth/presentations/bloc/login/login_cubit.dart';
 import 'features/auth/presentations/bloc/reset_password/reset_password_cubit.dart';
 import 'features/auth/presentations/bloc/signup/signup_cubit.dart';
 import 'features/food/presentations/bloc/find_restaurant/find_restaurant_bloc.dart';
+import 'features/search/presentations/bloc/food_search/food_search_cubit.dart';
 import 'features/settings/presentations/bloc/contact/contact_cubit.dart';
 import 'features/settings/presentations/bloc/setting/settings_cubit.dart';
 import 'features/shared/presentations/bloc/internet/internet_bloc.dart';
@@ -81,4 +82,5 @@ Future<void> initializeDependencies() async {
   getIt.registerFactory<SignUpCubit>(() => SignUpCubit(getIt()));
   getIt.registerFactory<ResetPasswordCubit>(() => ResetPasswordCubit(getIt()));
   getIt.registerFactory<UpdateInfoCubit>(() => UpdateInfoCubit(getIt()));
+  getIt.registerFactory<FoodSearchCubit>(() => FoodSearchCubit());
 }
