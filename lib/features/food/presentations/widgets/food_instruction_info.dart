@@ -5,6 +5,7 @@ import '../../../../cores/constants/colors.dart';
 import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/extensions/context_extension.dart';
+import '../../../../cores/extensions/string_extension.dart';
 import '../../../../generated/l10n.dart';
 import '../../domain/entities/food_recipe.dart';
 
@@ -41,9 +42,10 @@ class FoodInstructionInfo extends StatelessWidget {
             ),
           ),
           _InfoItem(
-            iconData: Icons.punch_clock,
-            title: S.current.preparation_time,
-            value: foodRecipe.preparationTime.toDurationString(),
+            iconData: Icons.local_fire_department_outlined,
+            title: S.current.difficulty_level,
+            value: foodRecipe.difficulty.name.toUpperCaseFirstLetter,
+            valueColor: foodRecipe.difficulty.color,
           ),
         ],
       ),
@@ -55,11 +57,13 @@ class _InfoItem extends StatelessWidget {
   final IconData iconData;
   final String value;
   final String title;
+  final Color? valueColor;
 
   const _InfoItem({
     required this.iconData,
     required this.value,
     required this.title,
+    this.valueColor,
   });
 
   static const _spacing = SizedBox(height: AppSpacing.marginXS);
@@ -72,9 +76,10 @@ class _InfoItem extends StatelessWidget {
           _spacing,
           Text(
             value,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: AppFontSize.labelLarge,
+              color: valueColor,
             ),
             textAlign: TextAlign.center,
           ),

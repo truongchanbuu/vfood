@@ -1130,6 +1130,16 @@ class S {
     );
   }
 
+  /// `Difficulty`
+  String get difficulty_level {
+    return Intl.message(
+      'Difficulty',
+      name: 'difficulty_level',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Food You May Like`
   String get recommended_food_title {
     return Intl.message(
@@ -1193,6 +1203,11 @@ class S {
   /// `stalk`
   String get stalk_unit {
     return Intl.message('stalk', name: 'stalk_unit', desc: '', args: []);
+  }
+
+  /// `fruit`
+  String get fruit_unit {
+    return Intl.message('fruit', name: 'fruit_unit', desc: '', args: []);
   }
 
   /// `Permission Required`
@@ -1275,6 +1290,16 @@ class S {
     );
   }
 
+  /// `Cơm tấm Long Xuyên is a distinctive variation of Vietnam's broken rice dish, originating from Long Xuyên city in An Giang province. This version is characterized by its use of finely milled broken rice grains, which are smaller and create a tender, melt-in-the-mouth texture. The dish typically includes thinly sliced grilled pork, shredded pork skin, caramelized eggs, pickled vegetables, and scallion oil. A sweet and sour fish sauce accompanies the meal, enhancing its rich flavors.`
+  String get com_tam_long_xuyen_desc {
+    return Intl.message(
+      'Cơm tấm Long Xuyên is a distinctive variation of Vietnam\'s broken rice dish, originating from Long Xuyên city in An Giang province. This version is characterized by its use of finely milled broken rice grains, which are smaller and create a tender, melt-in-the-mouth texture. The dish typically includes thinly sliced grilled pork, shredded pork skin, caramelized eggs, pickled vegetables, and scallion oil. A sweet and sour fish sauce accompanies the meal, enhancing its rich flavors.',
+      name: 'com_tam_long_xuyen_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Phở, Vietnam's iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.`
   String get pho_history {
     return Intl.message(
@@ -1290,6 +1315,16 @@ class S {
     return Intl.message(
       'Bún bò Huế is a traditional Vietnamese beef noodle soup that originates from Huế, the former imperial capital located in central Vietnam. Renowned for its robust and spicy broth, the dish has a rich history intertwined with the region\'s cultural heritage.\n\nThe exact origins of bún bò Huế are subject to various accounts. Some narratives trace its inception back to the 16th century during the reign of Lord Nguyễn Hoàng. According to legend, a woman named Ms. Noodles ("Cô Bún") from the village of Cổ Tháp ingeniously combined tender beef with a flavorful broth, creating what is now known as bún bò Huế. \nVINPEARL.COM\n\nAnother perspective suggests that the dish was crafted to satisfy the palates of emperors, epitomizing the essence of Huế—a blend of refinement and robustness. \nSANHOTELSERIES.COM\n\nRegardless of its precise origin, bún bò Huế has evolved over centuries to become a beloved staple of Vietnamese cuisine. Its distinctive combination of spicy, sour, sweet, and salty flavors, along with the aromatic infusion of lemongrass and shrimp paste, reflects the rich culinary traditions of Huế and continues to captivate food enthusiasts both within Vietnam and around the world.',
       name: 'bun_bo_hue_history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `While the exact origins of cơm tấm Long Xuyên are not well-documented, it is a regional adaptation of the traditional Vietnamese broken rice dish, tailored to local tastes and ingredients. The emphasis on smaller rice grains and finely sliced accompaniments reflects the culinary preferences of the Long Xuyên community, setting it apart from other regional versions.`
+  String get com_tam_long_xuyen_history {
+    return Intl.message(
+      'While the exact origins of cơm tấm Long Xuyên are not well-documented, it is a regional adaptation of the traditional Vietnamese broken rice dish, tailored to local tastes and ingredients. The emphasis on smaller rice grains and finely sliced accompaniments reflects the culinary preferences of the Long Xuyên community, setting it apart from other regional versions.',
+      name: 'com_tam_long_xuyen_history',
       desc: '',
       args: [],
     );
@@ -1325,6 +1360,71 @@ class S {
     );
   }
 
+  /// `Pork Trotters`
+  String get pork_trotters {
+    return Intl.message(
+      'Pork Trotters',
+      name: 'pork_trotters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pork`
+  String get pork {
+    return Intl.message('Pork', name: 'pork', desc: '', args: []);
+  }
+
+  /// `Congealed Pork`
+  String get congealed_pork {
+    return Intl.message(
+      'Congealed Pork',
+      name: 'congealed_pork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beef Blood`
+  String get beef_blood {
+    return Intl.message('Beef Blood', name: 'beef_blood', desc: '', args: []);
+  }
+
+  /// `Beef Sausage`
+  String get beef_sausage {
+    return Intl.message(
+      'Beef Sausage',
+      name: 'beef_sausage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Broken rice`
+  String get broken_rice {
+    return Intl.message('Broken rice', name: 'broken_rice', desc: '', args: []);
+  }
+
+  /// `Duck Egg(s)`
+  String get duck_egg {
+    return Intl.message('Duck Egg(s)', name: 'duck_egg', desc: '', args: []);
+  }
+
+  /// `Egg(s)`
+  String get egg {
+    return Intl.message('Egg(s)', name: 'egg', desc: '', args: []);
+  }
+
+  /// `Coconut Milk`
+  String get coconut_milk {
+    return Intl.message(
+      'Coconut Milk',
+      name: 'coconut_milk',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Onion`
   String get onion {
     return Intl.message('Onion', name: 'onion', desc: '', args: []);
@@ -1340,9 +1440,29 @@ class S {
     return Intl.message('Ginger', name: 'ginger', desc: '', args: []);
   }
 
+  /// `Garlic`
+  String get garlic {
+    return Intl.message('Garlic', name: 'garlic', desc: '', args: []);
+  }
+
+  /// `Bean Sprout`
+  String get bean_sprout {
+    return Intl.message('Bean Sprout', name: 'bean_sprout', desc: '', args: []);
+  }
+
+  /// `Cilantro`
+  String get cilantro {
+    return Intl.message('Cilantro', name: 'cilantro', desc: '', args: []);
+  }
+
   /// `Herb`
   String get herb {
     return Intl.message('Herb', name: 'herb', desc: '', args: []);
+  }
+
+  /// `Star Anise`
+  String get star_anise {
+    return Intl.message('Star Anise', name: 'star_anise', desc: '', args: []);
   }
 
   /// `Vegetable`
@@ -1350,14 +1470,69 @@ class S {
     return Intl.message('Vegetable', name: 'vegetable', desc: '', args: []);
   }
 
+  /// `Pandan leaves`
+  String get pandan_leaves {
+    return Intl.message(
+      'Pandan leaves',
+      name: 'pandan_leaves',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Honey`
+  String get honey {
+    return Intl.message('Honey', name: 'honey', desc: '', args: []);
+  }
+
+  /// `Lime Juice`
+  String get lime_juice {
+    return Intl.message('Lime Juice', name: 'lime_juice', desc: '', args: []);
+  }
+
+  /// `Banana Blossoms`
+  String get banana_blossoms {
+    return Intl.message(
+      'Banana Blossoms',
+      name: 'banana_blossoms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lime`
+  String get lime {
+    return Intl.message('Lime', name: 'lime', desc: '', args: []);
+  }
+
+  /// `Lemongrass`
+  String get lemon_grass {
+    return Intl.message('Lemongrass', name: 'lemon_grass', desc: '', args: []);
+  }
+
   /// `Shallot`
   String get shallot {
     return Intl.message('Shallot', name: 'shallot', desc: '', args: []);
   }
 
+  /// `Thick Rice Vermicelli Noodles`
+  String get thick_rice_vermicelli_noodles {
+    return Intl.message(
+      'Thick Rice Vermicelli Noodles',
+      name: 'thick_rice_vermicelli_noodles',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Rock Sugar`
   String get rock_sugar {
     return Intl.message('Rock Sugar', name: 'rock_sugar', desc: '', args: []);
+  }
+
+  /// `Palm Sugar`
+  String get palm_sugar {
+    return Intl.message('Palm Sugar', name: 'palm_sugar', desc: '', args: []);
   }
 
   /// `Salt`
@@ -1370,6 +1545,31 @@ class S {
     return Intl.message(
       'MSG (Monosodium Glutamate)',
       name: 'msg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Five Spice Powder`
+  String get five_spice_powder {
+    return Intl.message(
+      'Five Spice Powder',
+      name: 'five_spice_powder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Annatto Oil`
+  String get annatto_oil {
+    return Intl.message('Annatto Oil', name: 'annatto_oil', desc: '', args: []);
+  }
+
+  /// `Fermented Shrimp Paste`
+  String get fermented_shrimp_paste {
+    return Intl.message(
+      'Fermented Shrimp Paste',
+      name: 'fermented_shrimp_paste',
       desc: '',
       args: [],
     );
@@ -1410,6 +1610,96 @@ class S {
     return Intl.message(
       'And just like that, our beef pho is ready!\nPlace the pho noodles into a bowl, then top with shredded onion, chopped scallions, scallion heads, sliced brisket, and raw beef sirloin. Immediately pour the hot broth over the raw beef to lightly cook it and distribute the broth evenly.\nSprinkle some ground pepper on top, add fresh herbs, and it\'s ready to enjoy! The rich, naturally sweet broth pairs perfectly with the chewy pho noodles and tender, flavorful beef, enhanced by the fragrant roasted spices, onions, and ginger.\nServe it up and enjoy this delicious meal with your family!',
       name: 'pho_recipe_step_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you prefer more meat in your pork hock, choose the hind hock, but if you enjoy chewy skin and tendons, the front hock is the better option. Cut the pork hock into circular slices and wash them thoroughly.\n\nBlanch the pork hock in boiling water to remove impurities, then rinse it again with clean water.\n\nClean the beef brisket thoroughly, then boil it separately with half a sliced ginger root to add fragrance. Simmer over low heat for about two hours, then test its tenderness by piercing it with chopsticks—if they pass through easily, the meat is fully cooked. Allow the brisket to cool, then slice it thinly before serving.`
+  String get bun_bo_hue_recipe_step_1 {
+    return Intl.message(
+      'If you prefer more meat in your pork hock, choose the hind hock, but if you enjoy chewy skin and tendons, the front hock is the better option. Cut the pork hock into circular slices and wash them thoroughly.\n\nBlanch the pork hock in boiling water to remove impurities, then rinse it again with clean water.\n\nClean the beef brisket thoroughly, then boil it separately with half a sliced ginger root to add fragrance. Simmer over low heat for about two hours, then test its tenderness by piercing it with chopsticks—if they pass through easily, the meat is fully cooked. Allow the brisket to cool, then slice it thinly before serving.',
+      name: 'bun_bo_hue_recipe_step_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beef or pork blood can be bought pre-cooked or purchased fresh and then boiled until fully cooked before slicing into bite-sized pieces. It is important to buy blood from reputable sources to ensure food safety. If you do not eat blood, you can simply omit it from the dish.\n\nCrab cakes should be shaped into small round pieces and dropped into the pot of simmering beef brisket broth. Once they float to the surface, they are fully cooked and can be removed and set aside. You can replace crab cakes with beef cakes, pork rolls, or leave them out altogether if preferred.\n\nFour stalks of lemongrass should be finely chopped, while the remaining ones should be cut into sections and lightly pounded. The onion should be divided into two portions—one half cut in half, and the other thinly sliced.\n\nGreen onions, Vietnamese cilantro, and Thai basil should be washed thoroughly and finely chopped. All accompanying vegetables should also be washed and drained before serving.`
+  String get bun_bo_hue_recipe_step_2 {
+    return Intl.message(
+      'Beef or pork blood can be bought pre-cooked or purchased fresh and then boiled until fully cooked before slicing into bite-sized pieces. It is important to buy blood from reputable sources to ensure food safety. If you do not eat blood, you can simply omit it from the dish.\n\nCrab cakes should be shaped into small round pieces and dropped into the pot of simmering beef brisket broth. Once they float to the surface, they are fully cooked and can be removed and set aside. You can replace crab cakes with beef cakes, pork rolls, or leave them out altogether if preferred.\n\nFour stalks of lemongrass should be finely chopped, while the remaining ones should be cut into sections and lightly pounded. The onion should be divided into two portions—one half cut in half, and the other thinly sliced.\n\nGreen onions, Vietnamese cilantro, and Thai basil should be washed thoroughly and finely chopped. All accompanying vegetables should also be washed and drained before serving.',
+      name: 'bun_bo_hue_recipe_step_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dissolve two tablespoons of fermented shrimp paste (mắm ruốc) in 100 ml of cold water.\n\nSauté four finely chopped lemongrass stalks in two tablespoons of oil until fragrant. Remove some of the lemongrass, then add three tablespoons of annatto oil. Finely mince one onion, one garlic bulb, and two chili peppers, then add them to the pan and fry until golden before turning off the heat.\n\nPlace the prepared pork hock into a pot and simmer over low heat with a halved onion and three lightly pounded lemongrass stalks. This helps to enhance the sweetness and fragrance of the broth while extracting the full flavor from the bones. Be sure to occasionally skim off any foam to keep the broth clear.\n\nCarefully pour only the top layer of the fermented shrimp paste mixture into the broth, discarding the residue at the bottom. Add two tablespoons of sugar, two tablespoons of seasoning powder, and one tablespoon of salt, then adjust the seasoning to taste.\n\nFinally, mix in the chili satay oil prepared earlier.`
+  String get bun_bo_hue_recipe_step_3 {
+    return Intl.message(
+      'Dissolve two tablespoons of fermented shrimp paste (mắm ruốc) in 100 ml of cold water.\n\nSauté four finely chopped lemongrass stalks in two tablespoons of oil until fragrant. Remove some of the lemongrass, then add three tablespoons of annatto oil. Finely mince one onion, one garlic bulb, and two chili peppers, then add them to the pan and fry until golden before turning off the heat.\n\nPlace the prepared pork hock into a pot and simmer over low heat with a halved onion and three lightly pounded lemongrass stalks. This helps to enhance the sweetness and fragrance of the broth while extracting the full flavor from the bones. Be sure to occasionally skim off any foam to keep the broth clear.\n\nCarefully pour only the top layer of the fermented shrimp paste mixture into the broth, discarding the residue at the bottom. Add two tablespoons of sugar, two tablespoons of seasoning powder, and one tablespoon of salt, then adjust the seasoning to taste.\n\nFinally, mix in the chili satay oil prepared earlier.',
+      name: 'bun_bo_hue_recipe_step_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blanch the rice noodles in boiling water, then drain and transfer them to a serving bowl.\n\nAdd slices of beef brisket, pork hock, crab cakes, blood pudding, Vietnamese cilantro, finely chopped green onions, and a few thin slices of onion. Finally, ladle the hot broth over the ingredients.\n\nBún Bò Huế is best enjoyed with bean sprouts, banana blossom, Thai basil, and a bit of chili paste for an extra kick of flavor.`
+  String get bun_bo_hue_recipe_step_4 {
+    return Intl.message(
+      'Blanch the rice noodles in boiling water, then drain and transfer them to a serving bowl.\n\nAdd slices of beef brisket, pork hock, crab cakes, blood pudding, Vietnamese cilantro, finely chopped green onions, and a few thin slices of onion. Finally, ladle the hot broth over the ingredients.\n\nBún Bò Huế is best enjoyed with bean sprouts, banana blossom, Thai basil, and a bit of chili paste for an extra kick of flavor.',
+      name: 'bun_bo_hue_recipe_step_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose finely broken rice and wash it thoroughly. Soak the rice for 15 minutes, then drain it.\n\nBoil water in a steamer, then mix the rice with 1/2 teaspoon of salt, 1 tablespoon of cooking oil, and 30 grams of pandan leaves. Steam the rice for 30 minutes. Once cooked, open the lid and fluff the rice evenly.`
+  String get com_tam_long_xuyen_step_1 {
+    return Intl.message(
+      'Choose finely broken rice and wash it thoroughly. Soak the rice for 15 minutes, then drain it.\n\nBoil water in a steamer, then mix the rice with 1/2 teaspoon of salt, 1 tablespoon of cooking oil, and 30 grams of pandan leaves. Steam the rice for 30 minutes. Once cooked, open the lid and fluff the rice evenly.',
+      name: 'com_tam_long_xuyen_step_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose pork that has both lean meat and fat. Wash it thoroughly and cut it into thin slices about 1 cm thick. Marinate the pork with 60g honey, 30ml fish sauce, 30ml coconut milk, 30g oyster sauce, 10g cooking oil, and 2g five-spice powder. Mix well and let the meat marinate for at least 30 minutes to absorb the flavors.\n\nAfter marinating, grill the meat over a charcoal grill or an electric grill until fully cooked.`
+  String get com_tam_long_xuyen_step_2 {
+    return Intl.message(
+      'Choose pork that has both lean meat and fat. Wash it thoroughly and cut it into thin slices about 1 cm thick. Marinate the pork with 60g honey, 30ml fish sauce, 30ml coconut milk, 30g oyster sauce, 10g cooking oil, and 2g five-spice powder. Mix well and let the meat marinate for at least 30 minutes to absorb the flavors.\n\nAfter marinating, grill the meat over a charcoal grill or an electric grill until fully cooked.',
+      name: 'com_tam_long_xuyen_step_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Boil the duck eggs until fully cooked, then peel them.\n\nHeat 2 tablespoons of cooking oil in a pot, add 30g of palm sugar, and cook until the sugar turns amber. Then, add 10g of minced shallots and sauté until fragrant.\n\nNext, pour in 400ml of coconut water, 20ml of soy sauce, 20ml of fish sauce, 20g of oyster sauce, and 3-4 star anise petals (about 1 whole star anise), stirring well. Bring the mixture to a boil, then add the eggs and simmer on low heat until the sauce reduces and the eggs turn a deep caramel color. Turn off the heat and serve.`
+  String get com_tam_long_xuyen_step_3 {
+    return Intl.message(
+      'Boil the duck eggs until fully cooked, then peel them.\n\nHeat 2 tablespoons of cooking oil in a pot, add 30g of palm sugar, and cook until the sugar turns amber. Then, add 10g of minced shallots and sauté until fragrant.\n\nNext, pour in 400ml of coconut water, 20ml of soy sauce, 20ml of fish sauce, 20g of oyster sauce, and 3-4 star anise petals (about 1 whole star anise), stirring well. Bring the mixture to a boil, then add the eggs and simmer on low heat until the sauce reduces and the eggs turn a deep caramel color. Turn off the heat and serve.',
+      name: 'com_tam_long_xuyen_step_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add 40ml of fresh coconut water, 20ml of fish sauce, and 30g of sugar to a pan. Cook over high heat while stirring continuously. Once the mixture thickens to a syrup-like consistency, turn off the heat and let it cool.\n\nWhen ready to serve, mix in minced chili, minced garlic, and 1/2 teaspoon of lime juice, stirring well.\n\nIn a separate pan, heat oil or rendered pork fat, then add 50g of chopped green onions and sauté until cooked.`
+  String get com_tam_long_xuyen_step_4 {
+    return Intl.message(
+      'Add 40ml of fresh coconut water, 20ml of fish sauce, and 30g of sugar to a pan. Cook over high heat while stirring continuously. Once the mixture thickens to a syrup-like consistency, turn off the heat and let it cool.\n\nWhen ready to serve, mix in minced chili, minced garlic, and 1/2 teaspoon of lime juice, stirring well.\n\nIn a separate pan, heat oil or rendered pork fat, then add 50g of chopped green onions and sauté until cooked.',
+      name: 'com_tam_long_xuyen_step_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Slice the grilled pork and braised eggs into small pieces. Place the steamed rice on a plate, then arrange the pork, eggs, pickled vegetables, and shredded pork skin on top. Drizzle some fish sauce and scallion oil over the dish, and it's ready to enjoy!`
+  String get com_tam_long_xuyen_step_5 {
+    return Intl.message(
+      'Slice the grilled pork and braised eggs into small pieces. Place the steamed rice on a plate, then arrange the pork, eggs, pickled vegetables, and shredded pork skin on top. Drizzle some fish sauce and scallion oil over the dish, and it\'s ready to enjoy!',
+      name: 'com_tam_long_xuyen_step_5',
       desc: '',
       args: [],
     );

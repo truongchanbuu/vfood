@@ -2,7 +2,6 @@ import 'package:equatable/equatable.dart';
 
 import 'food_category.dart';
 import 'food_flavor.dart';
-import 'food_ingredient.dart';
 import 'food_recipe.dart';
 import 'food_region.dart';
 

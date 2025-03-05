@@ -13,7 +13,6 @@ import '../../../../cores/constants/font_sizes.dart';
 import '../../../../cores/constants/spacing.dart';
 import '../../../../cores/constants/text_styles.dart';
 import '../../../../cores/extensions/context_extension.dart';
-import '../../../../cores/extensions/string_extension.dart';
 import '../../../../generated/l10n.dart';
 import '../../../../injection_container.dart';
 import '../../../shared/presentations/pages/full_screen_image_page.dart';
@@ -338,39 +337,24 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                           : null,
                     ),
 
-                    _spacing,
-
                     // Instruction
-                    _buildTitle(
-                      context,
-                      S.current.food_instruction,
-                      Icons.menu_book,
-                      suffix: Container(
-                        decoration: BoxDecoration(
-                          color: _foodEntity.foodRecipe.difficulty.color,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(AppSpacing.radiusS),
-                          ),
-                        ),
-                        padding: const EdgeInsets.all(AppSpacing.paddingS),
-                        child: Text(
-                          _foodEntity.foodRecipe.difficulty.name
-                              .toUpperCaseFirstLetter,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
+                    if (_foodEntity
+                        .foodRecipe.recipeInstruction.isNotEmpty) ...[
+                      _spacing,
+                      _buildTitle(
+                        context,
+                        S.current.food_instruction,
+                        Icons.menu_book,
                       ),
-                    ),
-                    _spacing,
-                    FoodInstructionInfo(foodRecipe: _foodEntity.foodRecipe),
-                    _spacing,
-                    FoodInstruction(
-                      recipeId: _foodEntity.foodRecipe.recipeId,
-                      recipeInstruction:
-                          _foodEntity.foodRecipe.recipeInstruction,
-                    ),
+                      _spacing,
+                      FoodInstructionInfo(foodRecipe: _foodEntity.foodRecipe),
+                      _spacing,
+                      FoodInstruction(
+                        recipeId: _foodEntity.foodRecipe.recipeId,
+                        recipeInstruction:
+                            _foodEntity.foodRecipe.recipeInstruction,
+                      ),
+                    ],
 
                     const SizedBox(height: AppSpacing.marginL),
 
@@ -443,7 +427,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
             const EdgeInsets.symmetric(horizontal: AppSpacing.marginM),
         leading: Text("•", style: TextStyle(fontSize: 20, color: baseColor)),
         title: Text(
-          '${ingredient.ingredientName} - ${ingredient.ingredientQuantityString} ${ingredient.ingredientUnit.unitName}',
+          '${ingredient.ingredientName} - ${ingredient.ingredientQuantityString} ${ingredient.ingredientUnit != null ? ingredient.ingredientUnit?.unitName : ''}',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: baseColor,

@@ -6,12 +6,14 @@ import 'ingredient_unit.dart';
 class FoodIngredient extends Equatable {
   final String ingredientName;
   final double ingredientQuantity;
-  final IngredientUnit ingredientUnit;
+  final IngredientUnit? ingredientUnit;
+  final bool optional;
 
   const FoodIngredient({
     required this.ingredientName,
     required this.ingredientQuantity,
-    required this.ingredientUnit,
+    this.ingredientUnit,
+    this.optional = false,
   });
 
   String get ingredientQuantityString {
@@ -34,5 +36,6 @@ class FoodIngredient extends Equatable {
         ingredientName,
         ingredientQuantity,
         ingredientUnit,
+        optional,
       ];
 }

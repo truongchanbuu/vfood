@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "already_have_account_title": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "annatto_oil": MessageLookupByLibrary.simpleMessage("Annatto Oil"),
     "app_information_title": MessageLookupByLibrary.simpleMessage(
       "App Information",
     ),
@@ -43,11 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "authenticate_button": MessageLookupByLibrary.simpleMessage(
       "Sign in/Sign up",
     ),
+    "banana_blossoms": MessageLookupByLibrary.simpleMessage("Banana Blossoms"),
+    "bean_sprout": MessageLookupByLibrary.simpleMessage("Bean Sprout"),
+    "beef_blood": MessageLookupByLibrary.simpleMessage("Beef Blood"),
     "beef_brisket": MessageLookupByLibrary.simpleMessage("Beef Brisket"),
     "beef_leg_bones": MessageLookupByLibrary.simpleMessage("Beef Leg Bones"),
+    "beef_sausage": MessageLookupByLibrary.simpleMessage("Beef Sausage"),
     "beef_tenderloin": MessageLookupByLibrary.simpleMessage("Beef Tenderloin"),
     "bitter_flavor": MessageLookupByLibrary.simpleMessage("Bitter"),
     "bread": MessageLookupByLibrary.simpleMessage("Bread"),
+    "broken_rice": MessageLookupByLibrary.simpleMessage("Broken rice"),
     "bulb_unit": MessageLookupByLibrary.simpleMessage("bulb"),
     "bun_bo_hue_desc": MessageLookupByLibrary.simpleMessage(
       "Bún bò Huế is a renowned Vietnamese spicy beef noodle soup that hails from Huế, a city in central Vietnam known for its imperial cuisine. This flavorful dish features thick, cylindrical rice vermicelli noodles immersed in a rich broth infused with lemongrass and fermented shrimp sauce, offering a harmonious blend of spicy, salty, and savory flavors.\nThe broth is traditionally prepared by simmering beef bones and shank with lemongrass, then seasoning with fermented shrimp sauce and sugar. Spicy chili oil is added later to enhance its characteristic heat. Common protein additions include thinly sliced beef shank, oxtail, and pork knuckles. The dish is typically garnished with lime wedges, cilantro, diced green onions, raw sliced onions, chili sauce, and an assortment of fresh herbs such as mint, basil, perilla, and Vietnamese coriander. Banana blossoms or thinly sliced purple cabbage are also customary accompaniments, adding a refreshing crunch to the ensemble.",
@@ -55,12 +61,48 @@ class MessageLookup extends MessageLookupByLibrary {
     "bun_bo_hue_history": MessageLookupByLibrary.simpleMessage(
       "Bún bò Huế is a traditional Vietnamese beef noodle soup that originates from Huế, the former imperial capital located in central Vietnam. Renowned for its robust and spicy broth, the dish has a rich history intertwined with the region\'s cultural heritage.\n\nThe exact origins of bún bò Huế are subject to various accounts. Some narratives trace its inception back to the 16th century during the reign of Lord Nguyễn Hoàng. According to legend, a woman named Ms. Noodles (\"Cô Bún\") from the village of Cổ Tháp ingeniously combined tender beef with a flavorful broth, creating what is now known as bún bò Huế. \nVINPEARL.COM\n\nAnother perspective suggests that the dish was crafted to satisfy the palates of emperors, epitomizing the essence of Huế—a blend of refinement and robustness. \nSANHOTELSERIES.COM\n\nRegardless of its precise origin, bún bò Huế has evolved over centuries to become a beloved staple of Vietnamese cuisine. Its distinctive combination of spicy, sour, sweet, and salty flavors, along with the aromatic infusion of lemongrass and shrimp paste, reflects the rich culinary traditions of Huế and continues to captivate food enthusiasts both within Vietnam and around the world.",
     ),
+    "bun_bo_hue_recipe_step_1": MessageLookupByLibrary.simpleMessage(
+      "If you prefer more meat in your pork hock, choose the hind hock, but if you enjoy chewy skin and tendons, the front hock is the better option. Cut the pork hock into circular slices and wash them thoroughly.\n\nBlanch the pork hock in boiling water to remove impurities, then rinse it again with clean water.\n\nClean the beef brisket thoroughly, then boil it separately with half a sliced ginger root to add fragrance. Simmer over low heat for about two hours, then test its tenderness by piercing it with chopsticks—if they pass through easily, the meat is fully cooked. Allow the brisket to cool, then slice it thinly before serving.",
+    ),
+    "bun_bo_hue_recipe_step_2": MessageLookupByLibrary.simpleMessage(
+      "Beef or pork blood can be bought pre-cooked or purchased fresh and then boiled until fully cooked before slicing into bite-sized pieces. It is important to buy blood from reputable sources to ensure food safety. If you do not eat blood, you can simply omit it from the dish.\n\nCrab cakes should be shaped into small round pieces and dropped into the pot of simmering beef brisket broth. Once they float to the surface, they are fully cooked and can be removed and set aside. You can replace crab cakes with beef cakes, pork rolls, or leave them out altogether if preferred.\n\nFour stalks of lemongrass should be finely chopped, while the remaining ones should be cut into sections and lightly pounded. The onion should be divided into two portions—one half cut in half, and the other thinly sliced.\n\nGreen onions, Vietnamese cilantro, and Thai basil should be washed thoroughly and finely chopped. All accompanying vegetables should also be washed and drained before serving.",
+    ),
+    "bun_bo_hue_recipe_step_3": MessageLookupByLibrary.simpleMessage(
+      "Dissolve two tablespoons of fermented shrimp paste (mắm ruốc) in 100 ml of cold water.\n\nSauté four finely chopped lemongrass stalks in two tablespoons of oil until fragrant. Remove some of the lemongrass, then add three tablespoons of annatto oil. Finely mince one onion, one garlic bulb, and two chili peppers, then add them to the pan and fry until golden before turning off the heat.\n\nPlace the prepared pork hock into a pot and simmer over low heat with a halved onion and three lightly pounded lemongrass stalks. This helps to enhance the sweetness and fragrance of the broth while extracting the full flavor from the bones. Be sure to occasionally skim off any foam to keep the broth clear.\n\nCarefully pour only the top layer of the fermented shrimp paste mixture into the broth, discarding the residue at the bottom. Add two tablespoons of sugar, two tablespoons of seasoning powder, and one tablespoon of salt, then adjust the seasoning to taste.\n\nFinally, mix in the chili satay oil prepared earlier.",
+    ),
+    "bun_bo_hue_recipe_step_4": MessageLookupByLibrary.simpleMessage(
+      "Blanch the rice noodles in boiling water, then drain and transfer them to a serving bowl.\n\nAdd slices of beef brisket, pork hock, crab cakes, blood pudding, Vietnamese cilantro, finely chopped green onions, and a few thin slices of onion. Finally, ladle the hot broth over the ingredients.\n\nBún Bò Huế is best enjoyed with bean sprouts, banana blossom, Thai basil, and a bit of chili paste for an extra kick of flavor.",
+    ),
     "cancel_button": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "cilantro": MessageLookupByLibrary.simpleMessage("Cilantro"),
     "clear_button": MessageLookupByLibrary.simpleMessage("Clear"),
     "clove_unit": MessageLookupByLibrary.simpleMessage("clove"),
+    "coconut_milk": MessageLookupByLibrary.simpleMessage("Coconut Milk"),
+    "com_tam_long_xuyen_desc": MessageLookupByLibrary.simpleMessage(
+      "Cơm tấm Long Xuyên is a distinctive variation of Vietnam\'s broken rice dish, originating from Long Xuyên city in An Giang province. This version is characterized by its use of finely milled broken rice grains, which are smaller and create a tender, melt-in-the-mouth texture. The dish typically includes thinly sliced grilled pork, shredded pork skin, caramelized eggs, pickled vegetables, and scallion oil. A sweet and sour fish sauce accompanies the meal, enhancing its rich flavors.",
+    ),
+    "com_tam_long_xuyen_history": MessageLookupByLibrary.simpleMessage(
+      "While the exact origins of cơm tấm Long Xuyên are not well-documented, it is a regional adaptation of the traditional Vietnamese broken rice dish, tailored to local tastes and ingredients. The emphasis on smaller rice grains and finely sliced accompaniments reflects the culinary preferences of the Long Xuyên community, setting it apart from other regional versions.",
+    ),
+    "com_tam_long_xuyen_step_1": MessageLookupByLibrary.simpleMessage(
+      "Choose finely broken rice and wash it thoroughly. Soak the rice for 15 minutes, then drain it.\n\nBoil water in a steamer, then mix the rice with 1/2 teaspoon of salt, 1 tablespoon of cooking oil, and 30 grams of pandan leaves. Steam the rice for 30 minutes. Once cooked, open the lid and fluff the rice evenly.",
+    ),
+    "com_tam_long_xuyen_step_2": MessageLookupByLibrary.simpleMessage(
+      "Choose pork that has both lean meat and fat. Wash it thoroughly and cut it into thin slices about 1 cm thick. Marinate the pork with 60g honey, 30ml fish sauce, 30ml coconut milk, 30g oyster sauce, 10g cooking oil, and 2g five-spice powder. Mix well and let the meat marinate for at least 30 minutes to absorb the flavors.\n\nAfter marinating, grill the meat over a charcoal grill or an electric grill until fully cooked.",
+    ),
+    "com_tam_long_xuyen_step_3": MessageLookupByLibrary.simpleMessage(
+      "Boil the duck eggs until fully cooked, then peel them.\n\nHeat 2 tablespoons of cooking oil in a pot, add 30g of palm sugar, and cook until the sugar turns amber. Then, add 10g of minced shallots and sauté until fragrant.\n\nNext, pour in 400ml of coconut water, 20ml of soy sauce, 20ml of fish sauce, 20g of oyster sauce, and 3-4 star anise petals (about 1 whole star anise), stirring well. Bring the mixture to a boil, then add the eggs and simmer on low heat until the sauce reduces and the eggs turn a deep caramel color. Turn off the heat and serve.",
+    ),
+    "com_tam_long_xuyen_step_4": MessageLookupByLibrary.simpleMessage(
+      "Add 40ml of fresh coconut water, 20ml of fish sauce, and 30g of sugar to a pan. Cook over high heat while stirring continuously. Once the mixture thickens to a syrup-like consistency, turn off the heat and let it cool.\n\nWhen ready to serve, mix in minced chili, minced garlic, and 1/2 teaspoon of lime juice, stirring well.\n\nIn a separate pan, heat oil or rendered pork fat, then add 50g of chopped green onions and sauté until cooked.",
+    ),
+    "com_tam_long_xuyen_step_5": MessageLookupByLibrary.simpleMessage(
+      "Slice the grilled pork and braised eggs into small pieces. Place the steamed rice on a plate, then arrange the pork, eggs, pickled vegetables, and shredded pork skin on top. Drizzle some fish sauce and scallion oil over the dish, and it\'s ready to enjoy!",
+    ),
     "confirm_password_field": MessageLookupByLibrary.simpleMessage(
       "Confirm Password",
     ),
+    "congealed_pork": MessageLookupByLibrary.simpleMessage("Congealed Pork"),
     "contact_support_title": MessageLookupByLibrary.simpleMessage(
       "Contact Support",
     ),
@@ -81,10 +123,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "different_confirm_password": MessageLookupByLibrary.simpleMessage(
       "The confirm password does not match",
     ),
+    "difficulty_level": MessageLookupByLibrary.simpleMessage("Difficulty"),
     "display_name_field": MessageLookupByLibrary.simpleMessage("Display Name"),
     "do_not_have_account_title": MessageLookupByLibrary.simpleMessage(
       "Don\\\'t have an account?",
     ),
+    "duck_egg": MessageLookupByLibrary.simpleMessage("Duck Egg(s)"),
+    "egg": MessageLookupByLibrary.simpleMessage("Egg(s)"),
     "email_already_in_use": MessageLookupByLibrary.simpleMessage(
       "This email address is already registered",
     ),
@@ -117,8 +162,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "fb_contact_error": MessageLookupByLibrary.simpleMessage(
       "Failed to open facebook",
     ),
+    "fermented_shrimp_paste": MessageLookupByLibrary.simpleMessage(
+      "Fermented Shrimp Paste",
+    ),
     "find_nearby_restaurant_button": MessageLookupByLibrary.simpleMessage(
       "Find Nearby Restaurant",
+    ),
+    "five_spice_powder": MessageLookupByLibrary.simpleMessage(
+      "Five Spice Powder",
     ),
     "food_category_title": MessageLookupByLibrary.simpleMessage(
       "Food Category",
@@ -132,10 +183,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot password",
     ),
+    "fruit_unit": MessageLookupByLibrary.simpleMessage("fruit"),
     "full_name_empty": MessageLookupByLibrary.simpleMessage(
       "Please enter your full name",
     ),
     "full_name_field": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "garlic": MessageLookupByLibrary.simpleMessage("Garlic"),
     "general_section_title": MessageLookupByLibrary.simpleMessage(
       "General Settings",
     ),
@@ -143,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "green_onion": MessageLookupByLibrary.simpleMessage("Green Onion"),
     "herb": MessageLookupByLibrary.simpleMessage("Herb"),
     "homepage": MessageLookupByLibrary.simpleMessage("Home"),
+    "honey": MessageLookupByLibrary.simpleMessage("Honey"),
     "incomplete_food_information_option": MessageLookupByLibrary.simpleMessage(
       "Incomplete Food Information",
     ),
@@ -167,7 +221,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please choose an issue",
     ),
     "language_option_title": MessageLookupByLibrary.simpleMessage("Language"),
+    "lemon_grass": MessageLookupByLibrary.simpleMessage("Lemongrass"),
     "light_mode_option": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "lime": MessageLookupByLibrary.simpleMessage("Lime"),
+    "lime_juice": MessageLookupByLibrary.simpleMessage("Lime Juice"),
     "location_permission_denied": MessageLookupByLibrary.simpleMessage(
       "Location permission is denied",
     ),
@@ -196,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "other_contact": MessageLookupByLibrary.simpleMessage("Other contacts"),
     "others_option": MessageLookupByLibrary.simpleMessage("Others"),
+    "palm_sugar": MessageLookupByLibrary.simpleMessage("Palm Sugar"),
+    "pandan_leaves": MessageLookupByLibrary.simpleMessage("Pandan leaves"),
     "password_field": MessageLookupByLibrary.simpleMessage("Password"),
     "payment_option": MessageLookupByLibrary.simpleMessage("Payment"),
     "permission_required": MessageLookupByLibrary.simpleMessage(
@@ -228,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "popular_vietnamese_food_title": MessageLookupByLibrary.simpleMessage(
       "Popular Vietnamese Food",
     ),
+    "pork": MessageLookupByLibrary.simpleMessage("Pork"),
+    "pork_trotters": MessageLookupByLibrary.simpleMessage("Pork Trotters"),
     "preparation_time": MessageLookupByLibrary.simpleMessage(
       "Preparation Time",
     ),
@@ -278,6 +339,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sour_flavor": MessageLookupByLibrary.simpleMessage("Sour"),
     "spicy_flavor": MessageLookupByLibrary.simpleMessage("Spicy"),
     "stalk_unit": MessageLookupByLibrary.simpleMessage("stalk"),
+    "star_anise": MessageLookupByLibrary.simpleMessage("Star Anise"),
     "step_title": MessageLookupByLibrary.simpleMessage("Step"),
     "street_food": MessageLookupByLibrary.simpleMessage("Street Food"),
     "subject_empty": MessageLookupByLibrary.simpleMessage(
@@ -311,6 +373,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "terms_of_service_and_privacy_policy": MessageLookupByLibrary.simpleMessage(
       "By signing in or logging in, you agree to our Terms of Service and Privacy Policy",
+    ),
+    "thick_rice_vermicelli_noodles": MessageLookupByLibrary.simpleMessage(
+      "Thick Rice Vermicelli Noodles",
     ),
     "unknown_exception": MessageLookupByLibrary.simpleMessage(
       "Unknown Exception",
