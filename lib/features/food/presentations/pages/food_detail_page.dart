@@ -30,6 +30,7 @@ import '../widgets/food_category_chip_wrap.dart';
 import '../widgets/food_flavor_chip_wrap.dart';
 import '../widgets/food_history_detail.dart';
 import '../widgets/food_instruction.dart';
+import '../widgets/food_instruction_info.dart';
 import '../widgets/recommend_food_tab.dart';
 import 'find_restaurant_page.dart';
 
@@ -171,7 +172,6 @@ FoodEntity _foodEntity = FoodEntity(
   ],
 );
 
-// TODO: Implement Instruction Widget
 class FoodDetailPage extends StatefulWidget {
   // final FoodEntity food;
   const FoodDetailPage({
@@ -363,6 +363,8 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                         ),
                       ),
                     ),
+                    _spacing,
+                    FoodInstructionInfo(foodRecipe: _foodEntity.foodRecipe),
                     _spacing,
                     FoodInstruction(
                       recipeId: _foodEntity.foodRecipe.recipeId,

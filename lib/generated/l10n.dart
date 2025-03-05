@@ -1110,6 +1110,26 @@ class S {
     );
   }
 
+  /// `Preparation Time`
+  String get preparation_time {
+    return Intl.message(
+      'Preparation Time',
+      name: 'preparation_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cooking Time`
+  String get cooking_time {
+    return Intl.message(
+      'Cooking Time',
+      name: 'cooking_time',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Food You May Like`
   String get recommended_food_title {
     return Intl.message(
@@ -1245,11 +1265,31 @@ class S {
     );
   }
 
+  /// `Bún bò Huế is a renowned Vietnamese spicy beef noodle soup that hails from Huế, a city in central Vietnam known for its imperial cuisine. This flavorful dish features thick, cylindrical rice vermicelli noodles immersed in a rich broth infused with lemongrass and fermented shrimp sauce, offering a harmonious blend of spicy, salty, and savory flavors.\nThe broth is traditionally prepared by simmering beef bones and shank with lemongrass, then seasoning with fermented shrimp sauce and sugar. Spicy chili oil is added later to enhance its characteristic heat. Common protein additions include thinly sliced beef shank, oxtail, and pork knuckles. The dish is typically garnished with lime wedges, cilantro, diced green onions, raw sliced onions, chili sauce, and an assortment of fresh herbs such as mint, basil, perilla, and Vietnamese coriander. Banana blossoms or thinly sliced purple cabbage are also customary accompaniments, adding a refreshing crunch to the ensemble.`
+  String get bun_bo_hue_desc {
+    return Intl.message(
+      'Bún bò Huế is a renowned Vietnamese spicy beef noodle soup that hails from Huế, a city in central Vietnam known for its imperial cuisine. This flavorful dish features thick, cylindrical rice vermicelli noodles immersed in a rich broth infused with lemongrass and fermented shrimp sauce, offering a harmonious blend of spicy, salty, and savory flavors.\nThe broth is traditionally prepared by simmering beef bones and shank with lemongrass, then seasoning with fermented shrimp sauce and sugar. Spicy chili oil is added later to enhance its characteristic heat. Common protein additions include thinly sliced beef shank, oxtail, and pork knuckles. The dish is typically garnished with lime wedges, cilantro, diced green onions, raw sliced onions, chili sauce, and an assortment of fresh herbs such as mint, basil, perilla, and Vietnamese coriander. Banana blossoms or thinly sliced purple cabbage are also customary accompaniments, adding a refreshing crunch to the ensemble.',
+      name: 'bun_bo_hue_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Phở, Vietnam's iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.`
   String get pho_history {
     return Intl.message(
       'Phở, Vietnam\'s iconic noodle soup, emerged in the early 20th century in northern Vietnam, particularly in the Nam Định province and Hanoi. Its creation is often attributed to the fusion of local culinary practices with French and Chinese influences during the colonial era. The French colonial presence increased the demand for beef, leading to a surplus of beef bones. Resourceful Vietnamese cooks utilized these bones to craft a rich, aromatic broth, combining it with rice noodles—a staple influenced by Chinese cuisine. This harmonious blend resulted in the birth of phở. Initially, phở was a simple dish sold by street vendors, but over time, it evolved, incorporating various herbs and spices, and spread throughout Vietnam and beyond, becoming a symbol of Vietnamese culinary tradition.',
       name: 'pho_history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bún bò Huế is a traditional Vietnamese beef noodle soup that originates from Huế, the former imperial capital located in central Vietnam. Renowned for its robust and spicy broth, the dish has a rich history intertwined with the region's cultural heritage.\n\nThe exact origins of bún bò Huế are subject to various accounts. Some narratives trace its inception back to the 16th century during the reign of Lord Nguyễn Hoàng. According to legend, a woman named Ms. Noodles ("Cô Bún") from the village of Cổ Tháp ingeniously combined tender beef with a flavorful broth, creating what is now known as bún bò Huế. \nVINPEARL.COM\n\nAnother perspective suggests that the dish was crafted to satisfy the palates of emperors, epitomizing the essence of Huế—a blend of refinement and robustness. \nSANHOTELSERIES.COM\n\nRegardless of its precise origin, bún bò Huế has evolved over centuries to become a beloved staple of Vietnamese cuisine. Its distinctive combination of spicy, sour, sweet, and salty flavors, along with the aromatic infusion of lemongrass and shrimp paste, reflects the rich culinary traditions of Huế and continues to captivate food enthusiasts both within Vietnam and around the world.`
+  String get bun_bo_hue_history {
+    return Intl.message(
+      'Bún bò Huế is a traditional Vietnamese beef noodle soup that originates from Huế, the former imperial capital located in central Vietnam. Renowned for its robust and spicy broth, the dish has a rich history intertwined with the region\'s cultural heritage.\n\nThe exact origins of bún bò Huế are subject to various accounts. Some narratives trace its inception back to the 16th century during the reign of Lord Nguyễn Hoàng. According to legend, a woman named Ms. Noodles ("Cô Bún") from the village of Cổ Tháp ingeniously combined tender beef with a flavorful broth, creating what is now known as bún bò Huế. \nVINPEARL.COM\n\nAnother perspective suggests that the dish was crafted to satisfy the palates of emperors, epitomizing the essence of Huế—a blend of refinement and robustness. \nSANHOTELSERIES.COM\n\nRegardless of its precise origin, bún bò Huế has evolved over centuries to become a beloved staple of Vietnamese cuisine. Its distinctive combination of spicy, sour, sweet, and salty flavors, along with the aromatic infusion of lemongrass and shrimp paste, reflects the rich culinary traditions of Huế and continues to captivate food enthusiasts both within Vietnam and around the world.',
+      name: 'bun_bo_hue_history',
       desc: '',
       args: [],
     );

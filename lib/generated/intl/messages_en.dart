@@ -49,6 +49,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "bitter_flavor": MessageLookupByLibrary.simpleMessage("Bitter"),
     "bread": MessageLookupByLibrary.simpleMessage("Bread"),
     "bulb_unit": MessageLookupByLibrary.simpleMessage("bulb"),
+    "bun_bo_hue_desc": MessageLookupByLibrary.simpleMessage(
+      "Bún bò Huế is a renowned Vietnamese spicy beef noodle soup that hails from Huế, a city in central Vietnam known for its imperial cuisine. This flavorful dish features thick, cylindrical rice vermicelli noodles immersed in a rich broth infused with lemongrass and fermented shrimp sauce, offering a harmonious blend of spicy, salty, and savory flavors.\nThe broth is traditionally prepared by simmering beef bones and shank with lemongrass, then seasoning with fermented shrimp sauce and sugar. Spicy chili oil is added later to enhance its characteristic heat. Common protein additions include thinly sliced beef shank, oxtail, and pork knuckles. The dish is typically garnished with lime wedges, cilantro, diced green onions, raw sliced onions, chili sauce, and an assortment of fresh herbs such as mint, basil, perilla, and Vietnamese coriander. Banana blossoms or thinly sliced purple cabbage are also customary accompaniments, adding a refreshing crunch to the ensemble.",
+    ),
+    "bun_bo_hue_history": MessageLookupByLibrary.simpleMessage(
+      "Bún bò Huế is a traditional Vietnamese beef noodle soup that originates from Huế, the former imperial capital located in central Vietnam. Renowned for its robust and spicy broth, the dish has a rich history intertwined with the region\'s cultural heritage.\n\nThe exact origins of bún bò Huế are subject to various accounts. Some narratives trace its inception back to the 16th century during the reign of Lord Nguyễn Hoàng. According to legend, a woman named Ms. Noodles (\"Cô Bún\") from the village of Cổ Tháp ingeniously combined tender beef with a flavorful broth, creating what is now known as bún bò Huế. \nVINPEARL.COM\n\nAnother perspective suggests that the dish was crafted to satisfy the palates of emperors, epitomizing the essence of Huế—a blend of refinement and robustness. \nSANHOTELSERIES.COM\n\nRegardless of its precise origin, bún bò Huế has evolved over centuries to become a beloved staple of Vietnamese cuisine. Its distinctive combination of spicy, sour, sweet, and salty flavors, along with the aromatic infusion of lemongrass and shrimp paste, reflects the rich culinary traditions of Huế and continues to captivate food enthusiasts both within Vietnam and around the world.",
+    ),
     "cancel_button": MessageLookupByLibrary.simpleMessage("Cancel"),
     "clear_button": MessageLookupByLibrary.simpleMessage("Clear"),
     "clove_unit": MessageLookupByLibrary.simpleMessage("clove"),
@@ -66,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "continue_with_google_button": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
+    "cooking_time": MessageLookupByLibrary.simpleMessage("Cooking Time"),
     "create_account_title": MessageLookupByLibrary.simpleMessage(
       "Create Account",
     ),
@@ -220,6 +227,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "pinch_unit": MessageLookupByLibrary.simpleMessage("pinch"),
     "popular_vietnamese_food_title": MessageLookupByLibrary.simpleMessage(
       "Popular Vietnamese Food",
+    ),
+    "preparation_time": MessageLookupByLibrary.simpleMessage(
+      "Preparation Time",
     ),
     "profile_management_section_title": MessageLookupByLibrary.simpleMessage(
       "Profile Management",
