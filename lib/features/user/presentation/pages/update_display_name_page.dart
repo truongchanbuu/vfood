@@ -65,7 +65,7 @@ class _UpdateDisplayNamePageState extends State<UpdateDisplayNamePage> {
         onTap: () => _focusNode.unfocus(),
         child: SafeArea(
           child: Scaffold(
-            appBar: defaultAppBar(context: context),
+            appBar: const DefaultAppBar(),
             body: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(AppSpacing.marginL),

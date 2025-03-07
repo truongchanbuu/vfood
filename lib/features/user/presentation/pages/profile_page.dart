@@ -40,8 +40,7 @@ class ProfilePage extends StatelessWidget {
         child: Scaffold(
           backgroundColor:
               context.isDarkMode ? AppColors.textDark : AppColors.textLight,
-          appBar:
-              defaultAppBar(context: context, title: S.current.profile_title),
+          appBar: DefaultAppBar(title: S.current.profile_title),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(AppSpacing.marginM),

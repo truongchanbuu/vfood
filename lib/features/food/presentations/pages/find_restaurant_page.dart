@@ -38,8 +38,7 @@ class FindRestaurantPage extends StatelessWidget {
             backgroundColor: context.isDarkMode
                 ? AppColors.backgroundDark
                 : AppColors.background,
-            appBar: defaultAppBar(
-              context: context,
+            appBar: DefaultAppBar(
               title: S.current.restaurants_nearby_title,
               centerTitle: false,
             ),

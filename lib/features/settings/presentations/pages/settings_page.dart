@@ -32,8 +32,7 @@ class SettingsPage extends StatelessWidget {
     );
 
     return Scaffold(
-      appBar: defaultAppBar(
-        context: context,
+      appBar: DefaultAppBar(
         title: S.current.setting_title,
         centerTitle: false,
       ),

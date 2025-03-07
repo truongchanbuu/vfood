@@ -21,8 +21,7 @@ class _FavoriteFoodPageState extends State<FavoriteFoodPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: defaultAppBar(
-          context: context,
+        appBar: DefaultAppBar(
           title: S.current.favorite_food_title,
           centerTitle: false,
         ),
